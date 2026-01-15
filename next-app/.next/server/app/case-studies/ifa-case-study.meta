@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/case-studies/layout,_N_T_/case-studies/ifa-case-study/layout,_N_T_/case-studies/ifa-case-study/page,_N_T_/case-studies/ifa-case-study"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/case-studies/ifa-case-study/__PAGE__",
+    "/case-studies/ifa-case-study",
+    "/case-studies",
+    "/_index",
+    "/_head"
+  ]
+}

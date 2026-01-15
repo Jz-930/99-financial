@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/solution/layout,_N_T_/solution/tax-free-retirement/layout,_N_T_/solution/tax-free-retirement/page,_N_T_/solution/tax-free-retirement"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/solution/tax-free-retirement/__PAGE__",
+    "/solution/tax-free-retirement",
+    "/solution",
+    "/_index",
+    "/_head"
+  ]
+}

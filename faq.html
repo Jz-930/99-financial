@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Financial Inc. | Wealth Strategies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f172a', /* 深蓝 */
+                            dark: '#020617', /* 页脚黑 */
+                            gold: '#ea8d22', /* 品牌金 */
+                            goldHover: '#c27113', 
+                            light: '#f8fafc', /* 浅灰背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block { display: block; animation: fadeIn 0.2s ease-in-out; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Hero 背景样式 (仅首页用，放这里也没事) */
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover; background-position: center;
+        }
+    </style>
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white flex flex-col min-h-screen">
+
+    <header id="app-header"></header>
+
+    <main class="pt-24 flex-grow">
+        <!-- Hero Section -->
+        <section class="hero-gradient py-20 text-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <div class="inline-block py-1.5 px-4 mb-6 border border-brand-gold/50 bg-brand-gold/10 rounded-full backdrop-blur-sm">
+                    <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Common Questions</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Frequently Asked Questions</h1>
+                <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                    Clear answers to common questions about corporate insurance, IFA strategies, CDA planning, and tax-efficient wealth building.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="bg-brand-light py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="space-y-4" id="faq-accordion">
+
+                    <!-- Q1 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Is an IFA risky?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                The main risks relate to interest rate changes, loan management, and changing collateral requirements. The underlying policy remains a stable, long-term asset designed for conservative growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Can I access cash value without using an IFA?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Yes. The corporation may use policy loans, withdrawals, or bank collateral loans without a formal IFA arrangement.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Are interest payments always tax-deductible?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                No. Deductibility depends on how borrowed funds are used. They must be tied to income-producing activities and should be confirmed with your tax advisor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover-shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>When does the CDA credit become available?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Only upon the insured's passing. This is when the corporation can distribute tax-free capital dividends to shareholders, subject to proper elections and CRA filing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Are participating life insurance returns guaranteed?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Policies include guaranteed values, but dividends are not guaranteed. However, Canadian insurers generally have strong, stable long-term dividend histories.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Can my corporation own and pay for the insurance?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Yes. This is the standard and often most tax-efficient structure for business owners with retained earnings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Does the bank review my corporate financials for an IFA?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Yes. Standard underwriting includes reviewing financial statements, tax returns, and corporate banking history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="faq-item bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer border border-slate-100">
+                        <div class="faq-question flex justify-between font-bold text-brand-blue list-none items-center text-lg">
+                            <span>Can I change beneficiaries or ownership later?</span>
+                            <span class="transition-transform duration-300 text-brand-gold ml-4 flex-shrink-0">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-slate-600 mt-6 leading-relaxed border-t border-slate-100 pt-6">
+                                Yes. Corporate-owned policies offer flexibility through restructuring, buy-sell agreements, or estate planning adjustments. Any changes should be coordinated with your legal and tax advisors.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">
+                    Still Have Questions?
+                </h2>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Our team is here to provide personalized answers and guidance tailored to your specific situation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-block bg-brand-gold text-white font-bold text-lg py-4 px-10 rounded-sm shadow-lg hover:bg-brand-goldHover transition transform hover:-translate-y-1 duration-200">
+                        Book a Free Consultation
+                    </a>
+                    <a href="contact.html" class="inline-block border-2 border-brand-blue text-brand-blue font-bold text-lg py-4 px-10 rounded-sm hover:bg-brand-blue hover:text-white transition">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="app-footer"></footer>
+    
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </a>
+    </div>
+
+    <script src="layout.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.faq-item');
+
+            // Set the first item to be open by default
+            if (accordionItems.length > 0) {
+                const firstItem = accordionItems[0];
+                const firstAnswer = firstItem.querySelector('.faq-answer');
+                const firstIcon = firstItem.querySelector('.faq-question span.transition-transform');
+                
+                firstItem.classList.add('open');
+                firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+                if (firstIcon) {
+                    firstIcon.style.transform = 'rotate(180deg)';
+                }
+            }
+
+            accordionItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    const answer = item.querySelector('.faq-answer');
+                    const icon = question.querySelector('span.transition-transform');
+                    const isOpen = item.classList.contains('open');
+
+                    // Close all other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                            const otherIcon = otherItem.querySelector('.faq-question span.transition-transform');
+                            if (otherIcon) {
+                                otherIcon.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isOpen) {
+                        item.classList.remove('open');
+                        answer.style.maxHeight = '0';
+                        if (icon) {
+                            icon.style.transform = 'rotate(0deg)';
+                        }
+                    } else {
+                        item.classList.add('open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        if (icon) {
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Financial Inc. | Wealth Strategies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f172a', /* 深蓝 */
+                            dark: '#020617', /* 页脚黑 */
+                            gold: '#ea8d22', /* 品牌金 */
+                            goldHover: '#c27113', 
+                            light: '#f8fafc', /* 浅灰背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block { display: block; animation: fadeIn 0.2s ease-in-out; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Hero 背景样式 (仅首页用，放这里也没事) */
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover; background-position: center;
+        }
+        .aos-item {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .aos-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white flex flex-col min-h-screen">
+
+    <header id="app-header"></header>
+
+    <main class="pt-24 flex-grow">
+        <section class="hero-gradient py-20 md:py-28 text-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 aos-item">Corporate-Owned Participating Life Insurance</h1>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto font-light mb-10 aos-item" data-aos-delay="100">A Stable, Tax-Efficient Asset for Canadian Business Owners.</p>
+                <div class="aos-item" data-aos-delay="200">
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-flex items-center gap-3 bg-brand-gold text-white font-semibold text-base px-8 py-3.5 rounded-sm shadow-lg hover:bg-white hover:text-brand-blue transition-all duration-300 border border-brand-gold hover:border-brand-gold group">
+                        <span>Talk to an Advisor About Corporate Par</span>
+                        <i class="fa-solid fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Par Insurance -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="aos-item">
+                        <h2 class="text-3xl font-serif font-bold text-brand-blue mb-6">What Is Participating Life Insurance?</h2>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                            Participating life insurance (“Par Insurance”) is a long-term asset class that combines guaranteed values, dividend growth potential, tax-efficient accumulation, and estate advantages. Par insurance provides lifelong coverage while building cash value through guaranteed growth and policyholder dividends.
+                        </p>
+                        <div class="bg-brand-light p-6 rounded-lg border-l-4 border-brand-gold">
+                            <p class="font-serif italic text-brand-blue text-lg">A foundational asset for corporate wealth building and preservation.</p>
+                        </div>
+                    </div>
+                    <div class="aos-item">
+                        <img src="https://placehold.co/600x450/f0f9ff/0f172a?text=Security+%26+Growth" alt="Conceptual image representing security and long-term growth of Par Insurance" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Corporations Use Par -->
+        <section class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="aos-item text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">Why Corporations Use Par Insurance</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="aos-item bg-white p-8 rounded-lg shadow-sm hover:shadow-xl border-t-4 border-brand-blue hover:border-brand-gold transition duration-300 transform hover:-translate-y-2">
+                        <i class="fa-solid fa-chart-line text-3xl text-brand-gold mb-4"></i>
+                        <h3 class="font-bold text-brand-blue text-xl mb-3">Tax-Efficient Growth</h3>
+                        <p class="text-slate-600 leading-relaxed">Funds grow tax-deferred, creating a stable asset uncorrelated to market volatility, allowing capital to compound more efficiently than passive investments.</p>
+                    </div>
+                    <div class="aos-item bg-white p-8 rounded-lg shadow-sm hover:shadow-xl border-t-4 border-brand-blue hover:border-brand-gold transition duration-300 transform hover:-translate-y-2" data-aos-delay="100">
+                        <i class="fa-solid fa-hand-holding-dollar text-3xl text-brand-gold mb-4"></i>
+                        <h3 class="font-bold text-brand-blue text-xl mb-3">Access to Cash Value</h3>
+                        <p class="text-slate-600 leading-relaxed">Access cash via withdrawals, policy loans, or as collateral for a line of credit, making it a versatile balance sheet asset for liquidity needs.</p>
+                    </div>
+                    <div class="aos-item bg-white p-8 rounded-lg shadow-sm hover:shadow-xl border-t-4 border-brand-blue hover:border-brand-gold transition duration-300 transform hover:-translate-y-2" data-aos-delay="200">
+                        <i class="fa-solid fa-sack-dollar text-3xl text-brand-gold mb-4"></i>
+                        <h3 class="font-bold text-brand-blue text-xl mb-3">Tax-Free Estate Benefit</h3>
+                        <p class="text-slate-600 leading-relaxed">The death benefit creates a Capital Dividend Account (CDA) credit, allowing proceeds to be paid to shareholders 100% tax-free.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works (New Layout) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="aos-item text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">How Corporate-Owned Insurance Works</h2>
+                    <p class="aos-item text-slate-600 text-lg">Follow the journey of a corporate dollar as it transforms into a tax-free legacy.</p>
+                </div>
+
+                <div class="space-y-20">
+                    <!-- Step 1 & 2 -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="aos-item">
+                            <div class="flex items-center mb-6"><div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-xl mr-4">1</div><h4 class="font-bold text-brand-blue text-2xl">Funding & Growth</h4></div>
+                            <p class="text-slate-600 mb-4">The corporation pays premiums with lower-taxed corporate dollars. The policy's cash value then grows, sheltered from annual taxation.</p>
+                        </div>
+                        <div class="aos-item"><img src="https://placehold.co/500x350/e0e7ff/3730a3?text=Funding+%26+Growth" alt="Diagram showing money going into a policy and a growth chart" class="rounded-lg shadow-lg w-full"></div>
+                    </div>
+
+                    <!-- Step 3 & 4 -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="aos-item md:order-2">
+                            <div class="flex items-center mb-6"><div class="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-xl mr-4">2</div><h4 class="font-bold text-brand-blue text-2xl">Lifetime & Death</h4></div>
+                            <p class="text-slate-600 mb-4">During lifetime, the policy can be collateralized for liquidity. Upon passing, the tax-free death benefit flows into the corporation.</p>
+                        </div>
+                        <div class="aos-item md:order-1"><img src="https://placehold.co/500x350/e0e7ff/3730a3?text=Liquidity+%26+Payout" alt="Diagram showing a loan against the policy and a payout to the corporation" class="rounded-lg shadow-lg w-full"></div>
+                    </div>
+
+                    <!-- Step 5 & 6 -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="aos-item">
+                            <div class="flex items-center mb-6"><div class="w-12 h-12 rounded-full bg-brand-gold text-white flex items-center justify-center font-bold text-xl mr-4">3</div><h4 class="font-bold text-brand-blue text-2xl">Distribution</h4></div>
+                            <p class="text-slate-600 mb-4">The death benefit (less ACB) creates a large CDA credit, allowing a 100% tax-free distribution to the shareholder’s family or estate.</p>
+                        </div>
+                        <div class="aos-item"><img src="https://placehold.co/500x350/e0e7ff/3730a3?text=CDA+%26+Family" alt="Diagram showing the CDA credit and tax-free distribution to family" class="rounded-lg shadow-lg w-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Portfolio -->
+        <section class="py-24 bg-slate-900 text-white relative">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1470&q=80" alt="Abstract financial background of charts and graphs" class="w-full h-full object-cover opacity-10">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="aos-item text-3xl md:text-4xl font-serif font-bold mb-6">The Investment Portfolio Behind Par Insurance</h2>
+                    <p class="aos-item text-slate-300 text-lg">A participating account invests in a diversified portfolio designed for stable, long-term dividends, not short-term speculation.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="aos-item bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 text-center hover:bg-white/20 transition duration-300">
+                        <i class="fa-solid fa-landmark text-4xl text-brand-gold mb-5"></i>
+                        <h4 class="font-bold text-white text-xl">Bonds & Private Fixed Income</h4>
+                    </div>
+                    <div class="aos-item bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 text-center hover:bg-white/20 transition duration-300" data-aos-delay="100">
+                        <i class="fa-solid fa-building text-4xl text-brand-gold mb-5"></i>
+                        <h4 class="font-bold text-white text-xl">Real Estate & Mortgages</h4>
+                    </div>
+                    <div class="aos-item bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 text-center hover:bg-white/20 transition duration-300" data-aos-delay="200">
+                        <i class="fa-solid fa-chart-pie text-4xl text-brand-gold mb-5"></i>
+                        <h4 class="font-bold text-white text-xl">Equities</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tax-Free Retirement -->
+        <section id="tax-free-retirement" class="py-24 bg-brand-light scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="aos-item">
+                        <img src="https://placehold.co/600x750/ffffff/0f172a?text=Comfortable+Retirement" alt="Image of a couple enjoying a comfortable, financially secure retirement" class="rounded-lg shadow-2xl object-cover h-full w-full">
+                    </div>
+                    <div class="aos-item">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">Par Insurance & Tax-Free Retirement</h2>
+                        <p class="text-slate-600 text-lg mb-10">A corporate-owned par policy can be used to generate tax-free retirement income, creating a sophisticated alternative to traditional taxable retirement plans.</p>
+                        <div class="space-y-8 text-lg">
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-arrow-down text-brand-gold text-xl mt-1 mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-bold text-brand-blue">1. Funding</h4>
+                                    <p class="text-slate-500 text-base">Premiums are funded using retained earnings; cash value compounds tax-deferred.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-arrow-right text-brand-gold text-xl mt-1 mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-bold text-brand-blue">2. Retirement Cash Flow</h4>
+                                    <p class="text-slate-500 text-base">Access this value through policy or bank collateral loans, creating tax-free cash flow while preserving RRSP/TFSA room.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa-solid fa-arrow-up text-brand-gold text-xl mt-1 mr-6 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-bold text-brand-blue">3. Estate Settlement</h4>
+                                    <p class="text-slate-500 text-base">At death, tax-free proceeds repay loans and credit the CDA, allowing tax-free distributions to heirs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Uses -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="aos-item text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">Strategic Uses</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Enhancing shareholder wealth and legacy</span></div>
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Tax-efficient distribution to next-gen</span></div>
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Funding buy–sell agreements</span></div>
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Retirement income planning</span></div>
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Corporate diversification</span></div>
+                    <div class="aos-item bg-slate-50 p-6 rounded-lg flex items-start hover:bg-blue-50 transition border border-slate-100"> <i class="fa-solid fa-check text-green-500 w-6 text-center mr-4 mt-1"></i><span>Complementing IFA strategies</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Good Candidate -->
+        <section class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="aos-item" data-aos-delay="100">
+                        <h2 class="text-3xl font-serif font-bold text-brand-blue mb-8">Who Is a Good Candidate?</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start"><div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center mr-5 mt-1"><i class="fa-solid fa-briefcase text-brand-blue text-xl"></i></div><div><h4 class="font-bold text-brand-blue text-lg">Business Owners</h4><p class="text-slate-500">With consistent retained earnings.</p></div></div>
+                            <div class="flex items-start"><div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center mr-5 mt-1"><i class="fa-solid fa-user-tie text-brand-blue text-xl"></i></div><div><h4 class="font-bold text-brand-blue text-lg">Incorporated Professionals</h4><p class="text-slate-500">Operating through a CCPC or Professional Corporation.</p></div></div>
+                            <div class="flex items-start"><div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center mr-5 mt-1"><i class="fa-solid fa-arrow-trend-up text-brand-blue text-xl"></i></div><div><h4 class="font-bold text-brand-blue text-lg">Long-Term Planners</h4><p class="text-slate-500">Seeking stable, long-term asset growth.</p></div></div>
+                            <div class="flex items-start"><div class="w-12 h-12 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center mr-5 mt-1"><i class="fa-solid fa-people-roof text-brand-blue text-xl"></i></div><div><h4 class="font-bold text-brand-blue text-lg">Succession Planners</h4><p class="text-slate-500">Planning intergenerational wealth transfer.</p></div></div>
+                        </div>
+                    </div>
+                    <div class="aos-item">
+                        <img src="https://placehold.co/600x450/ffffff/0f172a?text=Ideal+Client+Portrait" alt="Portrait of a successful Canadian business owner or professional" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 bg-brand-dark text-center">
+             <div class="max-w-4xl mx-auto px-4">
+                <h2 class="aos-item text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
+                    See How Corporate Par Fits Your Corporation
+                </h2>
+                <p class="aos-item text-slate-400 text-base mb-10 max-w-2xl mx-auto">
+                    Get a personalized illustration tailored to your corporation's financial profile and goals.
+                </p>
+                <div class="aos-item">
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-flex items-center gap-3 bg-brand-gold text-white font-semibold text-base px-8 py-3.5 rounded-sm shadow-lg hover:bg-brand-goldHover transition-all duration-300 border border-brand-gold hover:border-white group">
+                        <span>Request a Personalized Illustration</span>
+                        <i class="fa-solid fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                </div>
+                <p class="text-slate-500 text-xs mt-6">Complimentary consultation • No obligation</p>
+            </div>
+        </section>
+        </main>
+
+    <footer id="app-footer"></footer>
+    
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </a>
+    </div>
+
+    <script src="layout.js"></script>
+
+    <script>
+        // Simple scroll animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.aos-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+</body>
+</html>

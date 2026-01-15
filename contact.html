@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Financial Inc. | Wealth Strategies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f172a', /* 深蓝 */
+                            dark: '#020617', /* 页脚黑 */
+                            gold: '#ea8d22', /* 品牌金 */
+                            goldHover: '#c27113', 
+                            light: '#f8fafc', /* 浅灰背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block { display: block; animation: fadeIn 0.2s ease-in-out; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Hero 背景样式 (仅首页用，放这里也没事) */
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white flex flex-col min-h-screen">
+
+    <header id="app-header"></header>
+
+    <main class="pt-24 flex-grow">
+        <section class="hero-gradient py-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">Contact 99 Financial Inc.</h1>
+                <p class="text-xl text-slate-300">Book a Free Consultation or Send Us a Message.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-2xl font-serif font-bold text-brand-blue mb-8">Get in Touch</h2>
+                    <div class="space-y-6 text-lg text-slate-600">
+                        <p class="flex items-center"><i class="fa-solid fa-phone w-8 text-brand-gold"></i> 416 637 5302</p>
+                        <p class="flex items-start"><i class="fa-solid fa-location-dot w-8 text-brand-gold mt-1"></i> 85 Enterprise Blvd. Unit 306, Markham ON</p>
+                        <p class="flex items-center"><i class="fa-solid fa-envelope w-8 text-brand-gold"></i> greatec@gmail.com</p>
+                    </div>
+                    <div class="mt-10 p-6 bg-slate-50 border border-slate-200 rounded text-center">
+                        <p class="font-bold text-brand-blue mb-2">Connect via WeChat</p>
+                        <div class="w-32 h-32 bg-gray-200 mx-auto flex items-center justify-center text-xs text-gray-500">[QR Code Placeholder]</div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-xl rounded-lg p-8 border border-slate-100">
+                    <h3 class="text-xl font-bold text-brand-blue mb-6">Send a Message</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Name" class="w-full border p-3 rounded">
+                            <input type="email" placeholder="Email" class="w-full border p-3 rounded">
+                        </div>
+                        <input type="text" placeholder="Company Name" class="w-full border p-3 rounded">
+                        <select class="w-full border p-3 rounded text-slate-500">
+                            <option>Select Topic...</option>
+                            <option>Corporate Par</option>
+                            <option>CDA Planning</option>
+                            <option>IFA</option>
+                        </select>
+                        <textarea rows="4" placeholder="Message" class="w-full border p-3 rounded"></textarea>
+                        <button class="w-full bg-brand-gold text-white font-bold py-3 rounded hover:bg-brand-blue transition">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <footer id="app-footer"></footer>
+    
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </a>
+    </div>
+
+    <script src="layout.js"></script>
+
+</body>
+</html>

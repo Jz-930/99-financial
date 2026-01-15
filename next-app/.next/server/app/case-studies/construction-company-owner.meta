@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/case-studies/layout,_N_T_/case-studies/construction-company-owner/layout,_N_T_/case-studies/construction-company-owner/page,_N_T_/case-studies/construction-company-owner"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/case-studies/construction-company-owner/__PAGE__",
+    "/case-studies/construction-company-owner",
+    "/case-studies",
+    "/_index",
+    "/_head"
+  ]
+}

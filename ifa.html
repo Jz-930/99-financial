@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Financial Inc. | Immediate Financing Arrangement</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f172a', /* Deep Blue */
+                            dark: '#020617', /* Footer Black */
+                            gold: '#ea8d22', /* Brand Gold */
+                            goldHover: '#c27113', 
+                            light: '#f8fafc', /* Light Gray Background */
+                            slate: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        /* Custom scrollbar for modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-slate antialiased bg-white flex flex-col min-h-screen">
+
+    <header id="app-header"></header>
+
+    <main class="pt-24 flex-grow">
+        <!-- 1. Hero Section -->
+        <section class="relative bg-hero-pattern bg-cover bg-center bg-fixed text-white py-24 text-center">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto fade-in-up">
+                    <span class="text-brand-gold font-bold uppercase tracking-widest text-xs mb-2 block">Leverage Strategy</span>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold mt-2 mb-6">
+                        Immediate Financing Arrangement <span class="text-brand-gold">(IFA)</span>
+                    </h1>
+                    <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+                        Leveraging Corporate-Owned Insurance for Liquidity & Tax Efficiency.
+                    </p>
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-flex items-center px-8 py-3 bg-brand-gold text-white font-semibold rounded hover:bg-brand-goldHover transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Schedule an IFA Strategy Call
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why Consider an IFA? -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-up delay-100">
+                        <h2 class="text-4xl font-serif font-bold text-brand-blue mb-6">Why Consider an IFA?</h2>
+                        <div class="w-20 h-1 bg-brand-gold mb-8"></div>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            An IFA allows business owners and incorporated professionals to retain liquidity while building long-term, tax-efficient wealth through a corporate-owned participating life insurance policy. 
+                        </p>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            Instead of tying up large premium payments, you can borrow back most of the premium immediately via a bank line of credit secured against the policy’s cash value.
+                        </p>
+                    </div>
+                    <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-slate-100 fade-in-up delay-200">
+                        <h3 class="font-serif font-semibold text-2xl text-brand-blue mb-6">Key Advantages</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="bg-brand-gold/10 text-brand-gold p-2 rounded-full mr-4 mt-1"><i class="fa-solid fa-droplet"></i></span>
+                                <div>
+                                    <strong class="block text-brand-blue">Maintain Liquidity</strong>
+                                    <span class="text-sm text-slate-500">Keep capital working in your business.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-brand-gold/10 text-brand-gold p-2 rounded-full mr-4 mt-1"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                                <div>
+                                    <strong class="block text-brand-blue">Tax-Deductible Interest</strong>
+                                    <span class="text-sm text-slate-500">Potential deduction when funds are used for income generation.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-brand-gold/10 text-brand-gold p-2 rounded-full mr-4 mt-1"><i class="fa-solid fa-chart-line"></i></span>
+                                <div>
+                                    <strong class="block text-brand-blue">Enhanced Growth</strong>
+                                    <span class="text-sm text-slate-500">Tax-sheltered growth inside the policy.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-brand-gold/10 text-brand-gold p-2 rounded-full mr-4 mt-1"><i class="fa-solid fa-people-roof"></i></span>
+                                <div>
+                                    <strong class="block text-brand-blue">Estate Benefits</strong>
+                                    <span class="text-sm text-slate-500">Significant CDA credit at death.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. How an IFA Works (Process) -->
+        <section class="py-24 bg-brand-light relative overflow-hidden">
+             <!-- Background decoration -->
+             <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">How an IFA Works</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">A structured process to leverage your insurance policy.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-gold group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-gold transition duration-300">01</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Apply for Policy</h3>
+                        <p class="text-slate-600 text-sm">Apply for a corporate-owned participating life insurance policy.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-blue group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-blue transition duration-300">02</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Pay Initial Premium</h3>
+                        <p class="text-slate-600 text-sm">Upon approval, the corporation pays the initial premium.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-gold group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-gold transition duration-300">03</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Assign Collateral</h3>
+                        <p class="text-slate-600 text-sm">The corporation assigns the policy as collateral to a lending institution.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-blue group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-blue transition duration-300">04</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Bank Advances Funds</h3>
+                        <p class="text-slate-600 text-sm">Bank advances 75–100% of CSV, depending on lender and structure.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-gold group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-gold transition duration-300">05</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Service Interest</h3>
+                        <p class="text-slate-600 text-sm">The corporation services interest payments on the outstanding loan.</p>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 border-t-4 border-brand-blue group">
+                        <div class="text-4xl font-bold text-slate-200 mb-4 group-hover:text-brand-blue transition duration-300">06</div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-3">Repeat Annually</h3>
+                        <p class="text-slate-600 text-sm">Process is repeated as new premiums are paid and credit adjusted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Candidates & Common Uses (Split Section) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Who is it for? -->
+                    <div>
+                        <h2 class="text-3xl font-serif font-bold text-brand-blue mb-8 flex items-center">
+                            <i class="fa-solid fa-user-check text-brand-gold mr-3 text-2xl"></i> Who Is a Good Candidate?
+                        </h2>
+                        <ul class="space-y-6">
+                            <li class="flex">
+                                <i class="fa-solid fa-check text-green-500 mt-1 mr-4"></i>
+                                <span class="text-slate-700">Incorporated business owners with strong, predictable cash flow.</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa-solid fa-check text-green-500 mt-1 mr-4"></i>
+                                <span class="text-slate-700">High-income professionals with Professional Corporations.</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa-solid fa-check text-green-500 mt-1 mr-4"></i>
+                                <span class="text-slate-700">Corporations with significant retained earnings seeking tax efficiency.</span>
+                            </li>
+                            <li class="flex">
+                                <i class="fa-solid fa-check text-green-500 mt-1 mr-4"></i>
+                                <span class="text-slate-700">Families with estate, legacy, or intergenerational wealth objectives.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Common Uses -->
+                    <div class="bg-brand-blue text-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+                        <h2 class="text-3xl font-serif font-bold mb-8 relative z-10">Common Uses of Funds</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
+                            <div class="flex items-center space-x-3 bg-white/10 p-3 rounded hover:bg-white/20 transition">
+                                <i class="fa-solid fa-briefcase text-brand-gold"></i>
+                                <span class="text-sm font-medium">Expand Operations</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white/10 p-3 rounded hover:bg-white/20 transition">
+                                <i class="fa-solid fa-building text-brand-gold"></i>
+                                <span class="text-sm font-medium">Real Estate</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white/10 p-3 rounded hover:bg-white/20 transition">
+                                <i class="fa-solid fa-rocket text-brand-gold"></i>
+                                <span class="text-sm font-medium">New Ventures</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white/10 p-3 rounded hover:bg-white/20 transition">
+                                <i class="fa-solid fa-hand-holding-dollar text-brand-gold"></i>
+                                <span class="text-sm font-medium">Succession Planning</span>
+                            </div>
+                            <div class="sm:col-span-2 flex items-center space-x-3 bg-white/10 p-3 rounded hover:bg-white/20 transition">
+                                <i class="fa-solid fa-handshake text-brand-gold"></i>
+                                <span class="text-sm font-medium">Buy–Sell Agreements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. IFA + CDA Integration -->
+        <section class="py-20 bg-slate-50 border-y border-slate-200">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <span class="text-brand-gold font-bold uppercase tracking-wider text-xs mb-2 block">Estate Planning Powerhouse</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-8">IFA + CDA Integration</h2>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                    At death, the corporation receives the life insurance death benefit. The credit to the <strong>Capital Dividend Account (CDA)</strong> is generally equal to the death benefit minus the policy’s adjusted cost basis (ACB). The outstanding bank loan is repaid from the death benefit, and the remaining amount, plus the CDA credit, can be distributed to shareholders tax-free.
+                </p>
+                <div class="flex justify-center">
+                    <div class="inline-flex items-center justify-center space-x-4 bg-white py-3 px-6 rounded-full shadow-sm border border-slate-200">
+                        <span class="font-bold text-brand-blue">Result:</span>
+                        <span class="text-slate-600">Loan Repaid <i class="fa-solid fa-check text-green-500 mx-1"></i></span>
+                        <span class="text-slate-100">|</span>
+                        <span class="text-slate-600">Tax-Free Distribution <i class="fa-solid fa-check text-green-500 mx-1"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Case Study -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Case Study</h2>
+                    <p class="text-slate-500 text-lg">Male Age 45, Non-Smoker | Annual Premium: $100,000 (20 Years)</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-brand-blue to-brand-dark rounded-3xl p-8 md:p-12 text-white shadow-2xl overflow-hidden relative">
+                    <!-- Background accent -->
+                    <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+
+                    <div class="relative z-10">
+                        <div class="mb-10 text-center max-w-3xl mx-auto">
+                            <p class="text-lg text-slate-300 font-light">
+                                To maintain corporate liquidity, the company uses an IFA: after paying each year’s premium, the corporation assigns the policy as collateral and borrows back the premium at Prime, allowing retained earnings to remain available.
+                            </p>
+                        </div>
+
+                        <!-- Info Tiles -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Tile 1 -->
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/15 transition text-center">
+                                <div class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-2">Cost</div>
+                                <div class="text-3xl font-serif font-bold mb-1">≈ $540k</div>
+                                <div class="text-xs text-slate-400">Total Interest Cost (Age 85)</div>
+                            </div>
+                            <!-- Tile 2 -->
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/15 transition text-center">
+                                <div class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-2">Value</div>
+                                <div class="text-3xl font-serif font-bold mb-1">≈ $6.26M</div>
+                                <div class="text-xs text-slate-400">Total Net Estate</div>
+                            </div>
+                            <!-- Tile 3 -->
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/15 transition text-center">
+                                <div class="text-brand-gold text-sm font-bold uppercase tracking-wider mb-2">Efficiency</div>
+                                <div class="text-3xl font-serif font-bold mb-1">≈ $8.98M</div>
+                                <div class="text-xs text-slate-400">CDA Credit Created</div>
+                            </div>
+                            <!-- Tile 4 -->
+                            <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/15 transition text-center">
+                                <div class="text-green-400 text-sm font-bold uppercase tracking-wider mb-2">Legacy</div>
+                                <div class="text-3xl font-serif font-bold mb-1">≈ $8.98M</div>
+                                <div class="text-xs text-slate-400">Tax-Free to Family</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Risks & Considerations -->
+        <section class="py-24 bg-red-50/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-brand-blue mb-4">Risks & Considerations</h2>
+                    <p class="text-slate-600 max-w-3xl">An IFA is a sophisticated strategy that requires a clear understanding of potential risks. We model multiple scenarios to ensure robustness.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-200">
+                        <h4 class="font-bold text-brand-blue mb-2">Interest Rate Risk</h4>
+                        <p class="text-sm text-slate-600">Rising rates can increase the cost of carrying the loan and affect corporate cash flow.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-200">
+                        <h4 class="font-bold text-brand-blue mb-2">Financing Risk</h4>
+                        <p class="text-sm text-slate-600">Lenders may adjust advance rates, collateral requirements, or covenants over time.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-200">
+                        <h4 class="font-bold text-brand-blue mb-2">Cash Flow Dependence</h4>
+                        <p class="text-sm text-slate-600">Assumes stable corporate cash flow to comfortably service interest costs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-200">
+                        <h4 class="font-bold text-brand-blue mb-2">Long-Term Commitment</h4>
+                        <p class="text-sm text-slate-600">Cancelling prematurely can reduce effectiveness and create tax consequences.</p>
+                    </div>
+                    <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-500">
+                        <h4 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Collateral Deficit / Margin Risk</h4>
+                        <p class="text-sm text-slate-600 mb-3">
+                            Collateral requirements may change. If CSV grows slowly or lending criteria tightens, additional collateral may be required on short notice.
+                        </p>
+                        <div class="bg-brand-blue/5 p-3 rounded text-sm font-medium text-brand-blue">
+                            <i class="fa-solid fa-shield-halved mr-2"></i> Our Approach: We stress-test each plan against multiple interest rate and collateral scenarios before implementation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-20 bg-brand-blue text-center text-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Is an IFA Right for Your Corporation?</h2>
+                <p class="text-xl text-slate-300 mb-10">Schedule a consultation to model this strategy with your specific corporate numbers.</p>
+                <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-flex items-center px-10 py-5 bg-brand-gold text-white font-bold rounded-lg shadow-lg hover:bg-brand-goldHover transition transform hover:-translate-y-1">
+                    See If an IFA Fits Your Situation
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="app-footer"></footer>
+    
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </a>
+    </div>
+
+    <script src="layout.js"></script>
+
+</body>
+</html>

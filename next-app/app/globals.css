@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: transparent;
+}
+
+@layer utilities {
+    .animate-fadeIn {
+        animation: fadeIn 0.2s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Gradients */
+.hero-gradient {
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Animations */
+.stat-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.fade-in.animate {
+    opacity: 1;
+}
+
+/* Card Hover Effects */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 116, 139, 0.08), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.icon-float {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon-float {
+    animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo-container {
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+    filter: grayscale(0) !important;
+}
+
+.expertise-card {
+    transition: all 0.4s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(234, 141, 34, 0.15);
+}
+
+.list-item-stagger {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease;
+}
+
+.list-item-stagger.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.client-card {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.client-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.client-card:hover .client-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.client-icon {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.case-study-image {
+    transition: all 0.6s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-study-image img {
+    transition: transform 0.6s ease;
+}
+
+.case-study-image:hover img {
+    transform: scale(1.1);
+}
+
+.highlight-number {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-number::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ea8d22, #c27113);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+}
+
+.stat-item.animate .highlight-number::after {
+    transform: scaleX(1);
+}
+
+.animated-divider {
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+.animated-divider.animate {
+    width: 5rem;
+}
+
+/* Global Background Pattern */
+.logo-pattern-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url('/images/logo_origin.webp');
+    background-repeat: space;
+    background-size: 120px auto;
+    /* Make it dark gray and very transparent */
+    filter: grayscale(100%) brightness(20%) opacity(0.04);
+    pointer-events: none;
+}

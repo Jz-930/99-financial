@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Financial Inc. | Wealth Strategies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f172a', /* 深蓝 */
+                            dark: '#020617', /* 页脚黑 */
+                            gold: '#ea8d22', /* 品牌金 */
+                            goldHover: '#c27113', 
+                            light: '#f8fafc', /* 浅灰背景 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (min-width: 1024px) {
+            .group:hover .group-hover\:block { display: block; animation: fadeIn 0.2s ease-in-out; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Hero 背景样式 */
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 统计数据动画 */
+        .stat-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-item.aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 滚动触发的淡入动画 */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-left.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-right.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .fade-in.animate {
+            opacity: 1;
+        }
+
+        /* 卡片悬浮效果增强 */
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 116, 139, 0.08), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* 图标动画 */
+        .icon-float {
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .icon-float {
+            animation: iconBounce 0.6s ease;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* 背景装饰动画 */
+        .rotating-bg {
+            position: absolute;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Logo 悬停效果 */
+        .logo-container {
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.05);
+            filter: grayscale(0) !important;
+        }
+
+        /* 专业经验卡片 */
+        .expertise-card {
+            transition: all 0.4s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(234, 141, 34, 0.15);
+        }
+
+        /* 列表项动画 */
+        .list-item-stagger {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.5s ease;
+        }
+
+        .list-item-stagger.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+        /* Who We Serve 卡片 */
+        .client-card {
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .client-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .client-card:hover .client-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .client-icon {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Case Study 图片效果 */
+        .case-study-image {
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-image img {
+            transition: transform 0.6s ease;
+        }
+
+        .case-study-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 数字强调效果 */
+        .highlight-number {
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-number::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ea8d22, #c27113);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+
+        .stat-item.aos-animate .highlight-number::after {
+            transform: scaleX(1);
+        }
+
+        /* 分隔线动画 */
+        .animated-divider {
+            width: 0;
+            transition: width 1s ease-out;
+        }
+
+        .animated-divider.animate {
+            width: 5rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white flex flex-col min-h-screen">
+
+    <header id="app-header"></header>
+
+    <main class="pt-24 flex-grow">
+        <section class="hero-gradient relative h-auto min-h-[85vh] flex items-center text-white py-20 lg:py-0">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block py-1.5 px-4 mb-8 border border-brand-gold/50 bg-brand-gold/10 rounded-full backdrop-blur-sm">
+                        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">For Canadian Business Owners</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-6xl font-serif font-bold leading-relaxed md:leading-[1.45] mb-8 drop-shadow-xl">
+                        Corporate Insurance & <br>
+                        <span class="text-brand-gold">Tax-Optimized</span> Wealth Strategies
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-200 mb-12 leading-relaxed font-light max-w-3xl mx-auto">
+                        Specialized in helping entrepreneurs, high-income professionals, and high-net-worth families build tax-efficient, long-term wealth through corporate-owned insurance, CDA strategies, and IFA.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="bg-brand-gold text-white px-10 py-4 rounded-sm font-bold text-lg hover:bg-brand-goldHover transition shadow-lg text-center transform hover:-translate-y-1 duration-200">
+                            Book a Consultation
+                        </a>
+                        <a href="/resources" class="bg-transparent border border-white/40 text-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-white hover:text-brand-blue transition text-center backdrop-blur-sm">
+                            Download Free Book
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-left">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">
+                            Tax-Efficient Corporate Planning for Canadian Entrepreneurs
+                        </h2>
+                        <div class="w-20 h-1 bg-brand-gold mb-8 animated-divider"></div>
+                        <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                            99 Financial Inc. is a Toronto-based advisory firm specializing in tax-efficient wealth strategies for Canadian entrepreneurs, incorporated professionals, and high-net-worth families.
+                        </p>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            We focus on advanced corporate planning solutions that transform retained earnings into long-term, tax-free capital—helping business owners protect their wealth, reduce tax, and build a multi-generational legacy.
+                        </p>
+                        <a href="/about" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-gold transition group text-lg">
+                            Learn More About Us 
+                            <i class="fa-solid fa-arrow-right ml-3 transform group-hover:translate-x-1 transition text-sm"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="relative fade-in-right">
+                        <div class="absolute -inset-4 bg-brand-gold/20 rounded-lg transform rotate-2"></div>
+                        <div class="bg-brand-light p-10 rounded-lg border border-slate-100 shadow-xl relative z-10 expertise-card">
+                            <h3 class="text-xl font-serif font-bold text-brand-blue mb-6 border-b border-slate-200 pb-4">Our Core Expertise</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start list-item-stagger" style="transition-delay: 0.1s;">
+                                    <i class="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
+                                    <span class="text-slate-700 font-medium">Corporate-Owned Participating Life Insurance</span>
+                                </li>
+                                <li class="flex items-start list-item-stagger" style="transition-delay: 0.2s;">
+                                    <i class="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
+                                    <span class="text-slate-700 font-medium">CDA (Capital Dividend Account) Planning</span>
+                                </li>
+                                <li class="flex items-start list-item-stagger" style="transition-delay: 0.3s;">
+                                    <i class="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
+                                    <span class="text-slate-700 font-medium">Immediate Financing Arrangements (IFA)</span>
+                                </li>
+                                <li class="flex items-start list-item-stagger" style="transition-delay: 0.4s;">
+                                    <i class="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
+                                    <span class="text-slate-700 font-medium">Retained Earnings Optimization</span>
+                                </li>
+                                <li class="flex items-start list-item-stagger" style="transition-delay: 0.5s;">
+                                    <i class="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
+                                    <span class="text-slate-700 font-medium">Estate Freeze & Family Business Succession</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-20 pt-10 border-t border-slate-100 fade-in">
+                    <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by Canada's Top Financial Institutions</p>
+                    <div class="flex flex-wrap justify-center gap-10 md:gap-20 opacity-50 grayscale transition duration-500 items-center">
+                        <span class="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i class="fa-solid fa-building"></i> Manulife</span>
+                        <span class="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i class="fa-solid fa-leaf"></i> Canada Life</span>
+                        <span class="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i class="fa-regular fa-sun"></i> Sun Life</span>
+                        <span class="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i class="fa-solid fa-scale-balanced"></i> Equitable Life</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-light border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-gold font-bold uppercase tracking-widest text-xs">Our Solutions</span>
+                    <h2 class="mt-3 text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Core Corporate Strategies</h2>
+                    <p class="text-slate-600 text-lg">Sophisticated tools to optimize your corporation's balance sheet.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="service-card fade-in-up bg-white rounded-sm shadow-sm hover:shadow-2xl transition duration-300 group border-t-4 border-brand-blue hover:border-brand-gold flex flex-col hover:-translate-y-2">
+                        <div class="p-10 flex-1">
+                            <div class="icon-float w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-brand-gold/10 transition">
+                                <i class="fa-solid fa-shield-halved text-brand-blue text-2xl group-hover:text-brand-gold transition"></i>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-brand-blue mb-4">Corporate Par Insurance</h3>
+                            <p class="text-slate-600 mb-8 leading-relaxed">
+                                Combines lifelong insurance protection with steady, tax-advantaged asset growth inside the corporation—offering both financial stability and powerful estate benefits.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-3">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-deferred growth</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Access to cash value</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-free CDA benefits</li>
+                            </ul>
+                        </div>
+                        <div class="p-10 pt-0 mt-auto">
+                            <a href="/corporate-par" class="inline-block border border-slate-200 text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center">Explore Strategy</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card fade-in-up bg-white rounded-sm shadow-sm hover:shadow-2xl transition duration-300 group border-t-4 border-brand-gold flex flex-col hover:-translate-y-2" style="transition-delay: 0.1s;">
+                        <div class="p-10 flex-1">
+                            <div class="icon-float w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-brand-gold/10 transition">
+                                <i class="fa-solid fa-file-invoice-dollar text-brand-gold text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-brand-blue mb-4">CDA Planning</h3>
+                            <p class="text-slate-600 mb-8 leading-relaxed">
+                                The Capital Dividend Account (CDA) allows business owners to extract corporate wealth completely tax-free. It is one of the most powerful tax planning tools for CCPCs.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-3">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Extract wealth tax-free</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Multiply net estate value</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Succession efficiency</li>
+                            </ul>
+                        </div>
+                        <div class="p-10 pt-0 mt-auto">
+                            <a href="/cda" class="inline-block border border-slate-200 text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center">Learn About CDA</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card fade-in-up bg-white rounded-sm shadow-sm hover:shadow-2xl transition duration-300 group border-t-4 border-brand-blue hover:border-brand-gold flex flex-col hover:-translate-y-2" style="transition-delay: 0.2s;">
+                        <div class="p-10 flex-1">
+                            <div class="icon-float w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-brand-gold/10 transition">
+                                <i class="fa-solid fa-building-columns text-brand-blue text-2xl group-hover:text-brand-gold transition"></i>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-brand-blue mb-4">IFA Strategy</h3>
+                            <p class="text-slate-600 mb-8 leading-relaxed">
+                                Immediate Financing Arrangements allow you to retain liquidity while building long-term wealth. Designed for those who value both cash flow and the compounding of insurance.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-3">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Maintain corporate liquidity</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-deductible interest</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Leverage corporate assets</li>
+                            </ul>
+                        </div>
+                        <div class="p-10 pt-0 mt-auto">
+                            <a href="/ifa" class="inline-block border border-slate-200 text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center">How IFA Works</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-blue relative overflow-hidden text-white">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-32"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
+                    <div>
+                        <h2 class="text-3xl font-serif font-bold text-white mb-10">Who We Serve</h2>
+                        <div class="space-y-8">
+                            <div class="flex client-card p-4 rounded-lg">
+                                <div class="flex-shrink-0">
+                                    <div class="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                        <i class="fa-solid fa-briefcase text-brand-gold"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-6">
+                                    <h4 class="text-xl font-bold text-white">Business Owners</h4>
+                                    <p class="text-slate-300 mt-1">With growing retained earnings ($500K - $5M revenue).</p>
+                                </div>
+                            </div>
+                            <div class="flex client-card p-4 rounded-lg">
+                                <div class="flex-shrink-0">
+                                    <div class="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                        <i class="fa-solid fa-user-doctor text-brand-gold"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-6">
+                                    <h4 class="text-xl font-bold text-white">Incorporated Professionals</h4>
+                                    <p class="text-slate-300 mt-1">Doctors, Lawyers, Dentists with $250K+ income.</p>
+                                </div>
+                            </div>
+                            <div class="flex client-card p-4 rounded-lg">
+                                <div class="flex-shrink-0">
+                                    <div class="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                        <i class="fa-solid fa-people-roof text-brand-gold"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-6">
+                                    <h4 class="text-xl font-bold text-white">High-Net-Worth Families</h4>
+                                    <p class="text-slate-300 mt-1">Planning intergenerational wealth transfer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-10 rounded-lg border border-white/20 shadow-2xl">
+                        <h2 class="text-3xl font-serif font-bold text-white mb-6">Why Work With <br>99 Financial</h2>
+                        <p class="text-slate-200 mb-8 leading-relaxed text-lg">
+                            We specialize in insurance-based corporate tax planning. Our recommendations are built on actuarial illustrations, tax law analysis, and long-term risk modeling.
+                        </p>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center text-slate-200">
+                                <i class="fa-solid fa-check text-brand-gold mr-3"></i> Clear explanations & real numbers
+                            </li>
+                            <li class="flex items-center text-slate-200">
+                                <i class="fa-solid fa-check text-brand-gold mr-3"></i> Step-by-step implementation structures
+                            </li>
+                        </ul>
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="block w-full text-center bg-brand-gold text-white font-bold py-4 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-lg">
+                            Book a Strategy Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div>
+                        <span class="text-brand-gold font-bold uppercase tracking-widest text-xs">Case Study Highlight</span>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mt-2 mb-2">Real Strategies, Real Impact</h2>
+                        <p class="text-slate-500">See how we solve complex problems for Canadian business owners.</p>
+                    </div>
+                    <a href="/case-studies" class="hidden md:inline-flex items-center text-brand-blue font-bold hover:text-brand-gold transition mt-4 md:mt-0 text-lg border-b-2 border-transparent hover:border-brand-gold">
+                        View All Case Studies <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
+                    <div class="p-10 lg:p-14 lg:w-3/5">
+                        <div class="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-bold uppercase rounded-sm mb-4 border border-blue-100">Construction Company</div>
+                        <h3 class="text-2xl font-serif font-bold text-brand-blue mb-6">Owner with $500k Annual Profit</h3>
+                        <p class="text-slate-600 mb-8 leading-relaxed text-lg">
+                            A construction company owner was facing rising retained earnings and high personal tax. By redirecting a portion of annual profits into a corporate-owned participating life policy—paired with an optional IFA—the owner created a stable, tax-efficient asset.
+                        </p>
+                        <div class="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-slate-100">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Proj. Death Benefit</p>
+                                <p class="text-2xl font-bold text-brand-blue highlight-number">~$<span class="counter" data-target="9.22">0</span>M</p>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Tax-Free to Family</p>
+                                <p class="text-2xl font-bold text-brand-gold highlight-number">~$<span class="counter" data-target="8.98">0</span>M</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/5 bg-slate-200 relative min-h-[300px] case-study-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Construction Site" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition duration-700">
+                        <div class="absolute inset-0 bg-brand-blue/20 mix-blend-multiply"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center md:hidden">
+                    <a href="/case-studies" class="text-brand-gold font-bold text-lg">Read Full Case Study &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-brand-dark text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ea8d22 1px, transparent 1px); background-size: 40px 40px;"></div>
+            
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
+                    Ready to turn trapped retained earnings into tax-free family wealth?
+                </h2>
+                <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="inline-block bg-brand-gold text-white font-bold text-xl py-5 px-12 rounded-sm shadow-xl hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 duration-200">
+                    Book a Consultation
+                </a>
+                <p class="mt-6 text-slate-400 text-sm">Complimentary 30-minute discovery call. No obligation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="app-footer"></footer>
+    
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" class="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+            <i class="fa-solid fa-comments text-xl"></i>
+        </a>
+    </div>
+
+    <script src="layout.js"></script>
+
+    <script>
+        // 滚动触发动画系统
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+
+                        // 如果是expertise-card，触发子元素列表动画
+                        if (entry.target.classList.contains('expertise-card')) {
+                            const listItems = entry.target.querySelectorAll('.list-item-stagger');
+                            listItems.forEach(item => item.classList.add('animate'));
+                        }
+
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // 监听所有需要动画的元素
+            const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .fade-in, .animated-divider, .expertise-card');
+            animatedElements.forEach(el => scrollObserver.observe(el));
+        });
+
+        // 数字滚动动画
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const duration = 2000; // 2秒
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target.toFixed(2);
+                    clearInterval(timer);
+                } else {
+                    element.textContent = current.toFixed(2);
+                }
+            }, 16);
+        }
+
+        // Intersection Observer 监听元素进入视口
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 添加动画class
+                    entry.target.classList.add('aos-animate');
+
+                    // 获取延迟时间
+                    const delay = parseInt(entry.target.getAttribute('data-aos-delay')) || 0;
+
+                    // 延迟后启动数字滚动
+                    setTimeout(() => {
+                        const counter = entry.target.querySelector('.counter');
+                        if (counter) {
+                            animateCounter(counter);
+                        }
+                    }, delay);
+
+                    // 只触发一次
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 监听所有 stat-item 元素
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.stat-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+</body>
+</html>

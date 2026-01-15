@@ -1,0 +1,23 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/case-studies/[slug]/page": "/case-studies/[slug]",
+  "/case-studies/construction-company-owner/page": "/case-studies/construction-company-owner",
+  "/case-studies/family-business-transition/page": "/case-studies/family-business-transition",
+  "/case-studies/high-income-lawyer/page": "/case-studies/high-income-lawyer",
+  "/case-studies/ifa-case-study/page": "/case-studies/ifa-case-study",
+  "/case-studies/medical-professional/page": "/case-studies/medical-professional",
+  "/case-studies/page": "/case-studies",
+  "/cda/page": "/cda",
+  "/contact/page": "/contact",
+  "/corporate-par/page": "/corporate-par",
+  "/estate-planning/page": "/estate-planning",
+  "/events/page": "/events",
+  "/faq/page": "/faq",
+  "/ifa/page": "/ifa",
+  "/page": "/",
+  "/resources/page": "/resources",
+  "/solution/page": "/solution",
+  "/solution/tax-free-retirement/page": "/solution/tax-free-retirement"
+}
