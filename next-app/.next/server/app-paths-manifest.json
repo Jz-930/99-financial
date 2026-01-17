@@ -10,6 +10,7 @@
   "/case-studies/medical-professional/page": "app/case-studies/medical-professional/page.js",
   "/case-studies/page": "app/case-studies/page.js",
   "/cda/page": "app/cda/page.js",
+  "/client-journey/page": "app/client-journey/page.js",
   "/contact/page": "app/contact/page.js",
   "/corporate-par/page": "app/corporate-par/page.js",
   "/estate-planning/page": "app/estate-planning/page.js",
