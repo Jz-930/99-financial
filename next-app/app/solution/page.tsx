@@ -11,12 +11,14 @@ export default function SolutionsPage() {
                 <div className="absolute inset-0 bg-brand-dark/20 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
                     <ScrollAnimation className="fade-in-up">
-                        <span className="text-brand-gold font-bold uppercase tracking-widest text-sm mb-4 block">Comprehensive Strategies</span>
                         <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white text-shadow-lg">
                             Our Solutions
                         </h1>
+                        <p className="text-2xl text-brand-gold font-medium mb-6">
+                            Strategy-led planning for incorporated business owners
+                        </p>
                         <p className="text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-                            Optimizing corporate wealth and tax efficiency for Canadian business owners.
+                            At 99 Financial, we evaluate insurance, tax, and liquidity decisions within a broader long-term corporate planning framework. Our solutions are designed for business owners who value clarity, discipline, and thoughtful planning over time.
                         </p>
                     </ScrollAnimation>
                 </div>
@@ -67,9 +69,12 @@ export default function SolutionsPage() {
                                 <div className="absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"></div>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">Corporate Par</h3>
+                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-2">Corporate-Owned Life Insurance</h3>
+                                <p className="text-sm font-serif italic text-brand-gold mb-4">Insurance as a long-term planning tool</p>
                                 <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
-                                    A stable, tax-efficient asset for Canadian business owners. Combines insurance protection with steady, tax-advantaged asset growth inside the corporation.
+                                    Within the right structure, corporate-owned life insurance can play a powerful role in tax efficiency, balance-sheet planning, and estate liquidity.
+                                    <br /><br />
+                                    The emphasis is not on product selection, but on how insurance fits within a broader corporate and long-term planning framework. Used thoughtfully, insurance supports planning objectives — it does not drive them.
                                 </p>
                                 <ul className="space-y-2 mb-8 text-sm text-slate-500">
                                     <li className="flex items-center"><i className="fa-solid fa-check text-brand-gold mr-2"></i>Tax-deferred growth</li>
@@ -94,9 +99,12 @@ export default function SolutionsPage() {
                                 <div className="absolute inset-0 bg-brand-gold/20 group-hover:bg-transparent transition duration-500"></div>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">CDA Planning</h3>
+                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-2">Capital Dividend Account (CDA)</h3>
+                                <p className="text-sm font-serif italic text-brand-gold mb-4">Understanding the mechanics behind tax-free corporate wealth transfer</p>
                                 <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
-                                    Tax-free corporate wealth extraction. The Capital Dividend Account (CDA) allows business owners to extract corporate wealth completely tax-free.
+                                    The Capital Dividend Account is often misunderstood and underutilized.
+                                    <br /><br />
+                                    We help business owners and their advisors understand how CDA is created, tracked, and strategically integrated into long-term planning — well before exit or succession events. Timing, structure, and coordination matter more than most owners realize.
                                 </p>
                                 <ul className="space-y-2 mb-8 text-sm text-slate-500">
                                     <li className="flex items-center"><i className="fa-solid fa-check text-brand-gold mr-2"></i>Tax-free withdrawals</li>
@@ -121,9 +129,12 @@ export default function SolutionsPage() {
                                 <div className="absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"></div>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">IFA Strategy</h3>
+                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-2">Immediate Financing Arrangement (IFA)</h3>
+                                <p className="text-sm font-serif italic text-brand-gold mb-4">Balancing long-term structure with lifetime liquidity</p>
                                 <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
-                                    Immediate Financing Arrangement. A liquidity strategy designed for those who value both cash flow and the compounding advantages of permanent insurance.
+                                    An Immediate Financing Arrangement is an advanced planning strategy — not a product.
+                                    <br /><br />
+                                    When appropriate, it allows business owners to access liquidity while preserving carefully designed long-term structures, without forcing premature compromises. IFA is suitable only in specific circumstances and requires disciplined planning.
                                 </p>
                                 <ul className="space-y-2 mb-8 text-sm text-slate-500">
                                     <li className="flex items-center"><i className="fa-solid fa-check text-brand-gold mr-2"></i>Keep corporate funds</li>
@@ -138,6 +149,155 @@ export default function SolutionsPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Section 1: How the Solutions Work Together */}
+            <section className="py-24 bg-white relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <ScrollAnimation className="fade-in-up">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-8 text-center">How the Solutions Work Together</h2>
+                            <p className="text-xl text-slate-600 mb-12 text-center leading-relaxed">
+                                Our solutions are not designed to operate in isolation. Each element plays a distinct role within a broader corporate planning framework, addressing different aspects of long-term decision-making.
+                            </p>
+
+                            <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-brand-gold/30 before:to-transparent">
+
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                        <div className="w-3 h-3 bg-brand-gold rounded-full"></div>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-lg shadow-sm border-l-4 border-brand-gold hover:shadow-md transition-shadow">
+                                        <p className="font-medium text-slate-800">The <strong>Client Journey</strong> provides the planning discipline and decision framework.</p>
+                                    </div>
+                                </div>
+
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                        <div className="w-3 h-3 bg-brand-gold rounded-full"></div>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-lg shadow-sm border-l-4 border-brand-gold hover:shadow-md transition-shadow">
+                                        <p className="font-medium text-slate-800"><strong>Corporate-owned life insurance</strong> establishes a long-term structural foundation.</p>
+                                    </div>
+                                </div>
+
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                        <div className="w-3 h-3 bg-brand-gold rounded-full"></div>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-lg shadow-sm border-l-4 border-brand-gold hover:shadow-md transition-shadow">
+                                        <p className="font-medium text-slate-800">The <strong>Capital Dividend Account</strong> reflects the tax outcomes created by that structure over time.</p>
+                                    </div>
+                                </div>
+
+                                <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                        <div className="w-3 h-3 bg-brand-gold rounded-full"></div>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-50 rounded-lg shadow-sm border-l-4 border-brand-gold hover:shadow-md transition-shadow">
+                                        <p className="font-medium text-slate-800">Where appropriate, an <strong>Immediate Financing Arrangement</strong> may be used to enhance liquidity without undermining long-term planning objectives.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p className="text-xl text-brand-blue font-serif font-medium text-center mt-12 italic">
+                                "Together, these components form an integrated approach — one that prioritizes structure, coordination, and clarity over individual tactics or short-term outcomes."
+                            </p>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
+            {/* Section 2: Who These Solutions Are For */}
+            <section className="py-24 bg-brand-light relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <ScrollAnimation className="fade-in-up">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-brand-blue mb-16">Who These Solutions Are For</h2>
+
+                        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                            {/* Typically Suitable */}
+                            <div className="bg-white rounded-lg shadow-xl p-8 border-t-4 border-brand-gold">
+                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-8 text-center bg-green-50/50 py-3 rounded-md">Typically suitable for</h3>
+                                <ul className="space-y-6">
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-check text-green-600 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-700 font-medium">Incorporated business owners with retained earnings</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-check text-green-600 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-700 font-medium">Long-term planning and tax efficiency focused</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-check text-green-600 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-700 font-medium">Estate, succession, or shareholder planning considerations</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-check text-green-600 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-700 font-medium">Comfortable with structured, coordinated decision-making</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Not Appropriate */}
+                            <div className="bg-slate-100 rounded-lg p-8 border-t-4 border-slate-300 opacity-90">
+                                <h3 className="text-2xl font-serif font-bold text-slate-500 mb-8 text-center bg-slate-200/50 py-3 rounded-md">Often not appropriate when</h3>
+                                <ul className="space-y-6">
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-minus text-slate-500 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-500">Corporate cash flow is needed for near-term operations</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-minus text-slate-500 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-500">Objectives are short-term or return-driven</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-minus text-slate-500 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-500">Flexibility is prioritized over structure</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center mt-0.5">
+                                            <i className="fa-solid fa-minus text-slate-500 text-sm"></i>
+                                        </div>
+                                        <span className="ml-4 text-slate-500">Decisions are evaluated in isolation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-24 bg-brand-blue relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 pattern-grid-lg"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <ScrollAnimation className="fade-in-up">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to align your corporate structure?</h2>
+                        <a
+                            href="https://tidycal.com/greatec/30-minute-meeting"
+                            target="_blank"
+                            className="inline-block bg-brand-gold text-white text-lg font-bold py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl uppercase tracking-widest"
+                        >
+                            Request a private strategy review
+                        </a>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
         </main>
     );
 }
