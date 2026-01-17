@@ -5,9 +5,10 @@ interface ScrollAnimationProps {
     children: React.ReactNode;
     className?: string; // e.g. "fade-in-up"
     delay?: number;
+    id?: string;
 }
 
-export default function ScrollAnimation({ children, className = "", delay = 0 }: ScrollAnimationProps) {
+export default function ScrollAnimation({ children, className = "", delay = 0, id }: ScrollAnimationProps) {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -24,7 +25,7 @@ export default function ScrollAnimation({ children, className = "", delay = 0 }:
     }, [delay]);
 
     return (
-        <div ref={ref} className={`${className} ${isVisible ? 'animate' : ''}`}>
+        <div ref={ref} id={id} className={`${className} ${isVisible ? 'animate' : ''}`}>
             {children}
         </div>
     );

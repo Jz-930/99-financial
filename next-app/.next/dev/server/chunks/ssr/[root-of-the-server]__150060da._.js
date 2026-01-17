@@ -227,12 +227,9 @@ function Header() {
                                         onMouseEnter: ()=>setActiveDropdown('resources'),
                                         onMouseLeave: ()=>setActiveDropdown(null),
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: `nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(resourcesPages) || activeDropdown === 'resources' ? 'text-brand-gold font-bold' : 'text-slate-600'}`,
-                                                onClick: (e)=>{
-                                                    e.stopPropagation();
-                                                    toggleDropdown('resources');
-                                                },
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                href: "/resources",
+                                                className: `nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(resourcesPages) || activeDropdown === 'resources' || isLinkActive('/resources') ? 'text-brand-gold font-bold' : 'text-slate-600'}`,
                                                 children: [
                                                     "Resources ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {

@@ -100,22 +100,22 @@ export default function Header() {
                                 onMouseEnter={() => setActiveDropdown('resources')}
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
-                                <button
-                                    className={`nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(resourcesPages) || activeDropdown === 'resources' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}
-                                    onClick={(e) => { e.stopPropagation(); toggleDropdown('resources'); }}
+                                <Link
+                                    href="/resources"
+                                    className={`nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(resourcesPages) || activeDropdown === 'resources' || isLinkActive('/resources') ? 'text-brand-gold font-bold' : 'text-slate-600'}`}
                                 >
                                     Resources <i className="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
-                                </button>
+                                </Link>
                                 <div className={`absolute top-full left-0 pt-2 w-64 ${activeDropdown === 'resources' ? 'block' : 'hidden'}`}>
                                     <div className="bg-white border-t-4 border-brand-gold shadow-xl rounded-b-md pt-2 animate-fadeIn">
-                                        <Link href="/foundational-articles" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Foundational Articles</Link>
-                                        <Link href="/planning-concepts" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
-                                        <Link href="/guides" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
+                                        <Link href="/resources#foundational-articles" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Foundational Articles</Link>
+                                        <Link href="/resources#planning-concepts" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
+                                        <Link href="/resources#guides" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
 
                                         <div className="px-5 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider bg-slate-50/50 mt-1">Events</div>
-                                        <Link href="/upcoming-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Upcoming Sessions</Link>
-                                        <Link href="/past-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Past Sessions</Link>
-                                        <Link href="/session-usage" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">How These Sessions Are Used</Link>
+                                        <Link href="/resources#upcoming-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Upcoming Sessions</Link>
+                                        <Link href="/resources#past-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Past Sessions</Link>
+                                        <Link href="/resources#session-usage" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">How These Sessions Are Used</Link>
                                     </div>
                                 </div>
                             </div>
@@ -173,14 +173,14 @@ export default function Header() {
 
                             <div className="space-y-3">
                                 <p className="text-xs text-gray-400 uppercase font-bold">Resources</p>
-                                <Link href="/foundational-articles" className="block pl-4 text-slate-600 hover:text-brand-gold">Foundational Articles</Link>
-                                <Link href="/planning-concepts" className="block pl-4 text-slate-600 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
-                                <Link href="/guides" className="block pl-4 text-slate-600 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
+                                <Link href="/resources#foundational-articles" className="block pl-4 text-slate-600 hover:text-brand-gold">Foundational Articles</Link>
+                                <Link href="/resources#planning-concepts" className="block pl-4 text-slate-600 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
+                                <Link href="/resources#guides" className="block pl-4 text-slate-600 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
                                 <div className="pl-4 pt-2">
                                     <p className="text-xs text-gray-400 uppercase font-bold mb-2">Events</p>
-                                    <Link href="/upcoming-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Upcoming Sessions</Link>
-                                    <Link href="/past-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Past Sessions</Link>
-                                    <Link href="/session-usage" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">How These Sessions Are Used</Link>
+                                    <Link href="/resources#upcoming-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Upcoming Sessions</Link>
+                                    <Link href="/resources#past-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Past Sessions</Link>
+                                    <Link href="/resources#session-usage" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">How These Sessions Are Used</Link>
                                 </div>
                             </div>
 
