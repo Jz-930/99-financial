@@ -22,7 +22,36 @@ export default function SolutionsPage() {
                 </div>
             </section>
 
+            {/* Client Journey Section */}
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <ScrollAnimation className="fade-in-up">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Client Journey</h2>
+                            <p className="text-xl text-brand-gold font-medium mb-8">A disciplined planning process, designed for complexity</p>
+
+                            <div className="text-slate-600 space-y-6 text-lg leading-relaxed mb-10">
+                                <p>
+                                    Every engagement follows a structured process — from understanding corporate context to evaluating strategic fit, implementation, and ongoing review.
+                                </p>
+                                <p>
+                                    This ensures decisions are made deliberately, with clarity around trade-offs, timing, and long-term consequences.
+                                </p>
+                                <p className="font-semibold text-brand-blue">
+                                    Best suited for business owners who value process, coordination, and strategic clarity.
+                                </p>
+                            </div>
+
+                            <Link href="/client-journey" className="inline-block px-8 py-4 bg-brand-blue text-white font-bold rounded-sm hover:bg-brand-gold transition-colors duration-300 uppercase tracking-widest text-sm shadow-lg hover:shadow-xl">
+                                Understand our client journey
+                            </Link>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
             <section className="py-24 relative overflow-hidden">
+
                 <div className="logo-pattern-bg"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

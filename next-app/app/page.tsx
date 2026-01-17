@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../components/ScrollAnimation';
+import PlanningApproach from '../components/PlanningApproach';
 // NumberCounter removed
 
 export default function Home() {
@@ -26,22 +27,21 @@ export default function Home() {
                             <span className="text-brand-gold font-bold text-xs uppercase tracking-widest">For Canadian Business Owners</span>
                         </div>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold leading-relaxed md:leading-[1.45] mb-8 drop-shadow-xl">
-                            Corporate Insurance & <br />
-                            <span className="text-brand-gold">Tax-Optimized</span> Wealth Strategies
+                            Corporate wealth requires <br />
+                            <span className="text-brand-gold">planning</span> — not just investing.
                         </h1>
-                        <p className="text-base md:text-lg text-slate-200 mb-12 leading-relaxed font-light max-w-4xl mx-auto">
-                            Specialized in helping entrepreneurs, high-income professionals, and high-net-worth families build tax-efficient, long-term wealth through corporate-owned insurance, CDA strategies, and Immediate Financing Arrangements (IFA).
+                        <div className="text-base md:text-lg text-slate-200 mb-8 leading-relaxed font-light max-w-4xl mx-auto space-y-2">
+                            <p>Retained earnings quietly create long-term tax drag.</p>
+                            <p>Corporate wealth is often misaligned with future estate outcomes.</p>
+                            <p>Doing nothing is also a decision — just not an intentional one.</p>
+                        </div>
+                        <p className="text-brand-gold font-medium text-lg mb-10 italic">
+                            Thoughtful planning starts long before a tax or estate issue becomes urgent.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5 justify-center">
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-10 py-4 rounded-sm font-bold text-lg hover:bg-brand-goldHover transition shadow-lg text-center transform hover:-translate-y-1 duration-200">
                                 Book a Consultation
                             </a>
-                            <a href="#" className="bg-transparent border border-white/40 text-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-white hover:text-brand-blue transition text-center backdrop-blur-sm">
-                                Join Our Monthly Webinar
-                            </a>
-                            <Link href="/resources" className="bg-transparent border border-white/40 text-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-white hover:text-brand-blue transition text-center backdrop-blur-sm">
-                                Download Free Book
-                            </Link>
                         </div>
                     </div>
                 </div>
@@ -52,21 +52,32 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <ScrollAnimation className="fade-in-left">
                             <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">
-                                Tax-Efficient Corporate Planning for Canadian Entrepreneurs
+                                Who We Work With
                             </h2>
                             <div className="logo-pattern-bg"></div>
                             <div className="relative z-10">
                                 <div className="w-20 h-1 bg-brand-gold mb-8 animated-divider animate"></div>
-                                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                    99 Financial Inc. is a Toronto-based advisory firm specializing in tax-efficient wealth strategies for Canadian entrepreneurs, incorporated professionals, and high-net-worth families.
-                                </p>
                                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                    We focus on advanced corporate planning solutions that transform retained earnings into long-term, tax-free capital—helping business owners protect their wealth, reduce tax, and build a multi-generational legacy.
+                                    Our work is focused on incorporated business owners and professionals who are beginning to think beyond annual tax filings and short-term returns. This typically includes individuals who:
                                 </p>
-                                <Link href="/about" className="inline-flex items-center text-brand-blue font-bold hover:text-brand-gold transition group text-lg">
-                                    Learn More About Us
-                                    <i className="fa-solid fa-arrow-right ml-3 transform group-hover:translate-x-1 transition text-sm"></i>
-                                </Link>
+                                <ul className="space-y-4 mb-4">
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-circle-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span className="text-slate-700 text-lg">Operate through a corporation with retained earnings</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-circle-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span className="text-slate-700 text-lg">Have growing income and increasing tax exposure</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-circle-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span className="text-slate-700 text-lg">Are thinking about long-term income, liquidity, and estate outcomes</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-circle-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span className="text-slate-700 text-lg">Already work with accountants and other advisors, but want a more integrated planning perspective</span>
+                                    </li>
+                                </ul>
                             </div>
 
                         </ScrollAnimation>
@@ -105,240 +116,233 @@ export default function Home() {
                         </ScrollAnimation>
                     </div>
 
-                    <ScrollAnimation className="mt-20 pt-10 border-t border-slate-100 fade-in">
-                        <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by Canada&apos;s Top Financial Institutions</p>
-                        <div className="flex flex-wrap justify-center gap-10 md:gap-20 opacity-50 grayscale transition duration-500 items-center">
-                            <span className="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i className="fa-solid fa-building"></i> Manulife</span>
-                            <span className="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i className="fa-solid fa-leaf"></i> Canada Life</span>
-                            <span className="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i className="fa-regular fa-sun"></i> Sun Life</span>
-                            <span className="text-2xl font-serif font-bold text-slate-500 flex items-center gap-2 logo-container"><i className="fa-solid fa-scale-balanced"></i> Equitable Life</span>
-                        </div>
-                    </ScrollAnimation>
+
                 </div >
             </section >
 
-            <section className="py-24 bg-brand-light/90 border-y border-slate-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">Our Solutions</span>
-                        <h2 className="mt-3 text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Core Corporate Strategies</h2>
-                        <p className="text-slate-600 text-lg">Sophisticated tools to optimize your corporation&apos;s balance sheet.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <ScrollAnimation className="service-card fade-in-up bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-500 group overflow-hidden border border-slate-100 flex flex-col hover:-translate-y-2">
-                            <div className="h-48 relative overflow-hidden">
-                                <Image
-                                    src="/images/corporate-par-insurance.png"
-                                    alt="Corporate Par Insurance"
-                                    fill
-                                    className="object-cover transition duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"></div>
-                            </div>
-                            <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">Corporate Par Insurance</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed flex-grow">
-                                    Combines lifelong insurance protection with steady, tax-advantaged asset growth inside the corporation—offering both financial stability and powerful estate benefits.
-                                </p>
-                                <ul className="text-sm text-slate-500 space-y-3 mb-8">
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-deferred growth</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Access to cash value</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-free CDA benefits</li>
-                                </ul>
-                                <div className="pt-0 mt-auto">
-                                    <Link href="/corporate-par" className="inline-block border border-brand-blue text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center group-hover:shadow-md">Explore Strategy</Link>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-
-                        <ScrollAnimation className="service-card fade-in-up bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-500 group overflow-hidden border border-slate-100 flex flex-col hover:-translate-y-2" delay={100}>
-                            <div className="h-48 relative overflow-hidden">
-                                <Image
-                                    src="/images/cda-planning.png"
-                                    alt="CDA Planning"
-                                    fill
-                                    className="object-cover transition duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-brand-gold/20 group-hover:bg-transparent transition duration-500"></div>
-                            </div>
-                            <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">CDA Planning</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed flex-grow">
-                                    The Capital Dividend Account (CDA) allows business owners to extract corporate wealth completely tax-free. It is one of the most powerful tax planning tools for CCPCs.
-                                </p>
-                                <ul className="text-sm text-slate-500 space-y-3 mb-8">
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Extract wealth tax-free</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Multiply net estate value</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Succession efficiency</li>
-                                </ul>
-                                <div className="pt-0 mt-auto">
-                                    <Link href="/cda" className="inline-block border border-brand-blue text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center group-hover:shadow-md">Learn About CDA</Link>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-
-                        <ScrollAnimation className="service-card fade-in-up bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-500 group overflow-hidden border border-slate-100 flex flex-col hover:-translate-y-2" delay={200}>
-                            <div className="h-48 relative overflow-hidden">
-                                <Image
-                                    src="/images/ifa-strategy.png"
-                                    alt="IFA Strategy"
-                                    fill
-                                    className="object-cover transition duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"></div>
-                            </div>
-                            <div className="p-8 flex-1 flex flex-col">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 border-b border-slate-100 pb-4">IFA Strategy</h3>
-                                <p className="text-slate-600 mb-6 leading-relaxed flex-grow">
-                                    Immediate Financing Arrangements allow you to retain liquidity while building long-term wealth. Designed for those who value both cash flow and the compounding of insurance.
-                                </p>
-                                <ul className="text-sm text-slate-500 space-y-3 mb-8">
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Maintain corporate liquidity</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Tax-deductible interest</li>
-                                    <li className="flex items-center"><span className="w-1.5 h-1.5 bg-brand-gold rounded-full mr-3"></span>Leverage corporate assets</li>
-                                </ul>
-                                <div className="pt-0 mt-auto">
-                                    <Link href="/ifa" className="inline-block border border-brand-blue text-brand-blue font-bold text-sm px-6 py-3 rounded-sm hover:bg-brand-blue hover:text-white transition w-full text-center group-hover:shadow-md">How IFA Works</Link>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-                    </div>
-                    <div className="mt-16 text-center">
-                        <Link href="/solution" className="inline-flex items-center text-brand-blue font-bold hover:text-brand-gold transition text-lg border-b-2 border-transparent hover:border-brand-gold">
-                            View All Strategies <i className="fa-solid fa-arrow-right ml-3"></i>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-24 bg-brand-blue relative overflow-hidden text-white">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-32"></div>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-                        <div>
-                            <h2 className="text-3xl font-serif font-bold text-white mb-10">Who We Serve</h2>
-                            <div className="space-y-8">
-                                <div className="flex client-card p-4 rounded-lg">
-                                    <div className="flex-shrink-0">
-                                        <div className="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                            <i className="fa-solid fa-briefcase text-brand-gold"></i>
-                                        </div>
-                                    </div>
-                                    <div className="ml-6">
-                                        <h4 className="text-xl font-bold text-white">Business Owners</h4>
-                                        <p className="text-slate-300 mt-1">With growing retained earnings ($500K - $5M revenue).</p>
-                                    </div>
-                                </div>
-                                <div className="flex client-card p-4 rounded-lg">
-                                    <div className="flex-shrink-0">
-                                        <div className="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                            <i className="fa-solid fa-user-doctor text-brand-gold"></i>
-                                        </div>
-                                    </div>
-                                    <div className="ml-6">
-                                        <h4 className="text-xl font-bold text-white">Incorporated Professionals</h4>
-                                        <p className="text-slate-300 mt-1">Doctors, Lawyers, Dentists with $250K+ income.</p>
-                                    </div>
-                                </div>
-                                <div className="flex client-card p-4 rounded-lg">
-                                    <div className="flex-shrink-0">
-                                        <div className="client-icon w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                                            <i className="fa-solid fa-people-roof text-brand-gold"></i>
-                                        </div>
-                                    </div>
-                                    <div className="ml-6">
-                                        <h4 className="text-xl font-bold text-white">High-Net-Worth Families</h4>
-                                        <p className="text-slate-300 mt-1">Planning intergenerational wealth transfer.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-white/10 backdrop-blur-md p-10 rounded-lg border border-white/20 shadow-2xl">
-                            <h2 className="text-3xl font-serif font-bold text-white mb-6">Why Work With <br />99 Financial</h2>
-                            <p className="text-slate-200 mb-8 leading-relaxed text-lg">
-                                We specialize in insurance-based corporate tax planning. Our recommendations are built on actuarial illustrations, tax law analysis, and long-term risk modeling.
-                            </p>
-                            <ul className="space-y-4 mb-10">
-                                <li className="flex items-center text-slate-200">
-                                    <i className="fa-solid fa-check text-brand-gold mr-3"></i> Clear explanations & real numbers
-                                </li>
-                                <li className="flex items-center text-slate-200">
-                                    <i className="fa-solid fa-check text-brand-gold mr-3"></i> Step-by-step implementation structures
-                                </li>
-                            </ul>
-                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="block w-full text-center bg-brand-gold text-white font-bold py-4 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-lg">
-                                Book a Strategy Call
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PlanningApproach />
 
             <section className="py-24 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-                        <div>
-                            <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">Case Study Highlight</span>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mt-2 mb-2">Real Strategies, Real Impact</h2>
-                            <p className="text-slate-500">See how we solve complex problems for Canadian business owners.</p>
-                        </div>
-                        <Link href="/case-studies" className="hidden md:inline-flex items-center text-brand-blue font-bold hover:text-brand-gold transition mt-4 md:mt-0 text-lg border-b-2 border-transparent hover:border-brand-gold">
-                            View All Case Studies <i className="fa-solid fa-arrow-right ml-3"></i>
+                {/* Video Background (Flipped) */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover transform scale-x-[-1]"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/images/Hero-video.mp4"
+                    >
+                        <source src="/images/CTA.mp4" type="video/mp4" />
+                    </video>
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-slate-900/90 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-10 mix-blend-overlay"></div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <ScrollAnimation className="fade-in-up">
+                            <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">Our Solutions</span>
+                            <h2 className="mt-3 text-3xl md:text-5xl font-serif font-bold text-white mb-6">Our Solutions</h2>
+                            <p className="text-slate-300 text-lg leading-relaxed">
+                                Designed to address situations where corporate assets, taxation, liquidity planning, and long-term outcomes intersect.
+                            </p>
+                        </ScrollAnimation>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Corporate-Owned Insurance Planning */}
+                        <ScrollAnimation className="fade-in-up group h-full">
+                            <Link href="/corporate-par" className="block h-full bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-brand-gold/50 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(234,141,34,0.1)] relative overflow-hidden flex flex-col">
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500 border border-white/10">
+                                        <i className="fa-solid fa-building-columns text-2xl text-brand-gold group-hover:text-white transition-colors duration-500"></i>
+                                    </div>
+                                    <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">Corporate-Owned Insurance Planning</h3>
+                                    <p className="text-slate-300 mb-6 leading-relaxed flex-grow text-sm">
+                                        A long-term planning tool used within corporate structures to support tax efficiency, balance-sheet planning, and future estate outcomes.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-gold font-bold text-sm group-hover:text-white transition-colors duration-300 z-10">
+                                    Explore Strategy <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                                {/* Glow Effect */}
+                                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
+                            </Link>
+                        </ScrollAnimation>
+
+                        {/* CDA Planning */}
+                        <ScrollAnimation className="fade-in-up group h-full" delay={100}>
+                            <Link href="/cda" className="block h-full bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-brand-gold/50 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(234,141,34,0.1)] relative overflow-hidden flex flex-col">
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500 border border-white/10">
+                                        <i className="fa-solid fa-coins text-2xl text-brand-gold group-hover:text-white transition-colors duration-500"></i>
+                                    </div>
+                                    <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">Capital Dividend Account (CDA) Planning</h3>
+                                    <p className="text-slate-300 mb-6 leading-relaxed flex-grow text-sm">
+                                        A tax mechanism that enables the tax-free transfer of corporate wealth when planning is structured intentionally and over time.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-gold font-bold text-sm group-hover:text-white transition-colors duration-300 z-10">
+                                    Learn About CDA <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                                {/* Glow Effect */}
+                                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
+                            </Link>
+                        </ScrollAnimation>
+
+                        {/* IFA */}
+                        <ScrollAnimation className="fade-in-up group h-full" delay={200}>
+                            <Link href="/ifa" className="block h-full bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-brand-gold/50 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(234,141,34,0.1)] relative overflow-hidden flex flex-col">
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500 border border-white/10">
+                                        <i className="fa-solid fa-arrows-rotate text-2xl text-brand-gold group-hover:text-white transition-colors duration-500"></i>
+                                    </div>
+                                    <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">Immediate Financing Arrangements (IFA)</h3>
+                                    <p className="text-slate-300 mb-6 leading-relaxed flex-grow text-sm">
+                                        An advanced planning strategy that may provide access to liquidity without dismantling long-term corporate planning structures.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-gold font-bold text-sm group-hover:text-white transition-colors duration-300 z-10">
+                                    How IFA Works <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                                {/* Glow Effect */}
+                                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500"></div>
+                            </Link>
+                        </ScrollAnimation>
+
+                    </div>
+                    <div className="mt-16 text-center">
+                        <Link href="/solution" className="inline-flex items-center text-brand-gold border border-brand-gold font-bold py-4 px-10 rounded-sm hover:bg-brand-gold hover:text-white transition shadow-lg hover:shadow-brand-gold/20 transform hover:-translate-y-1 backdrop-blur-sm">
+                            View All Solutions
                         </Link>
                     </div>
+                </div>
+            </section>
 
-                    <div className="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden flex flex-col lg:flex-row">
-                        <div className="p-10 lg:p-14 lg:w-3/5">
-                            <div className="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-bold uppercase rounded-sm mb-4 border border-blue-100">Construction Company</div>
-                            <h3 className="text-2xl font-serif font-bold text-brand-blue mb-6">Owner with $500k Annual Profit</h3>
-                            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-                                A construction company owner was facing rising retained earnings and high personal tax. By redirecting a portion of annual profits into a corporate-owned participating life policy—paired with an optional IFA—the owner created a stable, tax-efficient asset.
+            <section className="py-24 bg-slate-50 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <ScrollAnimation className="fade-in-up">
+                            <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">Case Snapshots</span>
+                            <h2 className="mt-3 text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Real-World Application</h2>
+                            <p className="text-slate-600 text-lg leading-relaxed">
+                                Every situation is different. The following examples illustrate how thoughtful planning can be applied in practice.
                             </p>
-                            <div className="flex flex-wrap gap-8 md:gap-16 pt-8 border-t border-slate-100">
-                                <ScrollAnimation className="stat-item">
-                                    <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Proj. Death Benefit</p>
-                                    <p className="text-2xl font-bold text-brand-blue highlight-number">~ $9.22M</p>
-                                </ScrollAnimation>
-                                <ScrollAnimation className="stat-item" delay={200}>
-                                    <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Tax-Free to Family</p>
-                                    <p className="text-2xl font-bold text-brand-gold highlight-number">~ $8.98M</p>
-                                </ScrollAnimation>
-                            </div>
-                        </div>
-                        <div className="lg:w-2/5 bg-slate-200 relative min-h-[300px] case-study-image">
-                            <Image
-                                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Construction Site"
-                                fill
-                                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition duration-700"
-                            />
-                            <div className="absolute inset-0 bg-brand-blue/20 mix-blend-multiply"></div>
-                        </div>
+                        </ScrollAnimation>
                     </div>
 
-                    <div className="mt-8 text-center md:hidden">
-                        <Link href="/case-studies" className="text-brand-gold font-bold text-lg">Read Full Case Study &rarr;</Link>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Case 1 */}
+                        <ScrollAnimation className="fade-in-up h-full">
+                            <Link href="/case-studies/construction-company-owner" className="group block h-full bg-white rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 p-8 relative overflow-hidden flex flex-col">
+                                <div className="absolute top-0 right-0 p-6 opacity-5 text-8xl font-serif font-bold text-slate-400 group-hover:text-brand-gold transition-colors duration-500 select-none">01</div>
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-24 h-24 relative mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <Image
+                                            src="/images/illustrations/construction_icon.png"
+                                            alt="Construction Safety"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xl font-serif font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors duration-300">Corporate Restructuring</h4>
+                                    <p className="text-slate-600 leading-relaxed text-sm">
+                                        Retained corporate earnings restructured to support future income needs while preserving long-term estate flexibility.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-blue font-bold text-sm group-hover:text-brand-gold transition-colors duration-300 z-10 pt-4">
+                                    View Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                            </Link>
+                        </ScrollAnimation>
+
+                        {/* Case 2 */}
+                        <ScrollAnimation className="fade-in-up h-full" delay={100}>
+                            <Link href="/case-studies/ifa-case-study" className="group block h-full bg-white rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 p-8 relative overflow-hidden flex flex-col">
+                                <div className="absolute top-0 right-0 p-6 opacity-5 text-8xl font-serif font-bold text-slate-400 group-hover:text-brand-gold transition-colors duration-500 select-none">02</div>
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-24 h-24 relative mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <Image
+                                            src="/images/illustrations/liquidity_icon.png"
+                                            alt="Liquidity Strategy"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xl font-serif font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors duration-300">Liquidity & Growth</h4>
+                                    <p className="text-slate-600 leading-relaxed text-sm">
+                                        Liquidity needs addressed without breaking long-term corporate planning or triggering unnecessary tax exposure.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-blue font-bold text-sm group-hover:text-brand-gold transition-colors duration-300 z-10 pt-4">
+                                    View Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                            </Link>
+                        </ScrollAnimation>
+
+                        {/* Case 3 */}
+                        <ScrollAnimation className="fade-in-up h-full" delay={200}>
+                            <Link href="/case-studies/medical-professional" className="group block h-full bg-white rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 p-8 relative overflow-hidden flex flex-col">
+                                <div className="absolute top-0 right-0 p-6 opacity-5 text-8xl font-serif font-bold text-slate-400 group-hover:text-brand-gold transition-colors duration-500 select-none">03</div>
+                                <div className="mb-6 relative z-10">
+                                    <div className="w-24 h-24 relative mb-6 group-hover:scale-110 transition-transform duration-500">
+                                        <Image
+                                            src="/images/illustrations/medical_icon.png"
+                                            alt="Medical Professional"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xl font-serif font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors duration-300">Professional Planning</h4>
+                                    <p className="text-slate-600 leading-relaxed text-sm">
+                                        A high-income professional planning early to align growing corporate wealth with future family outcomes.
+                                    </p>
+                                </div>
+                                <div className="mt-auto flex items-center text-brand-blue font-bold text-sm group-hover:text-brand-gold transition-colors duration-300 z-10 pt-4">
+                                    View Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
+                            </Link>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </section>
 
-            <section className="py-24 bg-brand-dark text-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#ea8d22 1px, transparent 1px)`, backgroundSize: `40px 40px` }}></div>
+            <section className="py-32 relative overflow-hidden text-center">
+                {/* Video Background */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/images/Hero-video.mp4"
+                    >
+                        <source src="/images/CTA.mp4" type="video/mp4" />
+                    </video>
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-brand-blue/90 mix-blend-multiply"></div>
+                </div>
 
-                <div className="relative z-10 max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
-                        Ready to turn trapped retained earnings into tax-free family wealth?
-                    </h2>
-                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold text-xl py-5 px-12 rounded-sm shadow-xl hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 duration-200">
-                        Book a Consultation
-                    </a>
-                    <p className="mt-6 text-slate-400 text-sm">Complimentary 30-minute discovery call. No obligation.</p>
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <ScrollAnimation className="fade-in-up">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
+                            Start With a Conversation
+                        </h2>
+                        <p className="text-xl md:text-2xl text-slate-200 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
+                            For business owners thinking about long-term corporate planning, a brief conversation can often help clarify whether these strategies are relevant — and when they should be considered.
+                        </p>
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-flex items-center justify-center bg-brand-gold text-white font-bold text-lg px-10 py-5 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
+                            Book a Private Consultation
+                            <i className="fa-solid fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </ScrollAnimation>
                 </div>
             </section>
+
+
         </>
     );
 }

@@ -133,18 +133,18 @@ const footerContent = `
 // ==========================================================================
 // 3. Injection & interaction logic
 // ==========================================================================
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     // A. Inject Header
     const headerEl = document.getElementById('app-header');
-    if(headerEl) {
+    if (headerEl) {
         headerEl.innerHTML = headerContent;
         headerEl.className = "fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 border-b border-gray-100";
     }
 
     // B. Inject Footer
     const footerEl = document.getElementById('app-footer');
-    if(footerEl) {
+    if (footerEl) {
         footerEl.innerHTML = footerContent;
         footerEl.className = "bg-brand-dark text-slate-400 pt-16 pb-8 border-t border-slate-800 text-sm font-light mt-auto";
     }
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        if(btn && menu) {
+        if (btn && menu) {
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
@@ -162,19 +162,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // D. Auto-highlight current page
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
-    
+
     // 1. Highlight nav links
     const links = document.querySelectorAll('nav a, #mobile-menu a');
     links.forEach(link => {
-        if(link.getAttribute('href') === currentPath) {
+        if (link.getAttribute('href') === currentPath) {
             link.classList.remove('text-slate-600', 'text-slate-700');
             link.classList.add('text-brand-gold', 'font-bold');
-            
+
             // If inside dropdown, also highlight parent button
             const parentGroup = link.closest('.group');
-            if(parentGroup) {
+            if (parentGroup) {
                 const parentBtn = parentGroup.querySelector('button');
-                if(parentBtn) {
+                if (parentBtn) {
                     parentBtn.classList.add('text-brand-gold', 'font-bold');
                     parentBtn.classList.remove('text-slate-600');
                 }
@@ -183,16 +183,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // 2. Manually highlight dropdown parent buttons
-    const solutionsPages = ['solutions.html', 'corporate-par.html', 'cda.html', 'ifa.html', 'estate-planning.html'];
+    const solutionsPages = ['solutions.html', 'corporate-par.html', 'cda.html', 'ifa.html', 'estate-planning.html', 'client-journey.html'];
     const resourcesPages = ['case-studies.html', 'events.html', 'resources.html', 'faq.html'];
 
-    if(solutionsPages.includes(currentPath)) {
+    if (solutionsPages.includes(currentPath)) {
         const btn = document.querySelector('button[data-group="solutions"]');
-        if(btn) { btn.classList.add('text-brand-gold', 'font-bold'); btn.classList.remove('text-slate-600'); }
+        if (btn) { btn.classList.add('text-brand-gold', 'font-bold'); btn.classList.remove('text-slate-600'); }
     }
-    if(resourcesPages.includes(currentPath)) {
+    if (resourcesPages.includes(currentPath)) {
         const btn = document.querySelector('button[data-group="resources"]');
-        if(btn) { btn.classList.add('text-brand-gold', 'font-bold'); btn.classList.remove('text-slate-600'); }
+        if (btn) { btn.classList.add('text-brand-gold', 'font-bold'); btn.classList.remove('text-slate-600'); }
     }
 
     // E. Scroll shadow
@@ -217,12 +217,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const closeAllDropdowns = () => {
         dropdownConfigs.forEach(({ menu }) => {
-            if(menu) menu.classList.add('hidden');
+            if (menu) menu.classList.add('hidden');
         });
     };
 
     dropdownConfigs.forEach(({ button, menu }) => {
-        if(!button || !menu) return;
+        if (!button || !menu) return;
 
         const openMenu = () => {
             closeAllDropdowns();
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
             openMenu();
         });
         button.addEventListener('keydown', (e) => {
-            if(e.key === 'Enter' || e.key === ' ') {
+            if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 openMenu();
             }
@@ -250,9 +250,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Close only when clicking outside
     document.addEventListener('click', (e) => {
         const isInsideDropdown = dropdownConfigs.some(({ button, menu }) => {
-            if(!button || !menu) return false;
+            if (!button || !menu) return false;
             return button.contains(e.target) || menu.contains(e.target);
         });
-        if(!isInsideDropdown) closeAllDropdowns();
+        if (!isInsideDropdown) closeAllDropdowns();
     });
 });

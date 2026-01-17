@@ -121,13 +121,99 @@ function SolutionsPage() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "py-24 bg-slate-50 relative overflow-hidden",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollAnimation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                        className: "fade-in-up",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "max-w-4xl mx-auto text-center",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6",
+                                    children: "Client Journey"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/solution/page.tsx",
+                                    lineNumber: 30,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xl text-brand-gold font-medium mb-8",
+                                    children: "A disciplined planning process, designed for complexity"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/solution/page.tsx",
+                                    lineNumber: 31,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "text-slate-600 space-y-6 text-lg leading-relaxed mb-10",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            children: "Every engagement follows a structured process — from understanding corporate context to evaluating strategic fit, implementation, and ongoing review."
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/solution/page.tsx",
+                                            lineNumber: 34,
+                                            columnNumber: 33
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            children: "This ensures decisions are made deliberately, with clarity around trade-offs, timing, and long-term consequences."
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/solution/page.tsx",
+                                            lineNumber: 37,
+                                            columnNumber: 33
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "font-semibold text-brand-blue",
+                                            children: "Best suited for business owners who value process, coordination, and strategic clarity."
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/solution/page.tsx",
+                                            lineNumber: 40,
+                                            columnNumber: 33
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/solution/page.tsx",
+                                    lineNumber: 33,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/client-journey",
+                                    className: "inline-block px-8 py-4 bg-brand-blue text-white font-bold rounded-sm hover:bg-brand-gold transition-colors duration-300 uppercase tracking-widest text-sm shadow-lg hover:shadow-xl",
+                                    children: "Understand our client journey"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/solution/page.tsx",
+                                    lineNumber: 45,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/solution/page.tsx",
+                            lineNumber: 29,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/app/solution/page.tsx",
+                        lineNumber: 28,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/app/solution/page.tsx",
+                    lineNumber: 27,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/solution/page.tsx",
+                lineNumber: 26,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "py-24 relative overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "logo-pattern-bg"
                     }, void 0, false, {
                         fileName: "[project]/app/solution/page.tsx",
-                        lineNumber: 26,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -148,20 +234,20 @@ function SolutionsPage() {
                                                     className: "object-cover transition duration-700 group-hover:scale-110"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 32,
+                                                    lineNumber: 61,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 38,
+                                                    lineNumber: 67,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 31,
+                                            lineNumber: 60,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -172,7 +258,7 @@ function SolutionsPage() {
                                                     children: "Corporate Par"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 41,
+                                                    lineNumber: 70,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -180,7 +266,7 @@ function SolutionsPage() {
                                                     children: "A stable, tax-efficient asset for Canadian business owners. Combines insurance protection with steady, tax-advantaged asset growth inside the corporation."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 42,
+                                                    lineNumber: 71,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -193,14 +279,14 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 46,
+                                                                    lineNumber: 75,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Tax-deferred growth"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 46,
+                                                            lineNumber: 75,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -210,20 +296,20 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 47,
+                                                                    lineNumber: 76,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Liquidity access"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 47,
+                                                            lineNumber: 76,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 74,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -232,26 +318,26 @@ function SolutionsPage() {
                                                     children: "Learn More"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 49,
+                                                    lineNumber: 78,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 40,
+                                            lineNumber: 69,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "h-1 bg-brand-gold w-0 group-hover:w-full transition-all duration-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 53,
+                                            lineNumber: 82,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/solution/page.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 59,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollAnimation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -268,20 +354,20 @@ function SolutionsPage() {
                                                     className: "object-cover transition duration-700 group-hover:scale-110"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 88,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 bg-brand-gold/20 group-hover:bg-transparent transition duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 65,
+                                                    lineNumber: 94,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 87,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -292,7 +378,7 @@ function SolutionsPage() {
                                                     children: "CDA Planning"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 68,
+                                                    lineNumber: 97,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -300,7 +386,7 @@ function SolutionsPage() {
                                                     children: "Tax-free corporate wealth extraction. The Capital Dividend Account (CDA) allows business owners to extract corporate wealth completely tax-free."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 98,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -313,14 +399,14 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 73,
+                                                                    lineNumber: 102,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Tax-free withdrawals"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 73,
+                                                            lineNumber: 102,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -330,20 +416,20 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 74,
+                                                                    lineNumber: 103,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Estate optimization"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 74,
+                                                            lineNumber: 103,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 72,
+                                                    lineNumber: 101,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -352,26 +438,26 @@ function SolutionsPage() {
                                                     children: "Learn More"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 105,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 67,
+                                            lineNumber: 96,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "h-1 bg-brand-gold w-0 group-hover:w-full transition-all duration-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 109,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/solution/page.tsx",
-                                    lineNumber: 57,
+                                    lineNumber: 86,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ScrollAnimation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -388,20 +474,20 @@ function SolutionsPage() {
                                                     className: "object-cover transition duration-700 group-hover:scale-110"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 115,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 bg-brand-blue/20 group-hover:bg-transparent transition duration-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 92,
+                                                    lineNumber: 121,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 114,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -412,7 +498,7 @@ function SolutionsPage() {
                                                     children: "IFA Strategy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 95,
+                                                    lineNumber: 124,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -420,7 +506,7 @@ function SolutionsPage() {
                                                     children: "Immediate Financing Arrangement. A liquidity strategy designed for those who value both cash flow and the compounding advantages of permanent insurance."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 125,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -433,14 +519,14 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 100,
+                                                                    lineNumber: 129,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Keep corporate funds"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 100,
+                                                            lineNumber: 129,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -450,20 +536,20 @@ function SolutionsPage() {
                                                                     className: "fa-solid fa-check text-brand-gold mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/solution/page.tsx",
-                                                                    lineNumber: 101,
+                                                                    lineNumber: 130,
                                                                     columnNumber: 71
                                                                 }, this),
                                                                 "Interest deduction"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/solution/page.tsx",
-                                                            lineNumber: 101,
+                                                            lineNumber: 130,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 128,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -472,43 +558,43 @@ function SolutionsPage() {
                                                     children: "Learn More"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/solution/page.tsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 132,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 123,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "h-1 bg-brand-gold w-0 group-hover:w-full transition-all duration-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/solution/page.tsx",
-                                            lineNumber: 107,
+                                            lineNumber: 136,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/solution/page.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 113,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/solution/page.tsx",
-                            lineNumber: 28,
+                            lineNumber: 57,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/solution/page.tsx",
-                        lineNumber: 27,
+                        lineNumber: 56,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/solution/page.tsx",
-                lineNumber: 25,
+                lineNumber: 53,
                 columnNumber: 13
             }, this)
         ]

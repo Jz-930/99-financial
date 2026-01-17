@@ -36,8 +36,8 @@ export default function Header() {
         setActiveDropdown(null);
     }, [pathname]);
 
-    const solutionsPages = ['/solution', '/corporate-par', '/cda', '/ifa', '/estate-planning'];
-    const resourcesPages = ['/resources', '/case-studies', '/events', '/faq'];
+    const solutionsPages = ['/solution', '/client-journey', '/corporate-par', '/cda', '/ifa'];
+    const resourcesPages = ['/foundational-articles', '/planning-concepts', '/guides', '/events', '/upcoming-sessions', '/past-sessions', '/session-usage'];
 
     const toggleDropdown = (group: string) => {
         setActiveDropdown(activeDropdown === group ? null : group);
@@ -68,31 +68,32 @@ export default function Header() {
                             <Link href="/" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
                                 Home
                             </Link>
-                            <Link href="/about" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/about' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
-                                About
-                            </Link>
 
                             <div
                                 className="relative group h-full flex items-center"
                                 onMouseEnter={() => setActiveDropdown('solutions')}
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
-                                <button
+                                <Link
+                                    href="/solution"
                                     className={`nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(solutionsPages) || activeDropdown === 'solutions' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}
-                                    onClick={(e) => { e.stopPropagation(); toggleDropdown('solutions'); }}
                                 >
                                     Solutions <i className="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
-                                </button>
-                                <div className={`absolute top-full left-0 pt-2 w-64 ${activeDropdown === 'solutions' ? 'block' : 'hidden'}`}>
+                                </Link>
+                                <div className={`absolute top-full left-0 pt-2 w-72 ${activeDropdown === 'solutions' ? 'block' : 'hidden'}`}>
                                     <div className="bg-white border-t-4 border-brand-gold shadow-xl rounded-b-md pt-2 animate-fadeIn">
-                                        <Link href="/solution" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold border-b border-slate-50 font-bold">Overview</Link>
-                                        <Link href="/corporate-par" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Corporate Par</Link>
-                                        <Link href="/cda" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">CDA Planning</Link>
-                                        <Link href="/ifa" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">IFA Strategy</Link>
-                                        <Link href="/estate-planning" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Estate Planning</Link>
+
+                                        <Link href="/client-journey" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Client Journey</Link>
+                                        <Link href="/corporate-par" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Corporate-Owned Life Insurance</Link>
+                                        <Link href="/cda" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">CDA</Link>
+                                        <Link href="/ifa" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">IFA</Link>
                                     </div>
                                 </div>
                             </div>
+
+                            <Link href="/case-studies" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/case-studies' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
+                                Case Studies
+                            </Link>
 
                             <div
                                 className="relative group h-full flex items-center"
@@ -105,19 +106,28 @@ export default function Header() {
                                 >
                                     Resources <i className="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
                                 </button>
-                                <div className={`absolute top-full left-0 pt-2 w-56 ${activeDropdown === 'resources' ? 'block' : 'hidden'}`}>
+                                <div className={`absolute top-full left-0 pt-2 w-64 ${activeDropdown === 'resources' ? 'block' : 'hidden'}`}>
                                     <div className="bg-white border-t-4 border-brand-gold shadow-xl rounded-b-md pt-2 animate-fadeIn">
-                                        <Link href="/resources" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold border-b border-slate-50 font-bold">Download</Link>
-                                        <Link href="/case-studies" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Case Studies</Link>
-                                        <Link href="/events" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Events</Link>
-                                        <Link href="/faq" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">FAQ</Link>
+                                        <Link href="/foundational-articles" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Foundational Articles</Link>
+                                        <Link href="/planning-concepts" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
+                                        <Link href="/guides" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
+
+                                        <div className="px-5 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider bg-slate-50/50 mt-1">Events</div>
+                                        <Link href="/upcoming-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Upcoming Sessions</Link>
+                                        <Link href="/past-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Past Sessions</Link>
+                                        <Link href="/session-usage" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">How These Sessions Are Used</Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <Link href="/contact" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/contact' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
-                                Contact
+                            <Link href="/faq" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/faq' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
+                                FAQ
                             </Link>
+
+                            <Link href="/about" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/about' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
+                                About
+                            </Link>
+
                         </nav>
 
                         <div className="hidden lg:flex items-center">
@@ -150,25 +160,33 @@ export default function Header() {
                         </div>
                         <div className="space-y-6">
                             <Link href="/" className="block text-lg font-bold text-slate-800 hover:text-brand-gold">Home</Link>
-                            <Link href="/about" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">About</Link>
 
                             <div className="space-y-3">
                                 <p className="text-xs text-gray-400 uppercase font-bold">Solutions</p>
-                                <Link href="/corporate-par" className="block pl-4 text-slate-600 hover:text-brand-gold">Corporate Par</Link>
-                                <Link href="/cda" className="block pl-4 text-slate-600 hover:text-brand-gold">CDA Planning</Link>
-                                <Link href="/ifa" className="block pl-4 text-slate-600 hover:text-brand-gold">IFA Strategy</Link>
-                                <Link href="/estate-planning" className="block pl-4 text-slate-600 hover:text-brand-gold">Estate Planning</Link>
+                                <Link href="/client-journey" className="block pl-4 text-slate-600 hover:text-brand-gold">Client Journey</Link>
+                                <Link href="/corporate-par" className="block pl-4 text-slate-600 hover:text-brand-gold">Corporate-Owned Life Insurance</Link>
+                                <Link href="/cda" className="block pl-4 text-slate-600 hover:text-brand-gold">CDA</Link>
+                                <Link href="/ifa" className="block pl-4 text-slate-600 hover:text-brand-gold">IFA</Link>
                             </div>
+
+                            <Link href="/case-studies" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">Case Studies</Link>
 
                             <div className="space-y-3">
                                 <p className="text-xs text-gray-400 uppercase font-bold">Resources</p>
-                                <Link href="/resources" className="block pl-4 text-slate-600 hover:text-brand-gold font-bold">Download</Link>
-                                <Link href="/case-studies" className="block pl-4 text-slate-600 hover:text-brand-gold">Case Studies</Link>
-                                <Link href="/events" className="block pl-4 text-slate-600 hover:text-brand-gold">Events</Link>
-                                <Link href="/faq" className="block pl-4 text-slate-600 hover:text-brand-gold">FAQ</Link>
+                                <Link href="/foundational-articles" className="block pl-4 text-slate-600 hover:text-brand-gold">Foundational Articles</Link>
+                                <Link href="/planning-concepts" className="block pl-4 text-slate-600 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
+                                <Link href="/guides" className="block pl-4 text-slate-600 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
+                                <div className="pl-4 pt-2">
+                                    <p className="text-xs text-gray-400 uppercase font-bold mb-2">Events</p>
+                                    <Link href="/upcoming-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Upcoming Sessions</Link>
+                                    <Link href="/past-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Past Sessions</Link>
+                                    <Link href="/session-usage" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">How These Sessions Are Used</Link>
+                                </div>
                             </div>
 
-                            <Link href="/contact" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">Contact</Link>
+                            <Link href="/faq" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">FAQ</Link>
+
+                            <Link href="/about" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">About</Link>
 
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="block w-full text-center bg-brand-gold text-white py-3 rounded-sm font-bold shadow-md">
                                 Book a Consultation
