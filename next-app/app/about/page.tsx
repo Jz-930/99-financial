@@ -7,7 +7,8 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 export default function AboutPage() {
     return (
         <main className="bg-white">
-            <section className="hero-gradient relative h-[60vh] min-h-[500px] flex items-center text-white overflow-hidden">
+            {/* Hero Section */}
+            <section className="hero-gradient relative h-[45vh] min-h-[400px] flex items-center text-white overflow-hidden">
                 <div className="absolute inset-0 bg-brand-dark/30 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <ScrollAnimation className="fade-in-up">
@@ -23,104 +24,188 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="py-24 relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <ScrollAnimation className="fade-in-left">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-8">
-                                Transforming Retained Earnings into <span className="text-brand-gold">Long-Term Wealth</span>
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                99 Financial Inc. is a Toronto-based advisory firm dedicated to one field: corporate tax-efficient wealth strategies.
-                            </p>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                We focus on advanced corporate planning solutions that transform retained earnings into long-term, tax-free capital—helping business owners protect their wealth, reduce tax, and build a multi-generational legacy.
-                            </p>
+            {/* Our Practice */}
+            <section className="py-24 relative bg-white">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <ScrollAnimation className="fade-in-up">
+                        <span className="text-brand-gold font-bold uppercase tracking-widest text-sm mb-3 block">Our Practice</span>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-8">
+                            Independent. Advisory. Strategy-Led.
+                        </h2>
+                        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                            99 Financial works with Canadian business owners and incorporated professionals on long-term, tax-efficient wealth planning.
+                        </p>
+                        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                            Our work focuses on situations where corporate assets, tax considerations, liquidity planning, and long-term outcomes intersect. We provide strategy-led advice, often involving corporate-owned insurance structures, and work alongside clients’ existing accounting and legal advisors.
+                        </p>
+                        <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                            We do not provide product-driven recommendations. Our role is to help clients make informed decisions within a broader, integrated planning framework.
+                        </p>
+                    </ScrollAnimation>
+                </div>
+            </section>
 
-                            <div className="bg-brand-light p-8 rounded-lg border-l-4 border-brand-gold shadow-md">
-                                <h3 className="text-xl font-bold text-brand-blue mb-4">Our Mission</h3>
-                                <p className="text-slate-700 italic">
-                                    To help Canadian business owners and high-income professionals build tax-free wealth inside their corporations, preserve capital, and create long-term financial security for their families.
-                                </p>
+            {/* Our Approach */}
+            <section className="py-24 bg-slate-50 relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                        <ScrollAnimation className="fade-in-left order-2 md:order-1">
+                            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                                {/* Using a relevant abstract or process image here would be good, for now reusing a styled placeholder or graph if available. 
+                                    Using structure_illustration.png as it fits 'planning/structure' theme well */}
+                                <div className="absolute inset-0 bg-brand-blue/5 flex items-center justify-center">
+                                    <Image
+                                        src="/images/structure_illustration.png"
+                                        alt="Strategic Planning Approach"
+                                        width={500}
+                                        height={400}
+                                        className="object-contain p-8"
+                                    />
+                                </div>
                             </div>
                         </ScrollAnimation>
 
-                        <ScrollAnimation className="fade-in-right relative">
-                            <div className="absolute -inset-4 bg-brand-gold/10 rounded-xl transform rotate-3"></div>
-                            <div className="bg-white p-10 rounded-xl shadow-2xl border border-slate-100 relative z-10 expertise-card">
-                                <h3 className="text-2xl font-serif font-bold text-brand-blue mb-8 border-b border-slate-100 pb-4">Our Core Expertise</h3>
-                                <ul className="space-y-4">
-                                    {[
-                                        "Corporate-Owned Participating Life Insurance",
-                                        "CDA (Capital Dividend Account) Planning",
-                                        "Immediate Financing Arrangements (IFA)",
-                                        "Retained Earnings Optimization",
-                                        "Estate Freeze & Family Business Succession",
-                                        "Tax-Free Retirement Income Strategies for CCPCs"
-                                    ].map((item, index) => (
-                                        <li key={index} className="flex items-start">
-                                            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue/10 flex items-center justify-center mt-1 mr-4 text-brand-gold text-xs">
-                                                <i className="fa-solid fa-check"></i>
-                                            </div>
-                                            <span className="text-slate-700 font-medium text-lg">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        <ScrollAnimation className="fade-in-right order-1 md:order-2">
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-6">Our Approach</h2>
+                            <div className="w-16 h-1 bg-brand-gold mb-8"></div>
+                            <p className="text-lg text-slate-600 mb-6 leading-relaxed font-bold text-brand-dark">
+                                Our approach is strategy-led and planning-focused.
+                            </p>
+                            <p className="text-slate-600 mb-6 leading-relaxed">
+                                We begin by understanding each client’s corporate structure, objectives, and existing advisory relationships. From there, we evaluate how tax efficiency, liquidity, and long-term outcomes can be integrated into a coherent, sustainable planning strategy.
+                            </p>
+                            <p className="text-slate-600 leading-relaxed italic border-l-4 border-brand-gold pl-4 bg-white p-4 rounded-r shadow-sm">
+                                "Where appropriate, insurance is used as a planning tool, not as a standalone solution."
+                            </p>
                         </ScrollAnimation>
                     </div>
                 </div>
             </section>
 
-            <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
-                <div className="logo-pattern-bg opacity-10"></div>
+            {/* Our Commitment */}
+            <section className="py-24 relative overflow-hidden text-white">
+                {/* Video Background */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/images/Hero-video.mp4"
+                    >
+                        <source src="/images/CTA.mp4" type="video/mp4" />
+                    </video>
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-brand-blue/90 mix-blend-multiply"></div>
+                </div>
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <ScrollAnimation className="fade-in-up text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">What We Offer</h2>
-                        <p className="text-xl text-slate-300">A dedicated, integrated approach to corporate planning.</p>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Our Commitment</h2>
+                        <p className="text-xl text-brand-light/80 max-w-3xl mx-auto leading-relaxed">
+                            We are committed to providing clear, disciplined, and practical advice that supports long-term decision-making.
+                        </p>
                     </ScrollAnimation>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <ScrollAnimation className="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition duration-300 backdrop-blur-sm" delay={0}>
-                            <div className="text-brand-gold text-4xl mb-6"><i className="fa-solid fa-gem"></i></div>
-                            <h3 className="text-xl font-bold mb-4">Deep Specialization</h3>
-                            <p className="text-slate-300 leading-relaxed">
-                                Unlike generalist advisors, we specialize purely in corporate tax-efficient strategies. We understand the nuances of CCPCs, retained earnings, CDA, and financing structures.
-                            </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Value 1 */}
+                        <ScrollAnimation className="bg-white/10 p-8 rounded-xl border border-white/10 backdrop-blur-sm text-center hover:-translate-y-2 transition duration-300">
+                            <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl shadow-lg">
+                                <i className="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-white">Clarity</h3>
+                            <p className="text-brand-light/60 uppercase text-xs tracking-widest mb-4">Over Complexity</p>
                         </ScrollAnimation>
 
-                        <ScrollAnimation className="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition duration-300 backdrop-blur-sm" delay={100}>
-                            <div className="text-brand-gold text-4xl mb-6"><i className="fa-solid fa-handshake"></i></div>
-                            <h3 className="text-xl font-bold mb-4">Integrated Advisory</h3>
-                            <p className="text-slate-300 leading-relaxed">
-                                We work closely with your accountants, tax advisors, and lawyers to deliver a coordinated solution. Every strategy aligns with your corporate, legal, and tax requirements.
-                            </p>
+                        {/* Value 2 */}
+                        <ScrollAnimation className="bg-white/10 p-8 rounded-xl border border-white/10 backdrop-blur-sm text-center hover:-translate-y-2 transition duration-300" delay={100}>
+                            <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl shadow-lg">
+                                <i className="fa-solid fa-cubes-stacked"></i>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-white">Structure</h3>
+                            <p className="text-brand-light/60 uppercase text-xs tracking-widest mb-4">Over Tactics</p>
                         </ScrollAnimation>
 
-                        <ScrollAnimation className="bg-white/5 p-8 rounded-xl border border-white/10 hover:bg-white/10 transition duration-300 backdrop-blur-sm" delay={200}>
-                            <div className="text-brand-gold text-4xl mb-6"><i className="fa-solid fa-chart-pie"></i></div>
-                            <h3 className="text-xl font-bold mb-4">Evidence-Based Planning</h3>
-                            <p className="text-slate-300 leading-relaxed">
-                                Our recommendations are built on actuarial illustrations, tax law analysis, and long-term risk modeling. You get clear explanations, step-by-step structures, and real numbers.
-                            </p>
+                        {/* Value 3 */}
+                        <ScrollAnimation className="bg-white/10 p-8 rounded-xl border border-white/10 backdrop-blur-sm text-center hover:-translate-y-2 transition duration-300" delay={200}>
+                            <div className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl shadow-lg">
+                                <i className="fa-solid fa-timeline"></i>
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 text-white">Long-Term Outcomes</h3>
+                            <p className="text-brand-light/60 uppercase text-xs tracking-widest mb-4">Over Short-Term Optimization</p>
                         </ScrollAnimation>
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <p className="text-xl text-slate-200 font-light">
+                            We prioritize thoughtful analysis, transparent communication, and professional collaboration.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section className="py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-brand-light rounded-2xl p-10 md:p-16 border border-slate-200 shadow-xl text-center">
-                        <ScrollAnimation className="fade-in-up">
-                            <h2 className="text-3xl font-serif font-bold text-brand-blue mb-8">Establish a Legacy That Lasts</h2>
-                            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                                "We believe that every successful business owner deserves access to the same advanced planning strategies traditionally reserved for ultra-high-net-worth families."
-                            </p>
-                            <Link href="/contact" className="inline-block bg-brand-gold text-white font-bold text-lg py-4 px-10 rounded shadow-lg hover:bg-brand-goldHover hover:-translate-y-1 transition transform duration-300">
-                                Work With Us
-                            </Link>
-                        </ScrollAnimation>
-                    </div>
+            {/* About the Founder */}
+            <section className="py-24 bg-white relative">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <ScrollAnimation className="fade-in-up">
+                        <div className="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-200 shadow-xl flex flex-col md:flex-row gap-12 items-center">
+                            <div className="w-full md:w-1/3 flex-shrink-0">
+                                <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg border-4 border-white group">
+                                    <Image
+                                        src="/images/talking.jpeg"
+                                        alt="Tom Ren - Founder"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-blue/10 mix-blend-multiply"></div>
+                                </div>
+                            </div>
+
+                            <div className="w-full md:w-2/3">
+                                <h2 className="text-3xl font-serif font-bold text-brand-blue mb-6">About the Founder</h2>
+                                <h3 className="text-xl font-bold text-brand-gold mb-6">Tom Ren</h3>
+                                <div className="space-y-4 text-slate-600 leading-relaxed">
+                                    <p>
+                                        99 Financial Inc. was founded by Tom Ren, who has over 10 years of experience advising Canadian business owners and incorporated professionals on corporate insurance and tax-efficient wealth planning strategies.
+                                    </p>
+                                    <p>
+                                        Fluent in English and Mandarin, Tom works closely with Canadian business owners and immigrant business families, helping them navigate complex planning decisions with clarity, precision, and integrity.
+                                    </p>
+                                    <p>
+                                        His work frequently involves collaboration with accountants, lawyers, and other professional advisors to ensure strategies are well-integrated and appropriately implemented.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
+            {/* Who We Typically Work With */}
+            <section className="py-24 bg-brand-light/30 border-t border-slate-200">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <ScrollAnimation className="fade-in-up">
+                        <h2 className="text-3xl font-serif font-bold text-brand-blue mb-10">Who We Typically Work With</h2>
+                        <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 mb-10 text-left">
+                            <ul className="space-y-6">
+                                {[
+                                    "Incorporated business owners with retained earnings",
+                                    "Professionals operating through corporations",
+                                    "Clients exploring long-term tax efficiency, liquidity, or estate considerations",
+                                    "Individuals who already work with accounting and legal advisors"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-center text-lg text-slate-700">
+                                        <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <p className="text-sm text-slate-500 italic max-w-2xl mx-auto">
+                            We do not provide legal or tax advice. All strategies are discussed and implemented in coordination with the client’s professional advisors.
+                        </p>
+                    </ScrollAnimation>
                 </div>
             </section>
         </main>
