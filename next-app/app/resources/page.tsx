@@ -1,10 +1,18 @@
 
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
+import { getAllPosts } from '../../lib/api';
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+    const events = getAllPosts('events', ['title', 'category', 'summary', 'slug', 'date']);
+
+    const upcomingSessions = events.filter(e => e.category === 'upcoming');
+    const pastSessions = events.filter(e => e.category === 'past');
+    const sessionUsage = events.filter(e => e.category === 'usage');
+
     return (
         <main className="bg-white">
             {/* Hero Section */}
@@ -54,7 +62,7 @@ export default function ResourcesPage() {
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
                                         <i className="fa-solid fa-lightbulb"></i>
                                     </div>
-                                    <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 group-hover:text-brand-gold transition-colors">Strategy Explainers</h3>
+                                    <h3 className="text-2xl font-serif font-bold text-brand-blue mb-4 group-hover:text-brand-gold transition-colors">Planning Concepts & Frameworks</h3>
                                     <p className="text-slate-600 flex-grow mb-6 leading-relaxed">
                                         Breakdowns of specific strategies like Corporate Par, CDA, and IFA, explaining how they work in practice.
                                     </p>
@@ -116,35 +124,55 @@ export default function ResourcesPage() {
 
                         {/* Upcoming Sessions */}
                         <ScrollAnimation className="fade-in-up" id="upcoming-sessions">
-                            <Link href="/upcoming-sessions" className="group block h-full">
-                                <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-lg hover:border-brand-blue/30 transition-all duration-300 text-center h-full hover:-translate-y-1">
-                                    <h3 className="text-xl font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors">Upcoming Sessions</h3>
-                                    <p className="text-slate-600 text-sm mb-4">Register for live strategy reviews and educational webinars.</p>
-                                    <span className="inline-block text-brand-gold font-bold text-sm uppercase tracking-wider group-hover:underline">View Calendar</span>
+                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
+                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">Upcoming Sessions</h3>
+                                <div className="space-y-4">
+                                    {upcomingSessions.length > 0 ? upcomingSessions.map(event => (
+                                        <div key={event.slug} className="mb-4">
+                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
+                                            <p className="text-sm text-slate-500 mb-1">{new Date(event.date).toLocaleDateString()}</p>
+                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                                        </div>
+                                    )) : (
+                                        <p className="text-slate-500 text-sm italic">No upcoming sessions scheduled at this moment.</p>
+                                    )}
                                 </div>
-                            </Link>
+                            </div>
                         </ScrollAnimation>
 
                         {/* Past Sessions */}
                         <ScrollAnimation className="fade-in-up" delay={100} id="past-sessions">
-                            <Link href="/past-sessions" className="group block h-full">
-                                <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-lg hover:border-brand-blue/30 transition-all duration-300 text-center h-full hover:-translate-y-1">
-                                    <h3 className="text-xl font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors">Past Sessions</h3>
-                                    <p className="text-slate-600 text-sm mb-4">Access recordings and materials from previous events.</p>
-                                    <span className="inline-block text-brand-gold font-bold text-sm uppercase tracking-wider group-hover:underline">Browse Archive</span>
+                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
+                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">Past Sessions</h3>
+                                <div className="space-y-4">
+                                    {pastSessions.length > 0 ? pastSessions.map(event => (
+                                        <div key={event.slug} className="mb-4">
+                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
+                                            <p className="text-sm text-slate-500 mb-1">{new Date(event.date).toLocaleDateString()}</p>
+                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                                        </div>
+                                    )) : (
+                                        <p className="text-slate-500 text-sm italic">No past session archives available.</p>
+                                    )}
                                 </div>
-                            </Link>
+                            </div>
                         </ScrollAnimation>
 
                         {/* How These Sessions Are Used */}
                         <ScrollAnimation className="fade-in-up" delay={200} id="session-usage">
-                            <Link href="/session-usage" className="group block h-full">
-                                <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:shadow-lg hover:border-brand-blue/30 transition-all duration-300 text-center h-full hover:-translate-y-1">
-                                    <h3 className="text-xl font-bold text-brand-blue mb-3 group-hover:text-brand-gold transition-colors">How These Sessions Are Used</h3>
-                                    <p className="text-slate-600 text-sm mb-4">Learn how our clients use these sessions for ongoing education.</p>
-                                    <span className="inline-block text-brand-gold font-bold text-sm uppercase tracking-wider group-hover:underline">Learn More</span>
+                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
+                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">How These Sessions Are Used</h3>
+                                <div className="space-y-4">
+                                    {sessionUsage.length > 0 ? sessionUsage.map(event => (
+                                        <div key={event.slug} className="mb-4">
+                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
+                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                                        </div>
+                                    )) : (
+                                        <p className="text-slate-500 text-sm italic">Information on session usage is currently being updated.</p>
+                                    )}
                                 </div>
-                            </Link>
+                            </div>
                         </ScrollAnimation>
 
                     </div>

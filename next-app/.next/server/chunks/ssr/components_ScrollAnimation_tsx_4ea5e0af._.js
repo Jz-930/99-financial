@@ -1,3 +1,0 @@
-module.exports=[59460,a=>{"use strict";var b=a.i(87924),c=a.i(72131);function d({children:a,className:d="",delay:e=0}){let f=(0,c.useRef)(null),[g,h]=(0,c.useState)(!1);return(0,c.useEffect)(()=>{let a=new IntersectionObserver(([b])=>{b.isIntersecting&&(setTimeout(()=>h(!0),e),a.disconnect())},{threshold:.15});return f.current&&a.observe(f.current),()=>a.disconnect()},[e]),(0,b.jsx)("div",{ref:f,className:`${d} ${g?"animate":""}`,children:a})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=components_ScrollAnimation_tsx_4ea5e0af._.js.map
