@@ -35,12 +35,15 @@ export default function Home() {
                             <p>Corporate wealth is often misaligned with future estate outcomes.</p>
                             <p>Doing nothing is also a decision — just not an intentional one.</p>
                         </div>
-                        <p className="text-brand-gold font-medium text-lg mb-10 italic">
+                        <p className="text-brand-gold font-medium text-lg mb-4 italic">
                             Thoughtful planning starts long before a tax or estate issue becomes urgent.
+                        </p>
+                        <p className="text-slate-300 text-lg mb-10 font-light">
+                            We work alongside your accountant and legal counsel to build an integrated plan.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5 justify-center">
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-10 py-4 rounded-sm font-bold text-lg hover:bg-brand-goldHover transition shadow-lg text-center transform hover:-translate-y-1 duration-200">
-                                Book a Consultation
+                                Book a Private Strategy Review
                             </a>
                         </div>
                     </div>
@@ -89,7 +92,7 @@ export default function Home() {
                                 <ul className="space-y-4">
                                     <li className="flex items-start list-item-stagger animate">
                                         <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
-                                        <span className="text-slate-700 font-medium">Corporate-Owned Participating Life Insurance</span>
+                                        <span className="text-slate-700 font-medium">Corporate-Owned Life Insurance Strategy</span>
                                     </li>
                                     <li className="flex items-start list-item-stagger animate" style={{ transitionDelay: '0.1s' }}>
                                         <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
@@ -105,11 +108,7 @@ export default function Home() {
                                     </li>
                                     <li className="flex items-start list-item-stagger animate" style={{ transitionDelay: '0.4s' }}>
                                         <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
-                                        <span className="text-slate-700 font-medium">Estate Freeze & Family Business Succession</span>
-                                    </li>
-                                    <li className="flex items-start list-item-stagger animate" style={{ transitionDelay: '0.5s' }}>
-                                        <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-4"></i>
-                                        <span className="text-slate-700 font-medium">Tax-Free Retirement Income Strategies for CCPCs</span>
+                                        <span className="text-slate-700 font-medium">Family Business Succession</span>
                                     </li>
                                 </ul>
                             </div>
@@ -181,7 +180,7 @@ export default function Home() {
                                     </div>
                                     <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">Capital Dividend Account (CDA) Planning</h3>
                                     <p className="text-slate-300 mb-6 leading-relaxed flex-grow text-sm">
-                                        A tax mechanism that enables the tax-free transfer of corporate wealth when planning is structured intentionally and over time.
+                                        A tax mechanism that enables the tax-free transfer of corporate wealth when planning is structured intentionally and over time. <br /><br />Convert corporate estate taxes into tax-free capital dividends (where applicable).
                                     </p>
                                 </div>
                                 <div className="mt-auto flex items-center text-brand-gold font-bold text-sm group-hover:text-white transition-colors duration-300 z-10">
@@ -201,7 +200,7 @@ export default function Home() {
                                     </div>
                                     <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">Immediate Financing Arrangements (IFA)</h3>
                                     <p className="text-slate-300 mb-6 leading-relaxed flex-grow text-sm">
-                                        An advanced planning strategy that may provide access to liquidity without dismantling long-term corporate planning structures.
+                                        An advanced planning strategy that may provide access to liquidity without dismantling long-term corporate planning structures. <br /><br />Access liquidity while preserving long-term corporate planning structures.
                                     </p>
                                 </div>
                                 <div className="mt-auto flex items-center text-brand-gold font-bold text-sm group-hover:text-white transition-colors duration-300 z-10">
@@ -226,7 +225,7 @@ export default function Home() {
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <ScrollAnimation className="fade-in-up">
                             <span className="text-brand-gold font-bold uppercase tracking-widest text-xs">Case Snapshots</span>
-                            <h2 className="mt-3 text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Real-World Application</h2>
+                            <h2 className="mt-3 text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Typical Business Owner Scenarios</h2>
                             <p className="text-slate-600 text-lg leading-relaxed">
                                 Every situation is different. The following examples illustrate how thoughtful planning can be applied in practice.
                             </p>
@@ -328,14 +327,14 @@ export default function Home() {
 
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <ScrollAnimation className="fade-in-up">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
+                        <h2 className="text-2xl md:text-4xl font-serif font-bold text-slate-100 mb-8 leading-tight">
                             Start With a Conversation
                         </h2>
                         <p className="text-xl md:text-2xl text-slate-200 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
                             For business owners thinking about long-term corporate planning, a brief conversation can often help clarify whether these strategies are relevant — and when they should be considered.
                         </p>
                         <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-flex items-center justify-center bg-brand-gold text-white font-bold text-lg px-10 py-5 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
-                            Book a Private Consultation
+                            Book a Private Strategy Review
                             <i className="fa-solid fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform duration-300"></i>
                         </a>
                     </ScrollAnimation>

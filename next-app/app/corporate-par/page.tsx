@@ -197,7 +197,7 @@ export default function CorporateParPage() {
                             To help you turn retained earnings into a stable, tax-efficient and flexible asset for both today and the next generation.
                         </p>
                         <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold text-xl py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 shadow-lg">
-                            Book a Discovery Call
+                            Book a Private Strategy Review
                         </a>
                     </ScrollAnimation>
                 </div>

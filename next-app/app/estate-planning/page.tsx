@@ -32,8 +32,8 @@ export default function EstatePlanning() {
                             Integrating Corporate-Owned Insurance, Estate Freezes, and Capital Dividend Account (CDA) strategies to secure your legacy.
                         </p>
                         <div className="flex justify-center gap-4">
-                            <a href="#contact" className="bg-brand-gold text-white px-8 py-3 rounded shadow-lg hover:bg-brand-goldHover transition duration-300 font-medium">
-                                Start Your Plan
+                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-8 py-3 rounded shadow-lg hover:bg-brand-goldHover transition duration-300 font-medium">
+                                Book a Private Strategy Review
                             </a>
                         </div>
                     </ScrollAnimation>
@@ -203,7 +203,7 @@ export default function EstatePlanning() {
                             Don&apos;t leave your life&apos;s work to chance. Let&apos;s discuss a structured Estate & Succession Plan tailored to your business needs.
                         </p>
                         <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white text-lg font-bold px-10 py-4 rounded hover:bg-white hover:text-brand-blue transition duration-300 shadow-xl transform hover:-translate-y-1">
-                            Discuss Your Plan
+                            Book a Private Strategy Review
                         </a>
                     </ScrollAnimation>
                 </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,12 +10,12 @@ export default function CaseStudiesPage() {
                 <div className="absolute inset-0 bg-brand-dark/20 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
                     <ScrollAnimation className="fade-in-up">
-                        <span className="text-brand-gold font-bold uppercase tracking-widest text-sm mb-4 block">Proven Results</span>
+                        <span className="text-brand-gold font-bold uppercase tracking-widest text-sm mb-4 block">PLANNING STRUCTURES</span>
                         <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white text-shadow-lg">
-                            Case Studies
+                            Planning Structures in Practice
                         </h1>
                         <p className="text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-                            Real-world examples of how we help Canadian business owners and professionals build tax-efficient wealth.
+                            Illustrative case structures demonstrating how corporate and family capital can be strategically positioned for long-term tax efficiency, liquidity access, and estate outcomes.
                         </p>
                     </ScrollAnimation>
                 </div>
@@ -26,110 +25,113 @@ export default function CaseStudiesPage() {
                 <div className="logo-pattern-bg opacity-5"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
 
-                    {/* Case 1: Construction Company Owner */}
+                    {/* Case 1: Construction Design Firm Owner */}
                     <ScrollAnimation className="fade-in-up">
                         <div className="bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden hover:shadow-2xl transition duration-500 hover:border-brand-gold/50 flex flex-col lg:flex-row group">
-                            {/* Image Section */}
-                            <div className="lg:w-1/3 bg-slate-800 min-h-[300px] relative overflow-hidden">
+                            {/* Abstract Visual Section */}
+                            <div className="lg:w-1/3 bg-slate-800 min-h-[300px] relative overflow-hidden flex items-center justify-center p-8">
                                 <Image
-                                    src="/images/construction-company-owner.jpg"
-                                    alt="Construction Company Owner"
+                                    src="/images/Construction-Design-Firm.webp"
+                                    alt="Construction Design Firm Background"
                                     fill
-                                    className="object-cover transition transform group-hover:scale-105 duration-700 opacity-90 group-hover:opacity-100"
+                                    className="object-cover opacity-50"
                                 />
-                                <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply"></div>
-                                <div className="absolute top-6 left-6 z-10">
-                                    <span className="bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider shadow-md">Construction</span>
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 to-slate-800/50"></div>
+
+                                <div className="relative z-10 text-center">
+                                    <span className="block text-brand-gold font-bold text-6xl mb-2 opacity-20">01</span>
+                                    <h3 className="text-white font-serif text-2xl font-bold leading-tight">Construction<br />Design Firm</h3>
+                                    <div className="w-12 h-1 bg-brand-gold mx-auto mt-4"></div>
                                 </div>
                             </div>
 
                             {/* Content Section */}
                             <div className="p-8 lg:p-10 lg:w-2/3 flex flex-col">
                                 <h2 className="text-2xl font-serif font-bold text-brand-blue mb-8 border-b border-slate-100 pb-4">
-                                    Construction Company Owner — ~$500,000 Annual Profit
+                                    Construction Design Firm Owner
                                 </h2>
 
                                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 mb-10 flex-grow">
                                     <div>
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Profile</h3>
                                         <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                            Incorporated construction business with significant retained earnings.
+                                            Toronto construction design firm owner (Female, 46) with ~$500K annual profit and ~$2.5M retained earnings under a HoldCo + OpCo structure.
                                         </p>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Challenge</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>Corporate cash trapped inside the company</li>
-                                            <li>High personal tax on withdrawals</li>
-                                            <li>Estate tax risk on business assets</li>
+                                            <li>Corporate surplus accumulating with tax-inefficient personal extraction options</li>
+                                            <li>Estate tax exposure on accumulated corporate wealth</li>
+                                            <li>Need to maintain corporate liquidity while advancing long-term planning objectives</li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Strategy</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold mb-6">
-                                            <li>Corporate-owned participating whole life insurance</li>
-                                            <li>CDA-focused estate structure</li>
-                                            <li>Optional IFA to preserve operating liquidity</li>
+                                            <li>Corporate capital repositioning for estate efficiency</li>
+                                            <li>CDA-integrated corporate estate structure</li>
+                                            <li>Liquidity structuring flexibility within corporate planning</li>
                                         </ul>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Outcome</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>Predictable tax-free CDA credits</li>
+                                            <li>Multi-million projected CDA capacity</li>
                                             <li>Estate liquidity without forced asset sales</li>
-                                            <li>Long-term conversion of taxable retained earnings into tax-free family wealth</li>
+                                            <li>Corporate retained earnings repositioned into long-term tax-advantaged corporate estate structure</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-slate-100">
-                                    <Link href="/case-studies/construction-company-owner" className="text-brand-blue font-bold text-sm hover:text-brand-gold transition-colors duration-300 flex items-center group/link">
+                                    <Link href="/case-studies/construction-company-owner" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md flex items-center group/link">
                                         Read Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
                                     </Link>
-                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md">
-                                        Book a Conversation
-                                    </a>
                                 </div>
-                                <p className="text-[10px] text-slate-400 italic mt-4 text-center sm:text-right">
-                                    These case studies illustrate planning structures, not recommendations. <br className="hidden sm:block" />Each strategy must be reviewed based on individual circumstances and professional advice.
-                                </p>
                             </div>
                         </div>
                     </ScrollAnimation>
 
-                    {/* Case 2: IFA */}
+                    {/* Case 2: Corporate IFA Strategy */}
                     <ScrollAnimation className="fade-in-up">
                         <div className="bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden hover:shadow-2xl transition duration-500 hover:border-brand-gold/50 flex flex-col lg:flex-row-reverse group">
-                            {/* Image Section */}
-                            <div className="lg:w-1/3 bg-slate-800 min-h-[300px] relative overflow-hidden">
+                            {/* Abstract Visual Section */}
+                            <div className="lg:w-1/3 bg-slate-900 min-h-[300px] relative overflow-hidden flex items-center justify-center p-8">
                                 <Image
-                                    src="/images/ifa-case-study.jpg"
-                                    alt="IFA Case Study"
+                                    src="/images/Corporate-IFA-Strategy.webp"
+                                    alt="Corporate IFA Strategy Background"
                                     fill
-                                    className="object-cover transition transform group-hover:scale-105 duration-700 opacity-90 group-hover:opacity-100"
+                                    className="object-cover opacity-50"
                                 />
-                                <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply"></div>
-                                <div className="absolute top-6 left-6 z-10">
-                                    <span className="bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider shadow-md">Liquidity Strategy</span>
+                                <div className="absolute inset-0 bg-gradient-to-bl from-slate-900/50 to-slate-800/50"></div>
+
+                                <div className="relative z-10 text-center">
+                                    <span className="block text-brand-gold font-bold text-6xl mb-2 opacity-20">02</span>
+                                    <h3 className="text-white font-serif text-2xl font-bold leading-tight">Corporate<br />IFA Strategy</h3>
+                                    <div className="w-12 h-1 bg-brand-gold mx-auto mt-4"></div>
                                 </div>
                             </div>
 
                             {/* Content Section */}
                             <div className="p-8 lg:p-10 lg:w-2/3 flex flex-col">
                                 <h2 className="text-2xl font-serif font-bold text-brand-blue mb-8 border-b border-slate-100 pb-4">
-                                    Corporate-Owned Insurance + IFA — Age 45
+                                    Corporate IFA Strategy for a Capital-Intensive Business Owner
                                 </h2>
 
                                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 mb-10 flex-grow">
                                     <div>
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Profile</h3>
                                         <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                            Mid-career business owner prioritizing liquidity and long-term planning.
+                                            45-year-old incorporated business owner in Markham operating a specialized building materials company with approximately $2.1M in annual revenue, ~$600K after-tax corporate profit, and ~$3.8M in retained earnings.<br />
+                                            The business operates with ~$12M in fixed-asset financing tied to commercial property and operational infrastructure typical for asset-intensive enterprises.
                                         </p>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Challenge</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>Desire to build substantial estate value</li>
-                                            <li>Reluctance to permanently deploy large corporate cash flows</li>
+                                            <li>Large retained earnings accumulating beyond operating requirements</li>
+                                            <li>Dividend extraction highly tax-inefficient</li>
+                                            <li>Capital largely committed to fixed assets and commercial debt</li>
+                                            <li>Desire to improve long-term estate efficiency without reducing business liquidity</li>
                                         </ul>
                                     </div>
 
@@ -137,101 +139,96 @@ export default function CaseStudiesPage() {
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Strategy</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold mb-6">
                                             <li>Corporate-owned participating life insurance</li>
-                                            <li>Immediate Financing Arrangement (IFA) at Prime</li>
-                                            <li>Policy used as collateral to borrow back premiums</li>
+                                            <li>Immediate Financing Arrangement (IFA) with bank lending</li>
+                                            <li>Integrated insurance, lending, and tax structure</li>
                                         </ul>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Outcome</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>Corporate liquidity preserved</li>
-                                            <li>Long-term tax-deferred growth inside the corporation</li>
-                                            <li>Significant tax-free CDA credits at death</li>
+                                            <li>$21.84M projected corporate death benefit</li>
+                                            <li>$21.84M CDA credit created</li>
+                                            <li>~$15.16M net CDA after loan repayment</li>
+                                            <li>Estate liquidity achieved without disrupting operations</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-slate-100">
-                                    <Link href="/case-studies/ifa-case-study" className="text-brand-blue font-bold text-sm hover:text-brand-gold transition-colors duration-300 flex items-center group/link">
+                                    <Link href="/case-studies/ifa-case-study" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md flex items-center group/link">
                                         Read Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
                                     </Link>
-                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md">
-                                        Book a Conversation
-                                    </a>
                                 </div>
-                                <p className="text-[10px] text-slate-400 italic mt-4 text-center sm:text-right">
-                                    These case studies illustrate planning structures, not recommendations. <br className="hidden sm:block" />Each strategy must be reviewed based on individual circumstances and professional advice.
-                                </p>
                             </div>
                         </div>
                     </ScrollAnimation>
 
-                    {/* Case 3: Medical Professional */}
+                    {/* Case 3: Veterinary Practice Succession */}
                     <ScrollAnimation className="fade-in-up">
                         <div className="bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden hover:shadow-2xl transition duration-500 hover:border-brand-gold/50 flex flex-col lg:flex-row group">
-                            {/* Image Section */}
-                            <div className="lg:w-1/3 bg-slate-800 min-h-[300px] relative overflow-hidden">
+                            {/* Abstract Visual Section */}
+                            <div className="lg:w-1/3 bg-slate-800 min-h-[300px] relative overflow-hidden flex items-center justify-center p-8">
                                 <Image
-                                    src="/images/medical-professional.jpg"
-                                    alt="Medical Professional"
+                                    src="/images/Veterinary-Succession.webp"
+                                    alt="Veterinary Succession Background"
                                     fill
-                                    className="object-cover transition transform group-hover:scale-105 duration-700 opacity-90 group-hover:opacity-100"
+                                    className="object-cover opacity-50"
                                 />
-                                <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply"></div>
-                                <div className="absolute top-6 left-6 z-10">
-                                    <span className="bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider shadow-md">Medical Professional</span>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/50 to-slate-800/50"></div>
+
+                                <div className="relative z-10 text-center">
+                                    <span className="block text-brand-gold font-bold text-6xl mb-2 opacity-20">03</span>
+                                    <h3 className="text-white font-serif text-2xl font-bold leading-tight">Veterinary<br />Succession</h3>
+                                    <div className="w-12 h-1 bg-brand-gold mx-auto mt-4"></div>
                                 </div>
                             </div>
 
                             {/* Content Section */}
                             <div className="p-8 lg:p-10 lg:w-2/3 flex flex-col">
                                 <h2 className="text-2xl font-serif font-bold text-brand-blue mb-8 border-b border-slate-100 pb-4">
-                                    Medical Professional — ~$600,000 Annual Income
+                                    Veterinary Practice Succession & Estate Structuring
                                 </h2>
 
                                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 mb-10 flex-grow">
                                     <div>
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Profile</h3>
                                         <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                                            Incorporated physician earning high professional income.
+                                            Ottawa husband-and-wife veterinary clinic owners (age 50) operating for 25 years. Clinic revenue ~$3.1M, after-tax corporate profit ~$500K, $4.2M retained earnings, plus two corporate investment properties (FMV ~$2.5M). Their son is prepared to take over.
                                         </p>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Challenge</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>RRSP limits inadequate</li>
-                                            <li>Fully taxable retirement withdrawals</li>
-                                            <li>High lifetime tax exposure</li>
+                                            <li>Direct transfer of shares may trigger tax consequences</li>
+                                            <li>Future growth increases parents’ estate tax exposure</li>
+                                            <li>Retirement lifestyle requires liquidity beyond business assets</li>
+                                            <li>Wealth concentrated in business and real estate</li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Strategy</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold mb-6">
-                                            <li>Retain earnings inside the professional corporation</li>
-                                            <li>Corporate-owned participating whole life insurance</li>
-                                            <li>Retirement access via policy loans</li>
-                                            <li>CDA-based estate transfer</li>
+                                            <li>Estate Freeze with Family HoldCo structure</li>
+                                            <li>Surplus profit movement via intercorporate dividends</li>
+                                            <li>Structured corporate estate liquidity planning</li>
+                                            <li>Liquidity structuring flexibility to support retirement objectives</li>
                                         </ul>
 
                                         <h3 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Outcome</h3>
                                         <ul className="text-slate-600 text-sm space-y-1.5 list-disc pl-4 marker:text-brand-gold">
-                                            <li>Stable, tax-efficient retirement planning</li>
-                                            <li>Lower lifetime tax burden</li>
-                                            <li>Tax-free intergenerational wealth transfer</li>
+                                            <li>Parents’ current company value locked in</li>
+                                            <li>Future growth shifted to next generation</li>
+                                            <li>Retirement liquidity supported without requiring asset liquidation</li>
+                                            <li>Significant projected CDA capacity created</li>
+                                            <li>Succession, retirement planning, and estate tax strategy integrated</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-center gap-4 pt-6 border-t border-slate-100">
-                                    <Link href="/case-studies/medical-professional" className="text-brand-blue font-bold text-sm hover:text-brand-gold transition-colors duration-300 flex items-center group/link">
+                                    <Link href="/case-studies/veterinary-practice-succession" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md flex items-center group/link">
                                         Read Case Study <i className="fa-solid fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
                                     </Link>
-                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="sm:ml-auto px-6 py-2 bg-brand-gold text-white text-sm font-bold rounded-sm hover:bg-brand-blue transition-colors duration-300 shadow-md">
-                                        Book a Conversation
-                                    </a>
                                 </div>
-                                <p className="text-[10px] text-slate-400 italic mt-4 text-center sm:text-right">
-                                    These case studies illustrate planning structures, not recommendations. <br className="hidden sm:block" />Each strategy must be reviewed based on individual circumstances and professional advice.
-                                </p>
                             </div>
                         </div>
                     </ScrollAnimation>
@@ -241,8 +238,18 @@ export default function CaseStudiesPage() {
                 {/* Final CTA Section */}
                 <div className="mt-24 max-w-4xl mx-auto text-center px-4">
                     <ScrollAnimation className="fade-in-up">
-                        <div className="bg-brand-blue rounded-xl p-10 md:p-14 shadow-2xl relative overflow-hidden">
-                            <div className="absolute inset-0 opacity-10 pattern-grid-lg"></div>
+                        <div className="rounded-xl p-10 md:p-14 shadow-2xl relative overflow-hidden">
+                            <video
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="absolute inset-0 w-full h-full object-cover"
+                            >
+                                <source src="/images/CTA.mp4" type="video/mp4" />
+                            </video>
+                            <div className="absolute inset-0 bg-brand-blue/85 mix-blend-multiply"></div>
+                            <div className="absolute inset-0 bg-black/20"></div>
                             <div className="relative z-10">
                                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">
                                     Find out if these strategies align with your goals
@@ -255,7 +262,7 @@ export default function CaseStudiesPage() {
                                     target="_blank"
                                     className="inline-block bg-brand-gold text-white text-lg font-bold py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl uppercase tracking-widest"
                                 >
-                                    Schedule a Conversation
+                                    Book a Private Strategy Review
                                 </a>
                             </div>
                         </div>

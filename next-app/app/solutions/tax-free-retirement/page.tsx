@@ -118,7 +118,7 @@ export default function TaxFreeRetirement() {
                                 </div>
                                 <div className="flex items-center justify-center">
                                     <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white font-bold py-4 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-lg text-center w-full md:w-auto">
-                                        Calculate Your Potential Income
+                                        Book a Private Strategy Review
                                     </a>
                                 </div>
                             </div>

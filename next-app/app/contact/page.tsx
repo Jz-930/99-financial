@@ -3,114 +3,138 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 
 export const metadata = {
     title: 'Contact Us | 99 Financial Inc.',
-    description: 'Book a consultation or get in touch with our team.',
+    description: 'Start a Private Strategy Review. For incorporated business owners and professionals seeking clarity on corporate wealth, tax efficiency, and long-term planning.',
 };
 
 export default function Contact() {
     return (
         <>
-            <section className="relative py-24 text-white">
-                <div className="absolute inset-0 -z-10">
-                    <Image
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                        alt="Contact Banner"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                </div>
-                <div className="absolute inset-0 bg-slate-900/50 -z-10"></div>
-                <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-                    <ScrollAnimation>
-                        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Contact 99 Financial Inc.</h1>
-                        <p className="text-xl text-slate-300">Book a Free Consultation or Send Us a Message.</p>
+            {/* Hero Section */}
+            <section className="hero-gradient relative h-[45vh] min-h-[400px] flex items-center text-white overflow-hidden">
+                <div className="absolute inset-0 bg-brand-dark/30 z-0"></div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <ScrollAnimation className="fade-in-up">
+                        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 tracking-tight">Contact 99 Financial</h1>
+                        <p className="text-xl md:text-2xl text-slate-200 font-light max-w-3xl mx-auto mb-8">
+                            Start a Private Strategy Review
+                        </p>
+                        <div className="h-1 w-24 bg-brand-gold mx-auto mb-8 rounded-full"></div>
+                        <p className="text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed font-light">
+                            For incorporated business owners and professionals seeking clarity on corporate wealth, tax efficiency, and long-term planning.
+                        </p>
                     </ScrollAnimation>
                 </div>
             </section>
 
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16">
-                    <div>
-                        <ScrollAnimation>
-                            <h2 className="text-2xl font-serif font-bold text-brand-blue mb-8">Get in Touch</h2>
-                            <div className="space-y-6 text-lg text-slate-600">
-                                <p className="flex items-center"><i className="fa-solid fa-phone w-8 text-brand-gold"></i> 416 637 5302</p>
-                                <p className="flex items-start"><i className="fa-solid fa-location-dot w-8 text-brand-gold mt-1"></i> 85 Enterprise Blvd. Unit 306, Markham ON L6G 0b5</p>
-                                <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="flex items-center text-brand-blue font-bold mt-4 hover:text-brand-gold transition"><i className="fa-solid fa-calendar-check w-8 text-brand-gold"></i> Book a 30-Min Meeting</a>
-                                <p className="flex items-center"><i className="fa-solid fa-envelope w-8 text-brand-gold"></i> greatec@gmail.com</p>
-                            </div>
-                            <div className="mt-12 bg-white rounded-xl shadow-xl overflow-hidden border border-slate-100 group hover:-translate-y-1 transition duration-500">
-                                <div className="h-2 bg-brand-gold w-full"></div>
-                                <div className="p-8 text-center">
-                                    <div className="mb-6 flex justify-center">
-                                        <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue mb-2">
-                                            <i className="fa-solid fa-qrcode text-2xl"></i>
-                                        </div>
-                                    </div>
-                                    <h3 className="font-serif font-bold text-2xl text-brand-blue mb-2">Scan to Book</h3>
-                                    <p className="text-slate-500 text-sm mb-6">Use your mobile device to schedule a meeting directly.</p>
+            {/* What This Is / Who This Is For - Two Column Section */}
+            <section className="py-20 bg-brand-light relative">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+                        {/* Column 1: What This Review Is */}
+                        <ScrollAnimation className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-brand-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+                            <h2 className="text-2xl font-serif font-bold text-brand-blue mb-6">What This Review Is — and Is Not</h2>
 
-                                    <div className="relative w-48 h-48 mx-auto p-2 bg-white border border-slate-200 rounded-lg shadow-inner">
-                                        <Image
-                                            src="/images/QR_tidycal_download.png"
-                                            alt="Scan to Book TidyCal"
-                                            fill
-                                            className="object-contain p-2"
-                                        />
-                                    </div>
-                                    <div className="mt-6 text-sm text-slate-400 font-medium tracking-wide uppercase">
-                                        Secure Booking via TidyCal
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-                    </div>
-                    <ScrollAnimation className="bg-white shadow-xl rounded-lg p-8 border border-slate-100" delay={200}>
-                        <h3 className="text-xl font-bold text-brand-blue mb-6">Send a Message</h3>
-                        <form className="space-y-4">
-                            <div className="grid grid-cols-2 gap-4">
-                                <input type="text" placeholder="Name" className="w-full border p-3 rounded" />
-                                <input type="email" placeholder="Email" className="w-full border p-3 rounded" />
-                            </div>
-                            <input type="text" placeholder="Company Name" className="w-full border p-3 rounded" />
-                            <select className="w-full border p-3 rounded text-slate-500">
-                                <option>Select Topic...</option>
-                                <option>Corporate Par</option>
-                                <option>CDA Planning</option>
-                                <option>IFA</option>
-                            </select>
-                            <textarea rows={4} placeholder="Message" className="w-full border p-3 rounded"></textarea>
-                            <button className="w-full bg-brand-gold text-white font-bold py-3 rounded hover:bg-brand-blue transition">Submit</button>
-                        </form>
-
-                        <div className="mt-8 pt-8 border-t border-slate-100">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 className="font-bold text-brand-blue text-sm mb-2">
-                                        <i className="fa-solid fa-clock text-brand-gold mr-2"></i> Response Time
-                                    </h4>
-                                    <p className="text-xs text-slate-500 leading-relaxed">
-                                        We strive to respond to all inquiries within 24 hours during business days.
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-brand-blue text-sm mb-2">
-                                        <i className="fa-solid fa-shield-halved text-brand-gold mr-2"></i> Privacy Priority
-                                    </h4>
-                                    <p className="text-xs text-slate-500 leading-relaxed">
-                                        Your details are kept strictly confidential and are never shared with third parties.
-                                    </p>
-                                </div>
+                            <div className="space-y-4 text-slate-600 mb-8">
+                                <p className="font-medium text-brand-dark">This initial conversation is not a sales meeting.</p>
+                                <p>The purpose is simply to determine:</p>
+                                <ul className="space-y-3 pl-2">
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span>Whether a planning issue exists in your situation</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <i className="fa-solid fa-check text-brand-gold mt-1.5 mr-3 text-sm"></i>
+                                        <span>And whether it deserves attention at all</span>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div className="mt-6 pt-6 border-t border-slate-100">
-                                <h5 className="font-bold text-[10px] uppercase tracking-wider text-slate-400 mb-1">Disclaimer</h5>
-                                <p className="text-[10px] text-slate-400 leading-relaxed text-justify">
-                                    The information on this website is provided for general informational and educational purposes only and does not constitute financial, investment, tax, or legal advice. Any strategies discussed are subject to individual circumstances and applicable laws, and examples are illustrative only—results are not guaranteed (and dividends, if applicable, are not guaranteed). Before taking any action, please consult qualified professionals for advice specific to your situation.
+                            <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-brand-gold">
+                                <p className="text-slate-700 font-medium italic">
+                                    "A brief private strategy review can help assess relevance. No obligation. No preparation required."
                                 </p>
                             </div>
-                        </div>
+                        </ScrollAnimation>
+
+                        {/* Column 2: Who This Is For */}
+                        <ScrollAnimation delay={200} className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                            <div className="absolute top-0 left-0 w-1 h-full bg-brand-blue transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+                            <h2 className="text-2xl font-serif font-bold text-brand-blue mb-6">Who This Is For</h2>
+                            <p className="text-slate-500 mb-6 text-sm uppercase tracking-wider font-bold">This conversation is typically relevant for:</p>
+
+                            <ul className="space-y-4 mb-8">
+                                <li className="flex items-start">
+                                    <div className="bg-brand-light p-2 rounded-full mr-4 mt-0.5">
+                                        <i className="fa-solid fa-building text-brand-blue text-xs"></i>
+                                    </div>
+                                    <span className="text-slate-700">Incorporated business owners (CCPCs)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="bg-brand-light p-2 rounded-full mr-4 mt-0.5">
+                                        <i className="fa-solid fa-user-md text-brand-blue text-xs"></i>
+                                    </div>
+                                    <span className="text-slate-700">Professionals with growing corporate retained earnings</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="bg-brand-light p-2 rounded-full mr-4 mt-0.5">
+                                        <i className="fa-solid fa-door-open text-brand-blue text-xs"></i>
+                                    </div>
+                                    <span className="text-slate-700">Owners planning retirement, succession, or a future business exit</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="bg-brand-light p-2 rounded-full mr-4 mt-0.5">
+                                        <i className="fa-solid fa-users text-brand-blue text-xs"></i>
+                                    </div>
+                                    <span className="text-slate-700">Families concerned about long-term tax exposure and estate liquidity</span>
+                                </li>
+                            </ul>
+
+                            <p className="text-sm text-slate-500 border-t border-slate-100 pt-4">
+                                This planning is not appropriate for every situation and is evaluated on a case-by-case basis.
+                            </p>
+                        </ScrollAnimation>
+                    </div>
+                </div>
+            </section>
+
+            {/* Booking & Contact Info Section */}
+            <section className="py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-4">
+                    <ScrollAnimation className="text-center mb-16">
+                        <h2 className="text-3xl font-serif font-bold text-brand-blue mb-6">Book a Private Strategy Review</h2>
+                        <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                            Select a time that works for you. Meetings are typically held virtually unless otherwise arranged.
+                        </p>
+
+                        <a
+                            href="https://tidycal.com/greatec/30-minute-meeting"
+                            target="_blank"
+                            className="inline-flex items-center justify-center px-10 py-5 bg-brand-gold text-white font-bold text-lg rounded-full shadow-lg hover:bg-brand-goldHover hover:transform hover:-translate-y-1 transition-all duration-300 group"
+                        >
+                            Book a Private Conversation
+                            <i className="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </ScrollAnimation>
+
+                    <div className="border-t border-slate-200 mt-16 pt-16">
+                        <div className="grid md:grid-cols-2 gap-12 text-center md:text-left">
+                            <div className="flex flex-col items-center md:items-start">
+                                <span className="text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Get In Touch</span>
+                                <a href="tel:4166375302" className="text-2xl font-serif text-brand-blue hover:text-brand-gold transition-colors mb-2">416 637 5302</a>
+                                <a href="mailto:greatec@gmail.com" className="text-lg text-slate-600 hover:text-brand-gold transition-colors">greatec@gmail.com</a>
+                            </div>
+
+                            <div className="flex flex-col items-center md:items-start">
+                                <span className="text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Visit Us</span>
+                                <address className="not-italic text-slate-600 text-lg leading-relaxed">
+                                    85 Enterprise Blvd. Unit 306<br />
+                                    Markham ON L6G 0B5
+                                </address>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>

@@ -249,7 +249,7 @@ export default function ClientJourney() {
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <Link href="/contact" className="inline-block bg-brand-gold text-white font-semibold px-8 py-4 rounded shadow-lg hover:bg-brand-goldHover transition duration-300 transform hover:-translate-y-1">
-                            Request a Private Strategy Review
+                            Book a Private Strategy Review
                         </Link>
                     </div>
                 </div>

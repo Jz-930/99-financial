@@ -302,7 +302,7 @@ export default function CDAPage() {
 
                     <ScrollAnimation className="mt-8 fade-in-up" delay={200}>
                         <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold text-xl py-5 px-12 rounded-sm hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 shadow-xl">
-                            Book a Discovery Call
+                            Book a Private Strategy Review
                         </a>
                         <p className="mt-6 text-slate-400">See how CDA planning can work for your corporation.</p>
                     </ScrollAnimation>

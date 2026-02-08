@@ -166,7 +166,7 @@ export default async function CaseStudyDetail({ params }: PageProps) {
                             <h3 className="text-2xl font-serif font-bold mb-4">See Your Own Numbers</h3>
                             <p className="text-slate-300 mb-8">Every corporation is unique. Schedule a consultation to model these strategies with your financial data.</p>
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-lg">
-                                Book a Strategy Call
+                                Book a Private Strategy Review
                             </a>
                         </div>
                     </ScrollAnimation>

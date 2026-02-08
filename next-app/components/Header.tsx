@@ -36,7 +36,7 @@ export default function Header() {
         setActiveDropdown(null);
     }, [pathname]);
 
-    const solutionsPages = ['/solution', '/client-journey', '/corporate-par', '/cda', '/ifa'];
+    const solutionsPages = ['/solutions', '/client-journey', '/corporate-par', '/cda', '/ifa'];
     const resourcesPages = ['/foundational-articles', '/planning-concepts', '/guides', '/events', '/upcoming-sessions', '/past-sessions', '/session-usage'];
 
     const toggleDropdown = (group: string) => {
@@ -75,7 +75,7 @@ export default function Header() {
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
                                 <Link
-                                    href="/solution"
+                                    href="/solutions"
                                     className={`nav-btn flex items-center font-medium hover:text-brand-gold transition py-2 gap-1 focus:outline-none ${isGroupActive(solutionsPages) || activeDropdown === 'solutions' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}
                                 >
                                     Solutions <i className="fa-solid fa-chevron-down text-[10px] opacity-70 ml-1"></i>
@@ -120,19 +120,19 @@ export default function Header() {
                                 </div>
                             </div>
 
-                            <Link href="/faq" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/faq' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
-                                FAQ
-                            </Link>
-
                             <Link href="/about" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/about' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
                                 About
+                            </Link>
+
+                            <Link href="/contact" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/contact' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
+                                Contact
                             </Link>
 
                         </nav>
 
                         <div className="hidden lg:flex items-center">
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-6 py-2.5 rounded-sm font-semibold hover:bg-brand-goldHover transition shadow-md hover:-translate-y-0.5 duration-200">
-                                Book a Consultation
+                                Book a Private Strategy Review
                             </a>
                         </div>
 
@@ -184,12 +184,12 @@ export default function Header() {
                                 </div>
                             </div>
 
-                            <Link href="/faq" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">FAQ</Link>
-
                             <Link href="/about" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">About</Link>
 
+                            <Link href="/contact" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">Contact</Link>
+
                             <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="block w-full text-center bg-brand-gold text-white py-3 rounded-sm font-bold shadow-md">
-                                Book a Consultation
+                                Book a Private Strategy Review
                             </a>
                         </div>
                     </div>

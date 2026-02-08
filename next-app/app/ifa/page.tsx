@@ -186,7 +186,7 @@ export default function IFAPage() {
 
                     <ScrollAnimation className="fade-in-up">
                         <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold text-xl py-5 px-12 rounded-sm hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 shadow-xl">
-                            Book an IFA Strategy Call
+                            Book a Private Strategy Review
                         </a>
                     </ScrollAnimation>
                 </div>
