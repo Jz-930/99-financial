@@ -37,7 +37,7 @@ export default function Header() {
     }, [pathname]);
 
     const solutionsPages = ['/solutions', '/client-journey', '/corporate-par', '/cda', '/ifa'];
-    const resourcesPages = ['/foundational-articles', '/planning-concepts', '/guides', '/events', '/upcoming-sessions', '/past-sessions', '/session-usage'];
+    const resourcesPages = ['/resources', '/foundational-articles', '/planning-concepts', '/guides', '/events', '/faq'];
 
     const toggleDropdown = (group: string) => {
         setActiveDropdown(activeDropdown === group ? null : group);
@@ -54,7 +54,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-24">
 
-                        <div className="flex-shrink-0 flex items-center cursor-pointer group" onClick={() => window.location.href = '/'}>
+                        <Link href="/" className="flex-shrink-0 flex items-center cursor-pointer group">
                             <Image
                                 className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
                                 src="/images/logo_origin.webp"
@@ -62,7 +62,7 @@ export default function Header() {
                                 width={200}
                                 height={64}
                             />
-                        </div>
+                        </Link>
 
                         <nav className="hidden lg:flex space-x-8 items-center" ref={navRef}>
                             <Link href="/" className={`nav-link font-medium hover:text-brand-gold transition ${pathname === '/' ? 'text-brand-gold font-bold' : 'text-slate-600'}`}>
@@ -112,10 +112,7 @@ export default function Header() {
                                         <Link href="/resources#planning-concepts" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
                                         <Link href="/resources#guides" className="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
 
-                                        <div className="px-5 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider bg-slate-50/50 mt-1">Events</div>
-                                        <Link href="/resources#upcoming-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Upcoming Sessions</Link>
-                                        <Link href="/resources#past-sessions" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Past Sessions</Link>
-                                        <Link href="/resources#session-usage" className="block px-5 py-2 pl-8 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">How These Sessions Are Used</Link>
+
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +128,7 @@ export default function Header() {
                         </nav>
 
                         <div className="hidden lg:flex items-center">
-                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-6 py-2.5 rounded-sm font-semibold hover:bg-brand-goldHover transition shadow-md hover:-translate-y-0.5 duration-200">
+                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-white px-6 py-2.5 rounded-sm font-semibold hover:bg-brand-goldHover transition shadow-md hover:-translate-y-0.5 duration-200">
                                 Book a Private Strategy Review
                             </a>
                         </div>
@@ -176,22 +173,16 @@ export default function Header() {
                                 <Link href="/resources#foundational-articles" className="block pl-4 text-slate-600 hover:text-brand-gold">Foundational Articles</Link>
                                 <Link href="/resources#planning-concepts" className="block pl-4 text-slate-600 hover:text-brand-gold">Planning Concepts & Frameworks</Link>
                                 <Link href="/resources#guides" className="block pl-4 text-slate-600 hover:text-brand-gold">In-Depth Guides (PDF)</Link>
-                                <div className="pl-4 pt-2">
-                                    <p className="text-xs text-gray-400 uppercase font-bold mb-2">Events</p>
-                                    <Link href="/resources#upcoming-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Upcoming Sessions</Link>
-                                    <Link href="/resources#past-sessions" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">Past Sessions</Link>
-                                    <Link href="/resources#session-usage" className="block pl-4 text-slate-600 hover:text-brand-gold text-sm">How These Sessions Are Used</Link>
-                                </div>
                             </div>
-
-                            <Link href="/about" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">About</Link>
-
-                            <Link href="/contact" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">Contact</Link>
-
-                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="block w-full text-center bg-brand-gold text-white py-3 rounded-sm font-bold shadow-md">
-                                Book a Private Strategy Review
-                            </a>
                         </div>
+
+                        <Link href="/about" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">About</Link>
+
+                        <Link href="/contact" className="block text-lg font-medium text-slate-600 hover:text-brand-gold">Contact</Link>
+
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-brand-gold text-white py-3 rounded-sm font-bold shadow-md">
+                            Book a Private Strategy Review
+                        </a>
                     </div>
                 </div>
             )}

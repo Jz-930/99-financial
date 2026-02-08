@@ -5,6 +5,11 @@ import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import SectionContainer from '../../components/SectionContainer';
 
+export const metadata = {
+    title: 'Solutions | 99 Financial Inc.',
+    description: 'Explore our corporate planning solutions: Corporate-Owned Life Insurance, Capital Dividend Account (CDA), Immediate Financing Arrangement (IFA), and estate planning.',
+};
+
 /* ── Data ─────────────────────────────────────────────────────── */
 
 const strategyCards = [

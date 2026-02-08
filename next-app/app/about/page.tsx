@@ -3,7 +3,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
+import HeroSection from '../../components/HeroSection';
 import SectionContainer from '../../components/SectionContainer';
+
+export const metadata = {
+    title: 'About Us | 99 Financial Inc.',
+    description: 'Learn about 99 Financial, our founder Tom Ren, and our commitment to tax-efficient corporate wealth strategies for Canadian business owners.',
+};
 
 /* ── Data ─────────────────────────────────────────────────────── */
 

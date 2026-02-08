@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Corporate Wealth & Tax-Efficient Planning | 99 Financial Inc.',
+    description: 'Tax-efficient corporate planning for Canadian entrepreneurs. Strategies for corporate-owned insurance, CDA, IFA, estate planning, and retirement liquidity.',
+};
+
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -105,7 +112,7 @@ export default function Home() {
                             We work alongside your accountant and legal counsel to build an integrated plan.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="bg-brand-gold text-white px-8 py-3 md:px-10 md:py-4 rounded-sm font-bold text-base md:text-lg hover:bg-brand-goldHover transition shadow-lg text-center transform hover:-translate-y-1 duration-200">
+                            <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-white px-8 py-3 md:px-10 md:py-4 rounded-sm font-bold text-base md:text-lg hover:bg-brand-goldHover transition shadow-lg text-center transform hover:-translate-y-1 duration-200">
                                 Book a Private Strategy Review
                             </a>
                         </div>
@@ -225,7 +232,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="mt-16 text-center">
-                        <Link href="/solution" className="inline-flex items-center text-brand-gold border border-brand-gold font-bold py-4 px-10 rounded-sm hover:bg-brand-gold hover:text-white transition shadow-lg hover:shadow-brand-gold/20 transform hover:-translate-y-1 backdrop-blur-sm">
+                        <Link href="/solutions" className="inline-flex items-center text-brand-gold border border-brand-gold font-bold py-4 px-10 rounded-sm hover:bg-brand-gold hover:text-white transition shadow-lg hover:shadow-brand-gold/20 transform hover:-translate-y-1 backdrop-blur-sm">
                             View All Solutions
                         </Link>
                     </div>

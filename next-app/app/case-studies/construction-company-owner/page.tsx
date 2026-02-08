@@ -254,9 +254,9 @@ export default function ConstructionCompanyCasePage() {
                                     <p className="text-slate-300 text-sm mb-6">
                                         A confidential review can assess whether a similar corporate estate planning structure aligns with your tax profile and long-term planning objectives.
                                     </p>
-                                    <Link href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-md uppercase tracking-wider text-sm">
+                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-md uppercase tracking-wider text-sm">
                                         Book a Private Strategy Review
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </ScrollAnimation>

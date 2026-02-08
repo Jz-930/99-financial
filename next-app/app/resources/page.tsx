@@ -5,6 +5,11 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 import UpcomingEventCard from '../../components/UpcomingEventCard';
 import { getAllPosts, markdownToHtml } from '../../lib/api';
 
+export const metadata = {
+    title: 'Resources | 99 Financial Inc.',
+    description: 'Educational articles, planning frameworks, in-depth PDF guides, and upcoming events on corporate wealth planning and tax-efficient strategies.',
+};
+
 export default async function ResourcesPage() {
     // Fetch events. Note: We are no longer filtering by category since 'events' collection is now just 'Upcoming Sessions'
     const allEvents = getAllPosts('events', ['title', 'summary', 'slug', 'date', 'content']);
@@ -121,7 +126,7 @@ export default async function ResourcesPage() {
             </section>
 
             {/* Events Section - Redesigned */}
-            <section className="py-16 md:py-24 bg-white relative" id="events">
+            <section className="py-16 md:py-24 bg-white relative" id="upcoming-sessions">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollAnimation className="fade-in-up">
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-12 text-center">Events & Sessions</h2>
@@ -154,9 +159,7 @@ export default async function ResourcesPage() {
                                             <p className="text-sm text-slate-500 mb-3">
                                                 {new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                                             </p>
-                                            <a href="#" className="inline-flex items-center justify-center w-full px-4 py-2 bg-white hover:bg-brand-gold hover:text-white text-brand-blue text-sm font-bold rounded border border-slate-200 hover:border-brand-gold transition-all duration-300 shadow-sm mt-3">
-                                                <i className="fa-solid fa-download mr-2"></i> Download Documents
-                                            </a>
+
                                         </div>
                                     </div>
                                 </ScrollAnimation>

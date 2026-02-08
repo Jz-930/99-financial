@@ -44,7 +44,7 @@ export default function CTASection({
                         <p className="text-xl md:text-2xl text-slate-200 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
                             {description}
                         </p>
-                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-flex items-center justify-center bg-brand-gold text-white font-bold text-base md:text-lg px-8 py-4 md:px-10 md:py-5 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-brand-gold text-white font-bold text-base md:text-lg px-8 py-4 md:px-10 md:py-5 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
                             {buttonText}
                             <i className="fa-solid fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform duration-300"></i>
                         </a>
@@ -69,7 +69,7 @@ export default function CTASection({
                     <p className="text-lg text-white mb-8">
                         {description}
                     </p>
-                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block bg-brand-gold text-white font-bold text-xl py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 shadow-lg">
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gold text-white font-bold text-xl py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 shadow-lg">
                         {buttonText}
                     </a>
                 </ScrollAnimation>

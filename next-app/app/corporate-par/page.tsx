@@ -6,6 +6,11 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 import HeroSection from '../../components/HeroSection';
 import CTASection from '../../components/CTASection';
 import SectionContainer from '../../components/SectionContainer';
+
+export const metadata = {
+    title: 'Corporate-Owned Life Insurance | 99 Financial Inc.',
+    description: 'Learn how corporate-owned participating whole life insurance repositions retained earnings into a long-term, tax-efficient estate planning asset.',
+};
 import IconListItem from '../../components/IconListItem';
 import ComparisonGrid from '../../components/ComparisonGrid';
 

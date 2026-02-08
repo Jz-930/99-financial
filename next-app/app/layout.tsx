@@ -29,7 +29,7 @@ export default function RootLayout({
                 </main>
                 <Footer />
                 <div className="fixed bottom-6 right-6 z-40">
-                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
+                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-14 h-14 bg-brand-gold text-white rounded-full shadow-2xl hover:bg-brand-blue transition duration-300 border-2 border-white transform hover:scale-110">
                         <i className="fa-solid fa-comments text-xl"></i>
                     </a>
                 </div>

@@ -102,10 +102,9 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li><Link href="/about" className="hover:text-brand-gold transition">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-brand-gold transition">Contact</Link></li>
-                            <li><a href="#" className="hover:text-brand-gold transition">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-brand-gold transition">Terms & Conditions</a></li>
+
                         </ul>
-                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" className="inline-block mt-6 border border-slate-700 px-4 py-2 rounded text-xs hover:bg-brand-gold hover:text-white transition group">
+                        <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-block mt-6 border border-slate-700 px-4 py-2 rounded text-xs hover:bg-brand-gold hover:text-white transition group">
                             Book a Private Strategy Review <i className="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>

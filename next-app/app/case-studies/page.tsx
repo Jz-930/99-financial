@@ -3,6 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
 
+export const metadata = {
+    title: 'Case Studies | 99 Financial Inc.',
+    description: 'Real-world examples of corporate estate planning, tax-efficient insurance strategies, and IFA structures for Canadian business owners.',
+};
+
 /* ── Data ─────────────────────────────────────────────────────── */
 
 const caseStudies = [

@@ -7,6 +7,11 @@ import HeroSection from '../../components/HeroSection';
 import CTASection from '../../components/CTASection';
 import SectionContainer from '../../components/SectionContainer';
 
+export const metadata = {
+    title: 'Immediate Financing Arrangement (IFA) | 99 Financial Inc.',
+    description: 'Learn how the IFA strategy preserves corporate cash flow by using policy collateral to access premium financing for corporate-owned insurance.',
+};
+
 export default function IFAPage() {
     return (
         <main className="bg-white">

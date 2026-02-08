@@ -6,6 +6,11 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 import HeroSection from '../../components/HeroSection';
 import CTASection from '../../components/CTASection';
 import SectionContainer from '../../components/SectionContainer';
+
+export const metadata = {
+    title: 'Capital Dividend Account (CDA) | 99 Financial Inc.',
+    description: 'Understand how the CDA enables tax-free distribution of corporate insurance proceeds to shareholders as part of long-term estate planning.',
+};
 import IconListItem from '../../components/IconListItem';
 
 export default function CDAPage() {
