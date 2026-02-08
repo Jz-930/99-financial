@@ -37,17 +37,16 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "PDF File", name: "pdf_file", widget: "file", required: false}
+      - {label: "PDF File", name: "pdf_file", widget: "file", required: true}
       - {label: "Description", name: "body", widget: "markdown", required: false}
 
   - name: "events"
-    label: "Events & Sessions"
+    label: "Upcoming Sessions"
     folder: "content/events"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Category", name: "category", widget: "select", options: ["upcoming", "past", "usage"]}
-      - {label: "Event Date", name: "date", widget: "datetime"}
-      - {label: "Summary", name: "summary", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Session Date", name: "date", widget: "datetime"}
+      - {label: "Intro/Summary", name: "summary", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}

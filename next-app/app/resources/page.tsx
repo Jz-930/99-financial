@@ -1,17 +1,24 @@
-
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
-import { getAllPosts } from '../../lib/api';
+import UpcomingEventCard from '../../components/UpcomingEventCard';
+import { getAllPosts, markdownToHtml } from '../../lib/api';
 
 export default async function ResourcesPage() {
-    const events = getAllPosts('events', ['title', 'category', 'summary', 'slug', 'date']);
+    // Fetch events. Note: We are no longer filtering by category since 'events' collection is now just 'Upcoming Sessions'
+    const allEvents = getAllPosts('events', ['title', 'summary', 'slug', 'date', 'content']);
 
-    const upcomingSessions = events.filter(e => e.category === 'upcoming');
-    const pastSessions = events.filter(e => e.category === 'past');
-    const sessionUsage = events.filter(e => e.category === 'usage');
+    const now = new Date();
+    const upcomingSessions = allEvents
+        .filter(event => new Date(event.date) >= now)
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+    let featuredEvent = null;
+    if (upcomingSessions.length > 0) {
+        const contentHtml = await markdownToHtml(upcomingSessions[0].content || '');
+        featuredEvent = { ...upcomingSessions[0], contentHtml };
+    }
 
     return (
         <main className="bg-white">
@@ -56,7 +63,7 @@ export default async function ResourcesPage() {
                         </ScrollAnimation>
 
                         {/* Strategy Explainers */}
-                        <ScrollAnimation className="fade-in-up" delay={100} id="planning-concepts">
+                        <ScrollAnimation className="fade-in-up" delay={50} id="planning-concepts">
                             <Link href="/planning-concepts" className="group block h-full">
                                 <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
@@ -74,7 +81,7 @@ export default async function ResourcesPage() {
                         </ScrollAnimation>
 
                         {/* In-Depth Guides */}
-                        <ScrollAnimation className="fade-in-up" delay={200} id="guides">
+                        <ScrollAnimation className="fade-in-up" delay={100} id="guides">
                             <Link href="/guides" className="group block h-full">
                                 <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
@@ -92,7 +99,7 @@ export default async function ResourcesPage() {
                         </ScrollAnimation>
 
                         {/* FAQ */}
-                        <ScrollAnimation className="fade-in-up" delay={300}>
+                        <ScrollAnimation className="fade-in-up" delay={150}>
                             <Link href="/faq" className="group block h-full">
                                 <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
@@ -113,68 +120,79 @@ export default async function ResourcesPage() {
                 </div>
             </section>
 
-            {/* Events Section */}
+            {/* Events Section - Redesigned */}
             <section className="py-24 bg-white relative" id="events">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollAnimation className="fade-in-up">
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-16 text-center">Events & Sessions</h2>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-12 text-center">Events & Sessions</h2>
                     </ScrollAnimation>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        {/* Left Column: Upcoming/Current Session (Big Box) */}
+                        <div className="lg:col-span-2">
+                            <ScrollAnimation className="fade-in-up" id="upcoming-session-feature">
+                                <UpcomingEventCard event={featuredEvent} />
+                            </ScrollAnimation>
+                        </div>
 
-                        {/* Upcoming Sessions */}
-                        <ScrollAnimation className="fade-in-up" id="upcoming-sessions">
-                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
-                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">Upcoming Sessions</h3>
-                                <div className="space-y-4">
-                                    {upcomingSessions.length > 0 ? upcomingSessions.map(event => (
-                                        <div key={event.slug} className="mb-4">
-                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
-                                            <p className="text-sm text-slate-500 mb-1">{new Date(event.date).toLocaleDateString()}</p>
-                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                        {/* Right Column: Past Sessions (Two Small Boxes) */}
+                        <div className="lg:col-span-1 flex flex-col gap-8">
+                            {/* Past Session 1 */}
+                            {allEvents.filter(e => new Date(e.date) < new Date()).slice(0, 1).map((event) => (
+                                <ScrollAnimation delay={50} key={event.slug} className="fade-in-up flex-1">
+                                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col group">
+                                        <div className="mb-4">
+                                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Past Session</span>
+                                            <h4 className="text-lg font-bold text-brand-blue group-hover:text-brand-gold transition-colors mt-1 line-clamp-2">
+                                                {event.title}
+                                            </h4>
+                                            <p className="text-slate-600 text-sm mt-3 line-clamp-3 leading-relaxed">
+                                                {event.summary}
+                                            </p>
                                         </div>
-                                    )) : (
-                                        <p className="text-slate-500 text-sm italic">No upcoming sessions scheduled at this moment.</p>
-                                    )}
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-
-                        {/* Past Sessions */}
-                        <ScrollAnimation className="fade-in-up" delay={100} id="past-sessions">
-                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
-                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">Past Sessions</h3>
-                                <div className="space-y-4">
-                                    {pastSessions.length > 0 ? pastSessions.map(event => (
-                                        <div key={event.slug} className="mb-4">
-                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
-                                            <p className="text-sm text-slate-500 mb-1">{new Date(event.date).toLocaleDateString()}</p>
-                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                                        <div className="mt-auto">
+                                            <p className="text-sm text-slate-500 mb-3">
+                                                {new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                            </p>
+                                            <a href="#" className="inline-flex items-center justify-center w-full px-4 py-2 bg-white hover:bg-brand-gold hover:text-white text-brand-blue text-sm font-bold rounded border border-slate-200 hover:border-brand-gold transition-all duration-300 shadow-sm mt-3">
+                                                <i className="fa-solid fa-download mr-2"></i> Download Documents
+                                            </a>
                                         </div>
-                                    )) : (
-                                        <p className="text-slate-500 text-sm italic">No past session archives available.</p>
-                                    )}
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-
-                        {/* How These Sessions Are Used */}
-                        <ScrollAnimation className="fade-in-up" delay={200} id="session-usage">
-                            <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
-                                <h3 className="text-xl font-bold text-brand-blue mb-6 border-b border-brand-gold/20 pb-4">How These Sessions Are Used</h3>
-                                <div className="space-y-4">
-                                    {sessionUsage.length > 0 ? sessionUsage.map(event => (
-                                        <div key={event.slug} className="mb-4">
-                                            <h4 className="font-bold text-lg text-slate-800">{event.title}</h4>
-                                            <p className="text-slate-600 text-sm">{event.summary}</p>
+                                    </div>
+                                </ScrollAnimation>
+                            ))}
+                            {/* Past Session 2 */}
+                            {allEvents.filter(e => new Date(e.date) < new Date()).slice(1, 2).map((event) => (
+                                <ScrollAnimation delay={100} key={event.slug} className="fade-in-up flex-1">
+                                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col group">
+                                        <div className="mb-4">
+                                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Past Session</span>
+                                            <h4 className="text-lg font-bold text-brand-blue group-hover:text-brand-gold transition-colors mt-1 line-clamp-2">
+                                                {event.title}
+                                            </h4>
+                                            <p className="text-slate-600 text-sm mt-3 line-clamp-3 leading-relaxed">
+                                                {event.summary}
+                                            </p>
                                         </div>
-                                    )) : (
-                                        <p className="text-slate-500 text-sm italic">Information on session usage is currently being updated.</p>
-                                    )}
-                                </div>
-                            </div>
-                        </ScrollAnimation>
+                                        <div className="mt-auto">
+                                            <p className="text-sm text-slate-500 mb-3">
+                                                {new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                            </p>
+                                            <a href="#" className="inline-flex items-center justify-center w-full px-4 py-2 bg-white hover:bg-brand-gold hover:text-white text-brand-blue text-sm font-bold rounded border border-slate-200 hover:border-brand-gold transition-all duration-300 shadow-sm mt-3">
+                                                <i className="fa-solid fa-download mr-2"></i> Download Documents
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ScrollAnimation>
+                            ))}
 
+                            {/* Fallback if no past events (Optional, or just show less) */}
+                            {allEvents.filter(e => new Date(e.date) < new Date()).length === 0 && (
+                                <div className="bg-slate-50 rounded-xl p-8 border border-slate-200 h-full flex items-center justify-center text-center">
+                                    <p className="text-slate-400 text-sm italic">No past sessions archive available.</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </section>

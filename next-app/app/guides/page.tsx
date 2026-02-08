@@ -1,71 +1,88 @@
-
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import ScrollAnimation from '../../components/ScrollAnimation';
 import { getAllPosts } from '../../lib/api';
 
-export default function GuidesIndex() {
-    const posts = getAllPosts('guides', [
-        'title',
-        'date',
-        'slug',
-        'excerpt',
-        'pdf_file'
-    ]);
+export default async function GuidesPage() {
+    // Fetch guides
+    const guides = getAllPosts('guides', ['title', 'excerpt', 'body', 'date', 'pdf_file', 'slug']);
+
+    // Sort by date (newest first)
+    const sortedGuides = guides.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
-        <div className="bg-brand-light min-h-screen">
-            {/* Header with Mesh Background */}
-            <div className="relative bg-white border-b border-slate-200 overflow-hidden">
-                <div className="absolute inset-0 bg-mesh opacity-60"></div>
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-                    <Link href="/resources" className="text-brand-gold font-bold hover:underline mb-6 inline-flex items-center text-sm uppercase tracking-wider transition-colors">
-                        <i className="fa-solid fa-arrow-left mr-2"></i> Back to Resources
-                    </Link>
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-brand-blue mb-6 leading-tight">
-                        In-Depth Guides
-                    </h1>
-                    <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                        Comprehensive whitepapers and downloadable guides for detailed study and reference.
-                    </p>
+        <main className="bg-white">
+            {/* Hero Section */}
+            <section className="bg-brand-dark py-20 text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute -right-20 -top-20 w-96 h-96 bg-brand-gold rounded-full filter blur-3xl"></div>
+                    <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-brand-blue rounded-full filter blur-3xl"></div>
                 </div>
-            </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <ScrollAnimation className="fade-in-up">
+                        <Link href="/resources" className="inline-flex items-center text-brand-gold hover:text-white transition mb-6 text-sm font-bold uppercase tracking-wider">
+                            <i className="fa-solid fa-arrow-left mr-2"></i> Back to Resources
+                        </Link>
+                        <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6">In-Depth Guides</h1>
+                        <p className="text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                            Download comprehensive whitepapers and detailed guides on corporate planning strategies.
+                        </p>
+                    </ScrollAnimation>
+                </div>
+            </section>
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {posts.length === 0 ? (
-                        <div className="col-span-1 md:col-span-2 text-center py-20 bg-white rounded-xl border border-dashed border-slate-300">
-                            <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-300">
-                                <i className="fa-solid fa-folder-open text-2xl"></i>
-                            </div>
-                            <p className="text-slate-500 italic text-lg">No guides available at this time.</p>
-                            <p className="text-slate-400 text-sm mt-2">Please check back later for new content.</p>
+            {/* Guides List */}
+            <section className="py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {sortedGuides.length > 0 ? (
+                        <div className="space-y-8">
+                            {sortedGuides.map((guide, index) => (
+                                <ScrollAnimation key={guide.slug} className="fade-in-up" delay={index * 100}>
+                                    <div className="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-8 items-start">
+                                        <div className="flex-shrink-0">
+                                            <div className="w-16 h-16 rounded-lg bg-red-50 flex items-center justify-center text-red-500 text-3xl">
+                                                <i className="fa-solid fa-file-pdf"></i>
+                                            </div>
+                                        </div>
+                                        <div className="flex-grow">
+                                            <h2 className="text-2xl font-bold text-brand-blue mb-3">{guide.title}</h2>
+                                            <div className="text-slate-600 mb-6 prose max-w-none">
+                                                <p>{guide.excerpt || guide.body}</p>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                {guide.pdf_file ? (
+                                                    <a
+                                                        href={guide.pdf_file}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center px-6 py-3 bg-brand-blue text-white rounded hover:bg-brand-gold transition-colors font-semibold text-sm"
+                                                    >
+                                                        Download PDF <i className="fa-solid fa-download ml-2"></i>
+                                                    </a>
+                                                ) : (
+                                                    <span className="text-slate-400 text-sm italic">PDF download coming soon</span>
+                                                )}
+                                                <span className="text-slate-400 text-sm">
+                                                    Updated: {new Date(guide.date).toLocaleDateString()}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ScrollAnimation>
+                            ))}
                         </div>
                     ) : (
-                        posts.map((post) => (
-                            <div key={post.slug} className="group bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-brand-gold/30 transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
-                                <div className="flex items-start justify-between mb-6">
-                                    <div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-brand-blue group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
-                                        <i className="fa-solid fa-file-pdf text-xl"></i>
-                                    </div>
-                                </div>
-                                <h2 className="text-xl font-bold font-serif text-brand-blue mb-3 group-hover:text-brand-gold transition-colors">
-                                    {post.title}
-                                </h2>
-                                <p className="text-slate-600 mb-6 text-sm leading-relaxed flex-grow">
-                                    {post.excerpt}
-                                </p>
-                                {post.pdf_file ? (
-                                    <a href={post.pdf_file} className="inline-flex items-center text-sm font-bold text-brand-blue hover:text-brand-gold uppercase tracking-wider mt-auto" target="_blank" rel="noopener noreferrer">
-                                        <span className="border-b-2 border-brand-gold/20 pb-1 group-hover:border-brand-gold transition-all">Download PDF</span> <i className="ml-2 fa-solid fa-download"></i>
-                                    </a>
-                                ) : (
-                                    <span className="text-slate-400 text-xs uppercase tracking-wider font-bold mt-auto bg-slate-100 py-1 px-3 rounded-full self-start">Coming Soon</span>
-                                )}
+                        <div className="text-center py-24 bg-slate-50 rounded-xl border border-slate-200">
+                            <div className="mb-6 w-20 h-20 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-slate-300 text-4xl">
+                                <i className="fa-solid fa-file-pdf"></i>
                             </div>
-                        ))
+                            <h3 className="text-xl font-bold text-slate-600 mb-2">Guides Coming Soon</h3>
+                            <p className="text-slate-500 max-w-md mx-auto">We are currently curating our in-depth guides. Please check back shortly for new content.</p>
+                        </div>
                     )}
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     );
 }

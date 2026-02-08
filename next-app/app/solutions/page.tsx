@@ -12,13 +12,15 @@ export default function SolutionsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
                     <ScrollAnimation className="fade-in-up">
                         <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-white text-shadow-lg">
-                            Our Solutions
+                            Solutions
                         </h1>
                         <p className="text-2xl text-brand-gold font-medium mb-6">
-                            Strategy-led planning for incorporated business owners
+                            How we structure long-term corporate planning for business owners
                         </p>
                         <p className="text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed">
-                            At 99 Financial, we evaluate insurance, tax, and liquidity decisions within a broader long-term corporate planning framework. Our solutions are designed for business owners who value clarity, discipline, and thoughtful planning over time.
+                            At 99 Financial, insurance, tax, and liquidity decisions are evaluated within a broader long-term corporate planning framework.
+                            <br /><br />
+                            Our work is most relevant for business owners who prioritize structured decision-making and long-term alignment over short-term tactics.
                         </p>
                     </ScrollAnimation>
                 </div>
@@ -32,17 +34,20 @@ export default function SolutionsPage() {
                             <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Client Journey</h2>
                             <p className="text-xl text-brand-gold font-medium mb-8">A disciplined planning process, designed for complexity</p>
 
-                            <div className="text-slate-600 space-y-6 text-lg leading-relaxed mb-10">
-                                <p>
-                                    Every engagement follows a structured process — from understanding corporate context to evaluating strategic fit, implementation, and ongoing review.
-                                </p>
-                                <p>
-                                    This ensures decisions are made deliberately, with clarity around trade-offs, timing, and long-term consequences.
-                                </p>
-                                <p className="font-semibold text-brand-blue">
-                                    Best suited for business owners who value process, coordination, and strategic clarity.
-                                </p>
-                            </div>
+                            <ul className="text-slate-600 space-y-4 text-lg leading-relaxed mb-10 text-left max-w-2xl mx-auto">
+                                <li className="flex items-start">
+                                    <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                    <span>Every engagement follows a structured process — from understanding corporate context to evaluating strategic fit, implementation, and ongoing review.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                    <span>This ensures decisions are made deliberately, with clarity around trade-offs, timing, and long-term consequences.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                    <span className="font-semibold text-brand-blue">Best suited for business owners who value process, coordination, and strategic clarity.</span>
+                                </li>
+                            </ul>
 
                             <Link href="/client-journey" className="inline-block px-8 py-4 bg-brand-blue text-white font-bold rounded-sm hover:bg-brand-gold transition-colors duration-300 uppercase tracking-widest text-sm shadow-lg hover:shadow-xl">
                                 Understand our client journey
@@ -256,7 +261,7 @@ export default function SolutionsPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Case 1 */}
-                            <Link href="/case-studies/corporate-capital-repositioning" className="group block h-full">
+                            <Link href="/case-studies/construction-company-owner" className="group block h-full">
                                 <div className="bg-slate-50 border border-slate-100 rounded-lg p-8 h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
                                     <div className="mb-6">
                                         <span className="bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Case Study 1</span>
@@ -271,7 +276,7 @@ export default function SolutionsPage() {
                             </Link>
 
                             {/* Case 2 */}
-                            <Link href="/case-studies/leveraged-capital-efficiency" className="group block h-full">
+                            <Link href="/case-studies/ifa-case-study" className="group block h-full">
                                 <div className="bg-slate-50 border border-slate-100 rounded-lg p-8 h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
                                     <div className="mb-6">
                                         <span className="bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Case Study 2</span>
@@ -286,7 +291,7 @@ export default function SolutionsPage() {
                             </Link>
 
                             {/* Case 3 */}
-                            <Link href="/case-studies/family-estate-structuring" className="group block h-full">
+                            <Link href="/case-studies/veterinary-practice-succession" className="group block h-full">
                                 <div className="bg-slate-50 border border-slate-100 rounded-lg p-8 h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
                                     <div className="mb-6">
                                         <span className="bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Case Study 3</span>
@@ -305,17 +310,35 @@ export default function SolutionsPage() {
             </section>
 
             {/* CTA Section (3.7) */}
-            <section className="py-24 bg-brand-blue relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 pattern-grid-lg"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <section className="py-32 relative overflow-hidden text-white">
+                {/* Video Background */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src="/images/CTA.mp4" type="video/mp4" />
+                    </video>
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-brand-blue/90 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-black/20"></div>
+                </div>
+
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <ScrollAnimation className="fade-in-up">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight tracking-tight text-white drop-shadow-md">
                             Ready to explore whether your corporate structure is working efficiently?
                         </h2>
+
+                        <div className="h-1 w-24 bg-brand-gold mx-auto mb-10 rounded-full"></div>
+
                         <a
                             href="https://tidycal.com/greatec/30-minute-meeting"
                             target="_blank"
-                            className="inline-block bg-brand-gold text-white text-lg font-bold py-4 px-10 rounded-sm hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl uppercase tracking-widest"
+                            className="inline-flex items-center justify-center bg-brand-gold text-white text-lg font-bold py-4 px-12 rounded-full hover:bg-white hover:text-brand-blue transition-all duration-300 shadow-xl uppercase tracking-widest hover:scale-105"
                         >
                             Book a Private Strategy Review
                         </a>

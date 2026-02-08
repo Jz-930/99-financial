@@ -26,9 +26,20 @@ export default function ClientJourney() {
                         "For incorporated business owners, meaningful financial decisions are rarely isolated. Tax efficiency, retained earnings, liquidity needs, and long-term estate outcomes are deeply interconnected."
                     </p>
                     <div className="w-16 h-1 bg-brand-gold mx-auto mb-8"></div>
-                    <p className="text-slate-600 leading-relaxed text-lg">
-                        Our client journey is designed to bring clarity and structure to that complexity. It is not a sales process. It is a planning framework that helps business owners determine whether advanced strategies are appropriate, how they should be structured, and when they should be implemented.
-                    </p>
+                    <ul className="text-slate-600 leading-relaxed text-lg text-left max-w-2xl mx-auto space-y-4">
+                        <li className="flex items-start">
+                            <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                            <span>Our client journey is designed to bring clarity and structure to that complexity.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                            <span>It is not a sales process.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                            <span>It is a planning framework that helps business owners determine whether advanced strategies are appropriate, how they should be structured, and when they should be implemented.</span>
+                        </li>
+                    </ul>
                 </div>
             </section>
 

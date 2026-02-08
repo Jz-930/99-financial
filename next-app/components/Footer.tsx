@@ -11,9 +11,10 @@ export default function Footer() {
         <footer className="bg-brand-dark text-slate-400 pt-16 pb-8 border-t border-slate-800 text-sm font-light mt-auto relative z-50">
             {/* Popups */}
             {(showWeChat || showWhatsApp) && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" onClick={() => { setShowWeChat(false); setShowWhatsApp(false); }}>
-                    <div className="bg-white p-6 rounded-lg max-w-sm w-full relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+                <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" onClick={() => { setShowWeChat(false); setShowWhatsApp(false); }}>
+                    <div className="bg-white p-6 rounded-lg max-w-sm w-full relative" onClick={(e) => e.stopPropagation()}>
                         <button
+                            type="button"
                             onClick={() => { setShowWeChat(false); setShowWhatsApp(false); }}
                             className="absolute top-2 right-2 text-slate-400 hover:text-slate-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition"
                         >
@@ -48,7 +49,7 @@ export default function Footer() {
                             className="h-8 w-auto brightness-0 invert opacity-90 mb-6"
                         />
                         <p className="mb-2 text-slate-400 text-sm"><i className="fa-solid fa-phone text-brand-gold mr-3"></i> 416 637 5302</p>
-                        <p className="mb-4 text-slate-400 text-sm"><i className="fa-solid fa-location-dot text-brand-gold mr-3 mt-1"></i> 85 Enterprise Blvd. Unit 306, Markham ON L6G 0b5</p>
+                        <p className="mb-4 text-slate-400 text-sm"><i className="fa-solid fa-location-dot text-brand-gold mr-3 mt-1"></i> 85 Enterprise Blvd. Unit 306, Markham ON L6G 0B5</p>
                         <div className="flex space-x-4 mt-6">
                             <a
                                 href="https://www.linkedin.com/in/tom-ren/"
@@ -60,6 +61,7 @@ export default function Footer() {
                                 <i className="fa-brands fa-linkedin-in text-sm"></i>
                             </a>
                             <button
+                                type="button"
                                 onClick={() => setShowWeChat(true)}
                                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#07C160] hover:text-white transition"
                                 aria-label="WeChat"
@@ -67,6 +69,7 @@ export default function Footer() {
                                 <i className="fa-brands fa-weixin text-sm"></i>
                             </button>
                             <button
+                                type="button"
                                 onClick={() => setShowWhatsApp(true)}
                                 className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"
                                 aria-label="WhatsApp"

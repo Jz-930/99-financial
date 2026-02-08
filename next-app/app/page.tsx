@@ -30,11 +30,20 @@ export default function Home() {
                             Corporate wealth requires <br />
                             <span className="text-brand-gold">planning</span> — not just investing.
                         </h1>
-                        <div className="text-base md:text-lg text-slate-200 mb-8 leading-relaxed font-light max-w-4xl mx-auto space-y-2">
-                            <p>Retained earnings quietly create long-term tax drag.</p>
-                            <p>Corporate wealth is often misaligned with future estate outcomes.</p>
-                            <p>Doing nothing is also a decision — just not an intentional one.</p>
-                        </div>
+                        <ul className="text-base md:text-lg text-slate-200 mb-8 leading-relaxed font-light max-w-2xl mx-auto space-y-4 text-left">
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span>Retained earnings quietly create long-term tax drag.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span>Corporate wealth is often misaligned with future estate outcomes.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span>Doing nothing is also a decision — just not an intentional one.</span>
+                            </li>
+                        </ul>
                         <p className="text-brand-gold font-medium text-lg mb-4 italic">
                             Thoughtful planning starts long before a tax or estate issue becomes urgent.
                         </p>

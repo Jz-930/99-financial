@@ -32,15 +32,20 @@ export default function AboutPage() {
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-8">
                             Independent. Advisory. Strategy-Led.
                         </h2>
-                        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                            99 Financial works with Canadian business owners and incorporated professionals on long-term, tax-efficient wealth planning.
-                        </p>
-                        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                            Our work focuses on situations where corporate assets, tax considerations, liquidity planning, and long-term outcomes intersect. We provide strategy-led advice, often involving corporate-owned insurance structures, and work alongside clients’ existing accounting and legal advisors.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                            We do not provide product-driven recommendations. Our role is to help clients make informed decisions within a broader, integrated planning framework.
-                        </p>
+                        <ul className="text-lg text-slate-600 leading-relaxed text-left max-w-2xl mx-auto space-y-4">
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span>99 Financial works with Canadian business owners and incorporated professionals on long-term, tax-efficient wealth planning.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span>Our work focuses on situations where corporate assets, tax considerations, liquidity planning, and long-term outcomes intersect. We provide strategy-led advice, often involving corporate-owned insurance structures, and work alongside clients’ existing accounting and legal advisors.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="w-2 h-2 bg-brand-gold rounded-full mr-4 flex-shrink-0 mt-2.5"></span>
+                                <span className="font-medium">We do not provide product-driven recommendations. Our role is to help clients make informed decisions within a broader, integrated planning framework.</span>
+                            </li>
+                        </ul>
                     </ScrollAnimation>
                 </div>
             </section>

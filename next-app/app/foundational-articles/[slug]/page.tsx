@@ -52,11 +52,12 @@ export default async function FoundationalArticle({ params }: { params: Promise<
                         <div
                             className="prose prose-lg prose-slate max-w-none 
                   prose-headings:font-serif prose-headings:font-bold prose-headings:text-brand-blue 
-                  prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 
-                  prose-h3:text-2xl prose-h3:text-slate-700
-                  prose-p:leading-relaxed prose-p:text-slate-600
-                  prose-li:text-slate-600 prose-li:marker:text-brand-gold
+                  prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 
+                  prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4 prose-h3:text-slate-700
+                  prose-p:leading-loose prose-p:text-slate-600 prose-p:mb-6
+                  prose-li:text-slate-600 prose-li:marker:text-brand-gold prose-li:my-2
                   prose-strong:text-brand-blue prose-strong:font-bold
+                  prose-blockquote:border-l-4 prose-blockquote:border-brand-gold prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-slate-500
                   hover:prose-a:text-brand-gold hover:prose-a:no-underline prose-a:text-brand-blue prose-a:transition-colors"
                             dangerouslySetInnerHTML={{ __html: content }}
                         />

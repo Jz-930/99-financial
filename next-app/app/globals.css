@@ -42,7 +42,7 @@ body {
 .stat-item {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat-item.animate {
@@ -53,7 +53,7 @@ body {
 .fade-in-up {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-up.animate {
@@ -64,7 +64,7 @@ body {
 .fade-in-left {
     opacity: 0;
     transform: translateX(-40px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-left.animate {
@@ -75,7 +75,7 @@ body {
 .fade-in-right {
     opacity: 0;
     transform: translateX(40px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-right.animate {
@@ -85,7 +85,7 @@ body {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 0.8s ease-out;
+    transition: opacity 0.5s ease-out;
 }
 
 .fade-in.animate {
