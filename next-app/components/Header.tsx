@@ -152,8 +152,8 @@ export default function Header() {
             {isMobileMenuOpen && (
                 <div className="fixed inset-0 z-40 lg:hidden">
                     <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)}></div>
-                    <div className="fixed right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-6 overflow-y-auto">
-                        <div className="flex justify-end mb-8">
+                    <div className="fixed right-0 top-0 h-full w-[85%] max-w-sm bg-white shadow-2xl p-5 overflow-y-auto">
+                        <div className="flex justify-end mb-6">
                             <button onClick={() => setIsMobileMenuOpen(false)} className="text-slate-400 hover:text-brand-gold">
                                 <i className="fa-solid fa-xmark text-2xl"></i>
                             </button>

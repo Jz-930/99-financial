@@ -23,7 +23,7 @@ export default async function ResourcesPage() {
     return (
         <main className="bg-white">
             {/* Hero Section */}
-            <section className="hero-gradient relative h-[50vh] min-h-[400px] flex items-center text-white overflow-hidden">
+            <section className="hero-gradient relative h-auto min-h-[40vh] md:min-h-[400px] flex items-center text-white overflow-hidden py-16 md:py-0">
                 <div className="absolute inset-0 bg-brand-dark/20 z-0"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
                     <ScrollAnimation className="fade-in-up">
@@ -39,7 +39,7 @@ export default async function ResourcesPage() {
             </section>
 
             {/* Main Resources Grid */}
-            <section className="py-24 relative bg-brand-light/30">
+            <section className="py-16 md:py-24 relative bg-brand-light/30">
                 <div className="logo-pattern-bg opacity-5"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -47,7 +47,7 @@ export default async function ResourcesPage() {
                         {/* Foundational Articles */}
                         <ScrollAnimation className="fade-in-up" id="foundational-articles">
                             <Link href="/foundational-articles" className="group block h-full">
-                                <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
+                                <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
                                         <i className="fa-solid fa-layer-group"></i>
                                     </div>
@@ -65,7 +65,7 @@ export default async function ResourcesPage() {
                         {/* Strategy Explainers */}
                         <ScrollAnimation className="fade-in-up" delay={50} id="planning-concepts">
                             <Link href="/planning-concepts" className="group block h-full">
-                                <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
+                                <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
                                         <i className="fa-solid fa-lightbulb"></i>
                                     </div>
@@ -83,7 +83,7 @@ export default async function ResourcesPage() {
                         {/* In-Depth Guides */}
                         <ScrollAnimation className="fade-in-up" delay={100} id="guides">
                             <Link href="/guides" className="group block h-full">
-                                <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
+                                <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
                                         <i className="fa-solid fa-file-pdf"></i>
                                     </div>
@@ -101,7 +101,7 @@ export default async function ResourcesPage() {
                         {/* FAQ */}
                         <ScrollAnimation className="fade-in-up" delay={150}>
                             <Link href="/faq" className="group block h-full">
-                                <div className="bg-white p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
+                                <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col hover:-translate-y-1">
                                     <div className="mb-6 w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
                                         <i className="fa-solid fa-circle-question"></i>
                                     </div>
@@ -121,7 +121,7 @@ export default async function ResourcesPage() {
             </section>
 
             {/* Events Section - Redesigned */}
-            <section className="py-24 bg-white relative" id="events">
+            <section className="py-16 md:py-24 bg-white relative" id="events">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollAnimation className="fade-in-up">
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-12 text-center">Events & Sessions</h2>

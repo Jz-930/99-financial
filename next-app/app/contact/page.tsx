@@ -10,7 +10,7 @@ export default function Contact() {
     return (
         <>
             {/* Hero Section */}
-            <section className="hero-gradient relative h-[45vh] min-h-[400px] flex items-center text-white overflow-hidden">
+            <section className="hero-gradient relative h-auto min-h-[40vh] md:min-h-[400px] flex items-center text-white overflow-hidden py-16 md:py-0">
                 <div className="absolute inset-0 bg-brand-dark/30 z-0"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -28,11 +28,11 @@ export default function Contact() {
             </section>
 
             {/* What This Is / Who This Is For - Two Column Section */}
-            <section className="py-20 bg-brand-light relative">
+            <section className="py-16 md:py-20 bg-brand-light relative">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
                         {/* Column 1: What This Review Is */}
-                        <ScrollAnimation className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                        <ScrollAnimation className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
                             <div className="absolute top-0 left-0 w-1 h-full bg-brand-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
                             <h2 className="text-2xl font-serif font-bold text-brand-blue mb-6">What This Review Is — and Is Not</h2>
 
@@ -59,7 +59,7 @@ export default function Contact() {
                         </ScrollAnimation>
 
                         {/* Column 2: Who This Is For */}
-                        <ScrollAnimation delay={200} className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                        <ScrollAnimation delay={200} className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
                             <div className="absolute top-0 left-0 w-1 h-full bg-brand-blue transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
                             <h2 className="text-2xl font-serif font-bold text-brand-blue mb-6">Who This Is For</h2>
                             <p className="text-slate-500 mb-6 text-sm uppercase tracking-wider font-bold">This conversation is typically relevant for:</p>
@@ -100,7 +100,7 @@ export default function Contact() {
             </section>
 
             {/* Booking & Contact Info Section */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-4xl mx-auto px-4">
                     <ScrollAnimation className="text-center mb-16">
                         <h2 className="text-3xl font-serif font-bold text-brand-blue mb-6">Book a Private Strategy Review</h2>
@@ -111,7 +111,7 @@ export default function Contact() {
                         <a
                             href="https://tidycal.com/greatec/30-minute-meeting"
                             target="_blank"
-                            className="inline-flex items-center justify-center px-10 py-5 bg-brand-gold text-white font-bold text-lg rounded-full shadow-lg hover:bg-brand-goldHover hover:transform hover:-translate-y-1 transition-all duration-300 group"
+                            className="inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-brand-gold text-white font-bold text-base md:text-lg rounded-full shadow-lg hover:bg-brand-goldHover hover:transform hover:-translate-y-1 transition-all duration-300 group"
                         >
                             Book a Private Conversation
                             <i className="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>

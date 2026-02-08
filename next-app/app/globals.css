@@ -242,3 +242,10 @@ body {
     filter: grayscale(100%) brightness(20%) opacity(0.04);
     pointer-events: none;
 }
+
+/* Ultra-wide Screen Optimization */
+@media (min-width: 1536px) {
+    .max-w-7xl {
+        max-width: 1600px;
+    }
+}

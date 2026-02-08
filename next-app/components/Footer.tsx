@@ -8,7 +8,7 @@ export default function Footer() {
     const [showWhatsApp, setShowWhatsApp] = useState(false);
 
     return (
-        <footer className="bg-brand-dark text-slate-400 pt-16 pb-8 border-t border-slate-800 text-sm font-light mt-auto relative z-50">
+        <footer className="bg-brand-dark text-slate-400 pt-10 md:pt-16 pb-8 border-t border-slate-800 text-sm font-light mt-auto relative z-50">
             {/* Popups */}
             {(showWeChat || showWhatsApp) && (
                 <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" onClick={() => { setShowWeChat(false); setShowWhatsApp(false); }}>
