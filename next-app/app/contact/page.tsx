@@ -113,7 +113,7 @@ export default function Contact() {
                             target="_blank"
                             className="inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 bg-brand-gold text-white font-bold text-base md:text-lg rounded-full shadow-lg hover:bg-brand-goldHover hover:transform hover:-translate-y-1 transition-all duration-300 group"
                         >
-                            Book a Private Conversation
+                            Book a Private Strategy Review
                             <i className="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </ScrollAnimation>
