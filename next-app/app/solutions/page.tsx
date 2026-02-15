@@ -171,7 +171,7 @@ export default function SolutionsPage() {
                                 ))}
                             </div>
 
-                            <div className="mt-10 p-6 bg-brand-blue/5 rounded-lg border-l-4 border-brand-gold">
+                            <div className="mt-10 p-6 bg-slate-100 rounded-lg border-l-4 border-brand-gold">
                                 <p className="text-brand-blue italic font-medium leading-relaxed">
                                     &quot;Together, these components form an integrated approach — one that prioritizes structure, coordination, and clarity over individual tactics or short-term outcomes.&quot;
                                 </p>

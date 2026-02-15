@@ -173,7 +173,7 @@ export default function CaseStudiesPage() {
                 {/* Final CTA Section - Reformatted Light */}
                 <div className="mt-16 md:mt-24 max-w-4xl mx-auto text-center px-4">
                     <ScrollAnimation className="fade-in-up">
-                        <div className="bg-white rounded-xl p-8 md:p-14 shadow-xl border-l-4 border-brand-gold">
+                        <div className="bg-slate-100 rounded-xl p-8 md:p-14 shadow-xl border-l-4 border-brand-gold">
                             <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">
                                 Find out if these strategies align with your goals
                             </h2>

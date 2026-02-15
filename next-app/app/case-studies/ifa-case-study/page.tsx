@@ -287,18 +287,18 @@ export default function IFACaseStudyPage() {
 
                         {/* Professional Summary */}
                         <ScrollAnimation className="fade-in-up">
-                            <div className="bg-brand-blue text-white p-8 rounded-xl shadow-xl mt-12">
-                                <h2 className="text-xl font-serif font-bold text-brand-gold mb-4">Professional Summary</h2>
-                                <p className="text-slate-200 leading-relaxed mb-8">
+                            <div className="bg-slate-100 p-8 rounded-xl shadow-xl mt-12 border-l-4 border-brand-gold">
+                                <h2 className="text-xl font-serif font-bold text-brand-blue mb-4">Professional Summary</h2>
+                                <p className="text-slate-700 leading-relaxed mb-8">
                                     This structure illustrates how integrated insurance and financing can be used as a corporate capital structure tool to enhance estate efficiency while preserving operating liquidity.
                                 </p>
 
-                                <div className="border-t border-white/20 pt-6">
-                                    <h3 className="font-bold text-white mb-2">Next Step</h3>
-                                    <p className="text-slate-300 text-sm mb-6">
+                                <div className="border-t border-slate-200 pt-6">
+                                    <h3 className="font-bold text-brand-blue mb-2">Next Step</h3>
+                                    <p className="text-slate-600 text-sm mb-6">
                                         A confidential review can assess whether a similar capital structure approach aligns with your corporate balance sheet, tax profile, and long-term planning objectives, in coordination with your professional advisors.
                                     </p>
-                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-sm hover:bg-white hover:text-brand-blue transition shadow-md uppercase tracking-wider text-sm">
+                                    <a href="https://tidycal.com/greatec/30-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-sm hover:bg-brand-goldHover transition shadow-md uppercase tracking-wider text-sm">
                                         Book a Private Strategy Review
                                     </a>
                                 </div>

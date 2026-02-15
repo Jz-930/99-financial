@@ -128,7 +128,7 @@ export default function IFAPage() {
                     </p>
                     <div className="mt-6">
                         <Link href="/contact" className="inline-block bg-brand-gold text-white font-semibold px-8 py-4 rounded shadow-md hover:bg-brand-goldHover transition duration-300">
-                            Request a private strategy review
+                            Book a private strategy review
                         </Link>
                     </div>
                 </section>
