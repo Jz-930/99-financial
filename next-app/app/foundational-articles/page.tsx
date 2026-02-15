@@ -1,15 +1,14 @@
-
 import React from 'react';
 import Link from 'next/link';
-import { getAllPosts } from '../../lib/api';
+// import { getAllPosts } from '../../lib/api'; // Refactored to Contentful
+import { getFoundationalArticles, ArticlePosting } from '../../lib/contentful';
 
-export default function FoundationalArticlesIndex() {
-    const posts = getAllPosts('foundational-articles', [
-        'title',
-        'date',
-        'slug',
-        'excerpt',
-    ]);
+export const revalidate = 180; // ISR revalidation every 3 minutes
+
+export default async function FoundationalArticlesIndex() {
+    // Fetch from Contentful
+    const articlesRes = await getFoundationalArticles();
+    const posts = articlesRes.items as unknown as ArticlePosting[];
 
     return (
         <div className="bg-brand-light min-h-screen">
@@ -32,24 +31,34 @@ export default function FoundationalArticlesIndex() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 gap-6">
                     {posts.map((post) => (
-                        <Link key={post.slug} href={`/foundational-articles/${post.slug}`} className="group block">
+                        <Link key={post.fields.slug} href={`/foundational-articles/${post.fields.slug}`} className="group block">
                             <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 transition-all duration-300 hover:shadow-xl hover:border-brand-gold/30 hover:-translate-y-1">
                                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                                     <div className="flex-grow">
                                         <h2 className="text-2xl font-bold font-serif text-brand-blue mb-3 group-hover:text-brand-gold transition-colors duration-300">
-                                            {post.title}
+                                            {post.fields.title}
                                         </h2>
                                         <p className="text-slate-600 text-lg leading-relaxed mb-6 group-hover:text-slate-700">
-                                            {post.excerpt}
+                                            {post.fields.abstract}
                                         </p>
-                                        <span className="inline-flex items-center text-brand-blue font-bold uppercase tracking-wider text-xs border-b-2 border-brand-gold/20 pb-1 group-hover:border-brand-gold transition-all">
-                                            Read Article <i className="ml-2 fa-solid fa-arrow-right text-brand-gold group-hover:translate-x-1 transition-transform"></i>
-                                        </span>
+                                        <div className="flex justify-between items-center mt-auto">
+                                            <span className="inline-flex items-center text-brand-blue font-bold uppercase tracking-wider text-xs border-b-2 border-brand-gold/20 pb-1 group-hover:border-brand-gold transition-all">
+                                                Read Article <i className="ml-2 fa-solid fa-arrow-right text-brand-gold group-hover:translate-x-1 transition-transform"></i>
+                                            </span>
+                                            <span className="text-slate-400 text-sm">
+                                                {new Date(post.fields.publishDate).toLocaleDateString()}
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </Link>
                     ))}
+                    {posts.length === 0 && (
+                        <div className="text-center py-20 text-slate-500">
+                            No foundational articles found.
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

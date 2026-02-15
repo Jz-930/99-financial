@@ -1,15 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
-import { getAllPosts } from '../../lib/api';
+// import { getAllPosts } from '../../lib/api'; // Refactored
+import { getGuides, GuidePdf } from '../../lib/contentful';
 
-export default async function GuidesPage() {
-    // Fetch guides
-    const guides = getAllPosts('guides', ['title', 'excerpt', 'body', 'date', 'pdf_file', 'slug']);
+export const revalidate = 180;
 
-    // Sort by date (newest first)
-    const sortedGuides = guides.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+export default async function GuidesIndex() {
+    // Fetch guides from Contentful
+    const guidesRes = await getGuides();
+    const guides = guidesRes.items as unknown as GuidePdf[];
+
+    // Sort already handled by Contentful order in API call, but we can ensure here if needed
+    // Contentful returns newest first if we set order: '-fields.publishDate'
 
     return (
         <main className="bg-white">
@@ -35,10 +39,10 @@ export default async function GuidesPage() {
             {/* Guides List */}
             <section className="py-24 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {sortedGuides.length > 0 ? (
+                    {guides.length > 0 ? (
                         <div className="space-y-8">
-                            {sortedGuides.map((guide, index) => (
-                                <ScrollAnimation key={guide.slug} className="fade-in-up" delay={index * 100}>
+                            {guides.map((guide, index) => (
+                                <ScrollAnimation key={guide.fields.slug} className="fade-in-up" delay={index * 100}>
                                     <div className="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-8 items-start">
                                         <div className="flex-shrink-0">
                                             <div className="w-16 h-16 rounded-lg bg-red-50 flex items-center justify-center text-red-500 text-3xl">
@@ -46,14 +50,14 @@ export default async function GuidesPage() {
                                             </div>
                                         </div>
                                         <div className="flex-grow">
-                                            <h2 className="text-2xl font-bold text-brand-blue mb-3">{guide.title}</h2>
+                                            <h2 className="text-2xl font-bold text-brand-blue mb-3">{guide.fields.title}</h2>
                                             <div className="text-slate-600 mb-6 prose max-w-none">
-                                                <p>{guide.excerpt || guide.body}</p>
+                                                <p>{guide.fields.abstract}</p>
                                             </div>
                                             <div className="flex items-center gap-4">
-                                                {guide.pdf_file ? (
+                                                {guide.fields.pdf?.fields?.file?.url ? (
                                                     <a
-                                                        href={guide.pdf_file}
+                                                        href={`https:${guide.fields.pdf.fields.file.url}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="inline-flex items-center px-6 py-3 bg-brand-blue text-white rounded hover:bg-brand-gold transition-colors font-semibold text-sm"
@@ -61,10 +65,10 @@ export default async function GuidesPage() {
                                                         Download PDF <i className="fa-solid fa-download ml-2"></i>
                                                     </a>
                                                 ) : (
-                                                    <span className="text-slate-400 text-sm italic">PDF download coming soon</span>
+                                                    <span className="text-slate-400 text-sm italic">PDF download unavailable</span>
                                                 )}
                                                 <span className="text-slate-400 text-sm">
-                                                    Updated: {new Date(guide.date).toLocaleDateString()}
+                                                    Updated: {new Date(guide.fields.publishDate).toLocaleDateString()}
                                                 </span>
                                             </div>
                                         </div>

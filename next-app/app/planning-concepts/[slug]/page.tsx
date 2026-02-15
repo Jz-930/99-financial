@@ -1,78 +1,89 @@
-
 import React from 'react';
 import Link from 'next/link';
-import { getPostBySlug, getAllPosts, markdownToHtml } from '../../../lib/api';
+import { notFound } from 'next/navigation';
+import { getArticleBySlug, getPlanningConcepts, ArticlePosting } from '../../../lib/contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+
+export const revalidate = 180;
 
 export async function generateStaticParams() {
-    const posts = getAllPosts('planning-concepts', ['slug']);
+    const conceptsRes = await getPlanningConcepts();
+    const posts = conceptsRes.items as unknown as ArticlePosting[];
+
     return posts.map((post) => ({
-        slug: post.slug,
+        slug: post.fields.slug,
     }));
 }
 
-export default async function PlanningConcept({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
-    const post = getPostBySlug('planning-concepts', slug, [
-        'title',
-        'date',
-        'slug',
-        'content',
-    ]);
+const renderOptions = {
+    renderNode: {
+        [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className="mb-6 leading-relaxed text-slate-700 text-lg">{children}</p>,
+        [BLOCKS.HEADING_2]: (node: any, children: any) => <h2 className="text-3xl font-serif font-bold text-brand-blue mt-12 mb-6">{children}</h2>,
+        [BLOCKS.HEADING_3]: (node: any, children: any) => <h3 className="text-2xl font-bold text-brand-blue mt-8 mb-4">{children}</h3>,
+        [BLOCKS.UL_LIST]: (node: any, children: any) => <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">{children}</ul>,
+        [BLOCKS.OL_LIST]: (node: any, children: any) => <ol className="list-decimal pl-6 mb-6 space-y-2 text-slate-700">{children}</ol>,
+        [BLOCKS.QUOTE]: (node: any, children: any) => (
+            <blockquote className="border-l-4 border-brand-gold pl-6 py-2 my-8 italic text-slate-600 bg-slate-50 rounded-r-lg">
+                {children}
+            </blockquote>
+        ),
+    },
+    renderMark: {
+        [MARKS.BOLD]: (text: any) => <strong className="font-bold text-brand-blue">{text}</strong>,
+    }
+};
 
-    const content = await markdownToHtml(post.content || '');
+export default async function PlanningConceptPost({ params }: { params: Promise<{ slug: string }> }) {
+    const resolvedParams = await params;
+    const postEntry = await getArticleBySlug(resolvedParams.slug);
+
+    if (!postEntry) {
+        notFound();
+    }
+
+    const post = postEntry.fields as unknown as ArticlePosting['fields'];
 
     return (
-        <div className="bg-brand-light min-h-screen pt-12 pb-24">
-            {/* Breadcrumb / Back Navigation */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-                <Link href="/planning-concepts" className="text-slate-500 hover:text-brand-gold font-medium mb-8 inline-flex items-center text-sm uppercase tracking-wider transition-colors">
-                    <i className="fa-solid fa-arrow-left mr-2"></i> All Planning Concepts
-                </Link>
-            </div>
+        <article className="bg-white min-h-screen">
+            {/* Header */}
+            <div className="relative bg-brand-dark py-24 px-4 sm:px-6 lg:px-8 text-center text-white overflow-hidden">
+                <div className="absolute inset-0 bg-brand-blue opacity-50"></div>
+                <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-gold rounded-full filter blur-3xl opacity-20"></div>
 
-            {/* Article Document Card */}
-            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white rounded-xl shadow-lg border-t-4 border-brand-gold overflow-hidden">
-
-                    {/* Header Section */}
-                    <div className="p-8 md:p-12 border-b border-slate-100 bg-slate-50/50">
-                        <div className="mb-4 inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-brand-blue text-xs font-bold uppercase tracking-wider">
-                            <i className="fa-solid fa-lightbulb mr-2 text-brand-gold"></i> Strategy Explainer
-                        </div>
-                        <h1 className="text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6 leading-tight">
-                            {post.title}
-                        </h1>
-                        {post.date && (
-                            <div className="flex items-center text-slate-400 text-sm font-medium uppercase tracking-wider">
-                                <i className="fa-regular fa-calendar mr-2"></i>
-                                {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                            </div>
-                        )}
-                    </div>
-
-                    {/* Content Body */}
-                    <div className="p-8 md:p-16">
-                        <div
-                            className="prose prose-lg prose-slate max-w-none 
-                  prose-headings:font-serif prose-headings:font-bold prose-headings:text-brand-blue 
-                  prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 
-                  prose-h3:text-2xl prose-h3:text-slate-700
-                  prose-p:leading-relaxed prose-p:text-slate-600
-                  prose-li:text-slate-600 prose-li:marker:text-brand-gold
-                  prose-strong:text-brand-blue prose-strong:font-bold
-                  hover:prose-a:text-brand-gold hover:prose-a:no-underline prose-a:text-brand-blue prose-a:transition-colors"
-                            dangerouslySetInnerHTML={{ __html: content }}
-                        />
-
-                        {/* Footer/Signature Area */}
-                        <div className="mt-16 pt-8 border-t border-slate-100 flex items-center justify-between">
-                            <div className="text-slate-400 italic text-sm">
-                                99 Financial Inc. — Strategic Wealth Planning
-                            </div>
-                        </div>
+                <div className="relative z-10 max-w-4xl mx-auto">
+                    <Link href="/planning-concepts" className="inline-flex items-center text-brand-gold hover:text-white transition mb-8 text-sm font-bold uppercase tracking-wider">
+                        <i className="fa-solid fa-arrow-left mr-2"></i> Back to Concepts
+                    </Link>
+                    <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+                        {post.title}
+                    </h1>
+                    <div className="flex items-center justify-center text-slate-300 text-sm">
+                        <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                        <span className="mx-2">•</span>
+                        <span>Planning Concept</span>
                     </div>
                 </div>
-            </article>
-        </div>
+            </div>
+
+            {/* Content */}
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="prose prose-lg prose-slate max-w-none">
+                    {/* Render Rich Text from Contentful */}
+                    {documentToReactComponents(post.body, renderOptions)}
+                </div>
+
+                {/* Footer CTA */}
+                <div className="mt-16 pt-8 border-t border-slate-200">
+                    <div className="bg-slate-50 rounded-xl p-8 border border-slate-200 text-center">
+                        <h3 className="text-xl font-bold text-brand-blue mb-2">Is this structure appropriate for you?</h3>
+                        <p className="text-slate-600 mb-6">These concepts require careful implementation. Schedule a review to discuss feasibility.</p>
+                        <Link href="/contact" className="inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded hover:bg-brand-goldHover transition-colors shadow-lg">
+                            Book a Strategy Review
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </article>
     );
 }

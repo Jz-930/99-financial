@@ -4,25 +4,61 @@ import Image from 'next/image';
 import ScrollAnimation from '../../components/ScrollAnimation';
 import UpcomingEventCard from '../../components/UpcomingEventCard';
 import { getAllPosts, markdownToHtml } from '../../lib/api';
+import { getEvents, EventEntry } from '../../lib/contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export const metadata = {
     title: 'Resources | 99 Financial Inc.',
     description: 'Educational articles, planning frameworks, in-depth PDF guides, and upcoming events on corporate wealth planning and tax-efficient strategies.',
 };
 
+export const revalidate = 180; // Revalidate every 3 minutes
+
 export default async function ResourcesPage() {
-    // Fetch events. Note: We are no longer filtering by category since 'events' collection is now just 'Upcoming Sessions'
-    const allEvents = getAllPosts('events', ['title', 'summary', 'slug', 'date', 'content']);
+    // Fetch events from Contentful
+    const allEventsRes = await getEvents();
+    const allEvents = allEventsRes.items as unknown as EventEntry[];
 
     const now = new Date();
+    // Filter upcoming: Date >= today
     const upcomingSessions = allEvents
-        .filter(event => new Date(event.date) >= now)
-        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        .filter(event => new Date(event.fields.date) >= now)
+        .sort((a, b) => new Date(a.fields.date).getTime() - new Date(b.fields.date).getTime());
+
+    // Filter past: Date < today
+    // User logic: "Events & Sessions grab first 3. Nearest = Upcoming. 2nd & 3rd = Past"
+    // Actually, user said: "mostly recent one in upcoming, 2nd and 3rd recent in past session"
+    // Let's interpret: 
+    // If we have upcoming events, take the soonest one as "Featured Upcoming".
+    // Then take the next 2 events (could be further upcoming OR past?)
+    // "second and third recent" implies looking backwards if we talk about "recent".
+    // Let's stick to standard logic: 
+    // 1. Featured = Next Upcoming Event
+    // 2. Past List = Previous events (most recent first)
+
+    // Re-reading user request carefully: "Events & Sessions grab events first 3, closest one put in upcoming session, second and third closest put in past session."
+    // "Closest" usually means difference from NOW. 
+    // IF all are past, closest is the one just passed.
+    // IF some are future, closest is the next one.
+
+    // Let's implement:
+    // Featured: The single nearest Upcoming event.
+    // Past Grid: The 2 most recent Past events.
+
+    const pastSessions = allEvents
+        .filter(event => new Date(event.fields.date) < now)
+        .sort((a, b) => new Date(b.fields.date).getTime() - new Date(a.fields.date).getTime()) // Descending
+        .slice(0, 2);
 
     let featuredEvent = null;
     if (upcomingSessions.length > 0) {
-        const contentHtml = await markdownToHtml(upcomingSessions[0].content || '');
-        featuredEvent = { ...upcomingSessions[0], contentHtml };
+        featuredEvent = {
+            title: upcomingSessions[0].fields.title,
+            slug: upcomingSessions[0].fields.slug,
+            date: upcomingSessions[0].fields.date,
+            summary: upcomingSessions[0].fields.description,
+            // image: upcomingSessions[0].fields.image?.fields.file.url // If added to card
+        };
     }
 
     return (
@@ -136,61 +172,44 @@ export default async function ResourcesPage() {
                         {/* Left Column: Upcoming/Current Session (Big Box) */}
                         <div className="lg:col-span-2">
                             <ScrollAnimation className="fade-in-up" id="upcoming-session-feature">
-                                <UpcomingEventCard event={featuredEvent} />
+                                {featuredEvent ? (
+                                    <UpcomingEventCard event={featuredEvent} />
+                                ) : (
+                                    <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 h-full flex flex-col items-center justify-center text-center">
+                                        <div className="mb-4 text-slate-300 text-5xl">
+                                            <i className="fa-regular fa-calendar-xmark"></i>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-brand-blue mb-2">No Upcoming Sessions</h3>
+                                        <p className="text-slate-500">Check back later for new dates.</p>
+                                    </div>
+                                )}
                             </ScrollAnimation>
                         </div>
 
                         {/* Right Column: Past Sessions (Two Small Boxes) */}
                         <div className="lg:col-span-1 flex flex-col gap-8">
-                            {/* Past Session 1 */}
-                            {allEvents.filter(e => new Date(e.date) < new Date()).slice(0, 1).map((event) => (
-                                <ScrollAnimation delay={50} key={event.slug} className="fade-in-up flex-1">
+                            {pastSessions.map((event, index) => (
+                                <ScrollAnimation key={event.fields.slug} delay={50 * (index + 1)} className="fade-in-up flex-1">
                                     <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col group">
                                         <div className="mb-4">
                                             <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Past Session</span>
                                             <h4 className="text-lg font-bold text-brand-blue group-hover:text-brand-gold transition-colors mt-1 line-clamp-2">
-                                                {event.title}
+                                                {event.fields.title}
                                             </h4>
                                             <p className="text-slate-600 text-sm mt-3 line-clamp-3 leading-relaxed">
-                                                {event.summary}
+                                                {event.fields.description}
                                             </p>
                                         </div>
                                         <div className="mt-auto">
                                             <p className="text-sm text-slate-500 mb-3">
-                                                {new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                                {new Date(event.fields.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                                             </p>
-
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                            ))}
-                            {/* Past Session 2 */}
-                            {allEvents.filter(e => new Date(e.date) < new Date()).slice(1, 2).map((event) => (
-                                <ScrollAnimation delay={100} key={event.slug} className="fade-in-up flex-1">
-                                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-brand-gold/50 transition-all duration-300 h-full flex flex-col group">
-                                        <div className="mb-4">
-                                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Past Session</span>
-                                            <h4 className="text-lg font-bold text-brand-blue group-hover:text-brand-gold transition-colors mt-1 line-clamp-2">
-                                                {event.title}
-                                            </h4>
-                                            <p className="text-slate-600 text-sm mt-3 line-clamp-3 leading-relaxed">
-                                                {event.summary}
-                                            </p>
-                                        </div>
-                                        <div className="mt-auto">
-                                            <p className="text-sm text-slate-500 mb-3">
-                                                {new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                                            </p>
-                                            <a href="#" className="inline-flex items-center justify-center w-full px-4 py-2 bg-white hover:bg-brand-gold hover:text-white text-brand-blue text-sm font-bold rounded border border-slate-200 hover:border-brand-gold transition-all duration-300 shadow-sm mt-3">
-                                                <i className="fa-solid fa-download mr-2"></i> Download Documents
-                                            </a>
                                         </div>
                                     </div>
                                 </ScrollAnimation>
                             ))}
 
-                            {/* Fallback if no past events (Optional, or just show less) */}
-                            {allEvents.filter(e => new Date(e.date) < new Date()).length === 0 && (
+                            {pastSessions.length === 0 && (
                                 <div className="bg-slate-50 rounded-xl p-8 border border-slate-200 h-full flex items-center justify-center text-center">
                                     <p className="text-slate-400 text-sm italic">No past sessions archive available.</p>
                                 </div>
