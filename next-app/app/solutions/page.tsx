@@ -89,7 +89,7 @@ export default function SolutionsPage() {
             </section>
 
             {/* Client Journey Section */}
-            <SectionContainer className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+            <SectionContainer className="py-16 md:py-24 bg-slate-100 relative overflow-hidden">
                 <ScrollAnimation className="fade-in-up">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-blue mb-6">Client Journey</h2>
@@ -150,7 +150,7 @@ export default function SolutionsPage() {
             </section>
 
             {/* Combined Section: How It Works & Who It's For */}
-            <SectionContainer className="py-16 md:py-24 bg-slate-50 relative">
+            <SectionContainer className="py-16 md:py-24 bg-slate-100 relative">
                 <ScrollAnimation className="fade-in-up">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 

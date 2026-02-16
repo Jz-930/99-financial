@@ -52,11 +52,13 @@ export default function ClientJourney() {
                 </div>
             </section>
 
-            {/* Steps Section */}
-            <section className="pb-24 bg-white">
-                <div className="max-w-3xl mx-auto px-6 space-y-24">
+            {/* Steps Section - Broken down for alternating backgrounds */}
+            {/* Steps Section - Broken down for alternating backgrounds */}
 
-                    {/* Step 01 */}
+
+            {/* Step 01 - Context & Discovery (White) */}
+            <section className="py-20 bg-white">
+                <div className="max-w-3xl mx-auto px-6">
                     <div className="flex flex-col items-start text-left">
                         <span className="text-brand-gold font-bold tracking-widest uppercase text-sm mb-3">Step 01</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Context & Discovery</h2>
@@ -79,8 +81,12 @@ export default function ClientJourney() {
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Step 02 */}
+            {/* Step 02 - Strategic Fit Assessment (Gray) */}
+            <section className="py-20 bg-slate-100">
+                <div className="max-w-3xl mx-auto px-6">
                     <div className="flex flex-col items-start text-left">
                         <span className="text-brand-gold font-bold tracking-widest uppercase text-sm mb-3">Step 02</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Strategic Fit Assessment</h2>
@@ -106,8 +112,12 @@ export default function ClientJourney() {
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Step 03 */}
+            {/* Step 03 - Structure Design (White) */}
+            <section className="py-20 bg-white">
+                <div className="max-w-3xl mx-auto px-6">
                     <div className="flex flex-col items-start text-left">
                         <span className="text-brand-gold font-bold tracking-widest uppercase text-sm mb-3">Step 03</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Structure Design</h2>
@@ -129,8 +139,12 @@ export default function ClientJourney() {
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Step 04 */}
+            {/* Step 04 - Implementation & Coordination (Gray) */}
+            <section className="py-20 bg-slate-100">
+                <div className="max-w-3xl mx-auto px-6">
                     <div className="flex flex-col items-start text-left">
                         <span className="text-brand-gold font-bold tracking-widest uppercase text-sm mb-3">Step 04</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Implementation & Coordination</h2>
@@ -150,8 +164,12 @@ export default function ClientJourney() {
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Step 05 */}
+            {/* Step 05 - Ongoing Review & Governance (White) */}
+            <section className="py-20 bg-white">
+                <div className="max-w-3xl mx-auto px-6">
                     <div className="flex flex-col items-start text-left">
                         <span className="text-brand-gold font-bold tracking-widest uppercase text-sm mb-3">Step 05</span>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Ongoing Review & Governance</h2>
@@ -173,7 +191,6 @@ export default function ClientJourney() {
                             </p>
                         </div>
                     </div>
-
                 </div>
             </section>
 

@@ -12,11 +12,13 @@ export default function CorporateParPage() {
                 subtitle="Insurance as a long-term corporate planning tool"
             />
 
-            <div className="max-w-3xl mx-auto px-6 py-24">
+            <div>
 
-                <div className="space-y-16">
-                    {/* Opening — Strategic Context */}
-                    <section>
+
+                {/* Opening — Strategic Context */}
+                {/* Opening — Strategic Context (White) */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">Strategic Context</h2>
                         <div className="prose prose-lg text-slate-700 leading-relaxed text-lg">
                             <p className="mb-6">
@@ -28,10 +30,13 @@ export default function CorporateParPage() {
                                 Its value lies not in the insurance contract itself, but in how it is structured and integrated within broader corporate planning.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* The Planning Problem It Addresses */}
-                    <section>
+                {/* The Planning Problem It Addresses */}
+                {/* The Planning Problem It Addresses (Gray) */}
+                <section className="py-20 bg-slate-100">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">The Planning Problem It Addresses</h2>
                         <div className="prose prose-lg text-slate-700 leading-relaxed text-lg">
                             <p className="mb-6">
@@ -46,10 +51,13 @@ export default function CorporateParPage() {
                                 Corporate-owned life insurance is often considered when business owners begin addressing these long-term structural issues — not short-term investment performance.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* Where This Strategy Fits (and Where It Doesn’t) */}
-                    <section className="py-8 bg-slate-50 -mx-6 px-6 rounded-xl md:bg-transparent md:p-0 md:mx-0">
+                {/* Where This Strategy Fits (and Where It Doesn’t) */}
+                {/* Where This Strategy Fits (and Where It Doesn’t) (White) */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-8">Where This Strategy Fits (and Where It Doesn’t)</h2>
 
                         <div className="mb-10">
@@ -73,10 +81,13 @@ export default function CorporateParPage() {
                         <p className="text-slate-600 italic font-medium border-l-4 border-brand-gold pl-4 py-1">
                             Determining suitability is a critical step — and one that must occur before any product discussion.
                         </p>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* How It Integrates With Broader Planning */}
-                    <section>
+                {/* How It Integrates With Broader Planning */}
+                {/* How It Integrates With Broader Planning (Gray) */}
+                <section className="py-20 bg-slate-100">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">How It Integrates With Broader Planning</h2>
                         <div className="prose prose-lg text-slate-700 leading-relaxed text-lg">
                             <p className="mb-6">
@@ -93,10 +104,13 @@ export default function CorporateParPage() {
                                 Its effectiveness depends on coordination across accounting, legal, and financial planning disciplines.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* Common Misunderstandings */}
-                    <section>
+                {/* Common Misunderstandings */}
+                {/* Common Misunderstandings (White) */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">Common Misunderstandings</h2>
                         <div className="prose prose-lg text-slate-700 leading-relaxed text-lg">
                             <ul className="list-disc pl-5 space-y-3 marker:text-red-400 mb-6">
@@ -109,10 +123,13 @@ export default function CorporateParPage() {
                                 These misunderstandings often lead to misaligned expectations and suboptimal outcomes.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* Relationship to the Client Journey */}
-                    <section>
+                {/* Relationship to the Client Journey */}
+                {/* Relationship to the Client Journey (Gray) */}
+                <section className="py-20 bg-slate-100">
+                    <div className="max-w-3xl mx-auto px-6">
                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-blue mb-6">Relationship to the Client Journey</h2>
                         <div className="prose prose-lg text-slate-700 leading-relaxed text-lg">
                             <p>
@@ -120,21 +137,26 @@ export default function CorporateParPage() {
                                 The focus is on determining whether this tool supports the overall planning framework, not on selling a specific solution.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    {/* CTA */}
-                    <section className="bg-slate-100 p-8 rounded-lg border-l-4 border-brand-gold mt-12">
-                        <p className="text-xl font-serif font-bold text-brand-blue mb-4">
-                            Explore whether corporate-owned life insurance fits within your long-term planning framework.
-                        </p>
-                        <div className="mt-6">
-                            <Link href="/contact" className="inline-block bg-brand-gold text-white font-semibold px-8 py-4 rounded shadow-md hover:bg-brand-goldHover transition duration-300">
-                                Book a private strategy review
-                            </Link>
+                {/* CTA */}
+                {/* CTA (White) */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-3xl mx-auto px-6">
+                        <div className="bg-slate-100 p-8 rounded-lg border-l-4 border-brand-gold">
+                            <p className="text-xl font-serif font-bold text-brand-blue mb-4">
+                                Explore whether corporate-owned life insurance fits within your long-term planning framework.
+                            </p>
+                            <div className="mt-6">
+                                <Link href="/contact" className="inline-block bg-brand-gold text-white font-semibold px-8 py-4 rounded shadow-md hover:bg-brand-goldHover transition duration-300">
+                                    Book a private strategy review
+                                </Link>
+                            </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                </div>
             </div>
         </main>
     );
