@@ -1,14 +1,11 @@
 import { getStore } from "@netlify/blobs";
 
-const DEBOUNCE_STORE = "contentful-debounce";
-const BLOB_KEY = "lastContentfulUpdate";
 const DEBOUNCE_MS = 3 * 60 * 1000; // 3 minutes
 
-// Netlify Scheduled Function: runs every 3 minutes
 export default async () => {
     try {
-        const store = getStore(DEBOUNCE_STORE);
-        const lastUpdate = await store.get(BLOB_KEY, { type: "text" });
+        const store = getStore("contentful-debounce");
+        const lastUpdate = await store.get("lastContentfulUpdate", { type: "text" });
 
         if (!lastUpdate) {
             console.log("No pending Contentful updates. Skipping.");
@@ -19,12 +16,12 @@ export default async () => {
         const elapsed = Date.now() - lastUpdateTime;
 
         if (elapsed < DEBOUNCE_MS) {
-            console.log(`Last update was ${Math.round(elapsed / 1000)}s ago. Waiting for 3 minutes of inactivity. Skipping.`);
+            console.log(`Last update was ${Math.round(elapsed / 1000)}s ago. Waiting for 3 min of inactivity.`);
             return;
         }
 
         // 3 minutes have passed since the last update — trigger rebuild
-        const buildHookUrl = process.env.NETLIFY_BUILD_HOOK_URL;
+        const buildHookUrl = Netlify.env.get("NETLIFY_BUILD_HOOK_URL");
         if (!buildHookUrl) {
             console.error("NETLIFY_BUILD_HOOK_URL is not set. Cannot trigger build.");
             return;
@@ -35,7 +32,7 @@ export default async () => {
 
         if (response.ok) {
             console.log("Build triggered successfully. Clearing timestamp.");
-            await store.delete(BLOB_KEY);
+            await store.delete("lastContentfulUpdate");
         } else {
             console.error(`Failed to trigger build. Status: ${response.status}`);
         }
@@ -45,5 +42,5 @@ export default async () => {
 };
 
 export const config = {
-    schedule: "*/3 * * * *", // Every 3 minutes
+    schedule: "*/3 * * * *",
 };
