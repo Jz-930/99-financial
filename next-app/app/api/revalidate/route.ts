@@ -63,6 +63,6 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ revalidated: true, now: Date.now() });
     } catch (err) {
         console.error('Error revalidating:', err);
-        return NextResponse.json({ message: 'Error revalidating' }, { status: 500 });
+        return NextResponse.json({ message: 'Error revalidating', error: String(err) }, { status: 500 });
     }
 }
