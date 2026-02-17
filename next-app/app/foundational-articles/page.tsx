@@ -3,7 +3,7 @@ import Link from 'next/link';
 // import { getAllPosts } from '../../lib/api'; // Refactored to Contentful
 import { getFoundationalArticles, ArticlePosting } from '../../lib/contentful';
 
-export const revalidate = 180; // ISR revalidation every 3 minutes
+
 
 export default async function FoundationalArticlesIndex() {
     // Fetch from Contentful

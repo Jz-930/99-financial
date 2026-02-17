@@ -5,7 +5,7 @@ import { getArticleBySlug, getFoundationalArticles, ArticlePosting } from '../..
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
-export const revalidate = 180;
+
 
 export async function generateStaticParams() {
     const articlesRes = await getFoundationalArticles();

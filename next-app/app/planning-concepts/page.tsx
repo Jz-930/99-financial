@@ -3,7 +3,7 @@ import Link from 'next/link';
 // import { getAllPosts } from '../../lib/api'; // Refactored to Contentful
 import { getPlanningConcepts, ArticlePosting } from '../../lib/contentful';
 
-export const revalidate = 180;
+
 
 export default async function PlanningConceptsIndex() {
     // Fetch from Contentful

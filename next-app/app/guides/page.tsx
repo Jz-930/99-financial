@@ -5,7 +5,7 @@ import ScrollAnimation from '../../components/ScrollAnimation';
 // import { getAllPosts } from '../../lib/api'; // Refactored
 import { getGuides, GuidePdf } from '../../lib/contentful';
 
-export const revalidate = 180;
+
 
 export default async function GuidesIndex() {
     // Fetch guides from Contentful

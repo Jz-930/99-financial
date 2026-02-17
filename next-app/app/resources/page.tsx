@@ -12,7 +12,7 @@ export const metadata = {
     description: 'Educational articles, planning frameworks, in-depth PDF guides, and upcoming events on corporate wealth planning and tax-efficient strategies.',
 };
 
-export const revalidate = 180; // Revalidate every 3 minutes
+
 
 export default async function ResourcesPage() {
     // Fetch events from Contentful
