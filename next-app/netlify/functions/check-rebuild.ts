@@ -1,6 +1,6 @@
 import { getStore } from "@netlify/blobs";
 
-const DEBOUNCE_MS = 3 * 60 * 1000; // 3 minutes
+const DEBOUNCE_MS = 7 * 60 * 1000; // 7 minutes
 
 export default async () => {
     try {
@@ -16,7 +16,7 @@ export default async () => {
         const elapsed = Date.now() - lastUpdateTime;
 
         if (elapsed < DEBOUNCE_MS) {
-            console.log(`Last update was ${Math.round(elapsed / 1000)}s ago. Waiting for 3 min of inactivity.`);
+            console.log(`Last update was ${Math.round(elapsed / 1000)}s ago. Waiting for 7 min of inactivity.`);
             return;
         }
 
@@ -42,5 +42,5 @@ export default async () => {
 };
 
 export const config = {
-    schedule: "*/3 * * * *",
+    schedule: "*/7 * * * *",
 };
