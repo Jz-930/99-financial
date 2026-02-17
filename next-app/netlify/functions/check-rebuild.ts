@@ -21,7 +21,7 @@ export default async () => {
         }
 
         // 3 minutes have passed since the last update — trigger rebuild
-        const buildHookUrl = Netlify.env.get("NETLIFY_BUILD_HOOK_URL");
+        const buildHookUrl = process.env.NETLIFY_BUILD_HOOK_URL;
         if (!buildHookUrl) {
             console.error("NETLIFY_BUILD_HOOK_URL is not set. Cannot trigger build.");
             return;

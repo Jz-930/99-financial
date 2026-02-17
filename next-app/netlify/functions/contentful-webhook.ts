@@ -11,7 +11,7 @@ export default async (req: Request) => {
 
     // Validate the secret
     const secret = req.headers.get("x-vercel-reval-key");
-    if (secret !== Netlify.env.get("CONTENTFUL_REVALIDATE_SECRET")) {
+    if (secret !== process.env.CONTENTFUL_REVALIDATE_SECRET) {
         return new Response(JSON.stringify({ message: "Invalid secret" }), {
             status: 401,
             headers: { "Content-Type": "application/json" },
