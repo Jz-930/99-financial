@@ -13,8 +13,19 @@ export async function POST(request: NextRequest) {
 
     try {
         const body = await request.json();
-        const contentType = body.sys?.contentType?.sys?.id;
-        const slug = body.fields?.slug?.['en-US']; // Assuming 'en-US' locale, adjust if needed specific structure
+
+        // Log the payload for debugging
+        console.log('Webhook payload received:', JSON.stringify(body, null, 2));
+
+        // Determine content type
+        let contentType = '';
+        if (body.sys?.type === 'Asset') {
+            contentType = 'Asset';
+        } else {
+            contentType = body.sys?.contentType?.sys?.id;
+        }
+
+        const slug = body.fields?.slug?.['en-US']; // Assuming 'en-US' locale
 
         console.log(`Revalidating content type: ${contentType}, slug: ${slug}`);
 
@@ -33,6 +44,17 @@ export async function POST(request: NextRequest) {
             revalidatePath('/guides');
         } else if (contentType === 'events') {
             revalidatePath('/resources');
+        } else if (contentType === 'Asset') {
+            // Assets (images, PDFs) might be used anywhere
+            // A simple strategy is to revalidate pages that heavily rely on assets,
+            // or if we can't track usage easily, we might need to rely on the fact 
+            // that Next.js image optimization handles some of this, 
+            // but for PDFs (guides) we should revalidate guides page.
+            console.log('Asset updated. Revalidating all resource pages to be safe.');
+            revalidatePath('/guides');
+            revalidatePath('/resources');
+            revalidatePath('/about'); // Images in about page
+            // Potentially others if assets are used in articles, but we can't easily know which article uses which asset without parsing blocks.
         } else {
             // Default or unknown content type - maybe revalidate everything or log
             console.log('Unknown content type for detailed revalidation, but webhook received.');
