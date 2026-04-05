@@ -123,7 +123,7 @@ export default function Contact() {
                             <div className="flex flex-col items-center md:items-start">
                                 <span className="text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Get In Touch</span>
                                 <a href="tel:4166375302" className="text-2xl font-serif text-brand-blue hover:text-brand-gold transition-colors mb-2">416 637 5302</a>
-                                <a href="mailto:greatec@gmail.com" className="text-lg text-slate-600 hover:text-brand-gold transition-colors">greatec@gmail.com</a>
+                                <a href="mailto:info@99Financial.ca" className="text-lg text-slate-600 hover:text-brand-gold transition-colors">info@99Financial.ca</a>
                             </div>
 
                             <div className="flex flex-col items-center md:items-start">

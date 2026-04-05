@@ -49,6 +49,7 @@ export default function Footer() {
                             className="h-8 w-auto brightness-0 invert opacity-90 mb-6"
                         />
                         <p className="mb-2 text-slate-400 text-sm"><i className="fa-solid fa-phone text-brand-gold mr-3"></i> 416 637 5302</p>
+                        <p className="mb-2 text-slate-400 text-sm"><a href="mailto:info@99Financial.ca" className="hover:text-brand-gold transition"><i className="fa-solid fa-envelope text-brand-gold mr-3"></i> info@99Financial.ca</a></p>
                         <p className="mb-4 text-slate-400 text-sm"><i className="fa-solid fa-location-dot text-brand-gold mr-3 mt-1"></i> 85 Enterprise Blvd. Unit 306, Markham ON L6G 0B5</p>
                         <div className="flex space-x-4 mt-6">
                             <a
