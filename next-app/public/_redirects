@@ -1,1 +1,4 @@
+/events.html   /resources   301
+/events        /resources   301
+/events/*      /resources   301
 /solution   /solutions   301

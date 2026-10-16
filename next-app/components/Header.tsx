@@ -37,7 +37,7 @@ export default function Header() {
     }, [pathname]);
 
     const solutionsPages = ['/solutions', '/client-journey', '/corporate-par', '/cda', '/ifa'];
-    const resourcesPages = ['/resources', '/foundational-articles', '/planning-concepts', '/guides', '/events', '/faq'];
+    const resourcesPages = ['/resources', '/foundational-articles', '/planning-concepts', '/guides', '/faq'];
 
     const toggleDropdown = (group: string) => {
         setActiveDropdown(activeDropdown === group ? null : group);

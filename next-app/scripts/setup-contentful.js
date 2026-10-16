@@ -130,53 +130,6 @@ const contentTypes = [
             },
         ],
     },
-    {
-        id: 'event',
-        name: 'Event / Session',
-        description: 'Upcoming and past educational sessions.',
-        displayField: 'title',
-        fields: [
-            {
-                id: 'title',
-                name: 'Title',
-                type: 'Symbol',
-                required: true,
-            },
-            {
-                id: 'slug',
-                name: 'Slug',
-                type: 'Symbol',
-                required: true,
-                validations: [{ unique: true }, { regexp: { pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$' } }],
-            },
-            {
-                id: 'date',
-                name: 'Event Date',
-                type: 'Date',
-                required: true,
-            },
-            {
-                id: 'summary',
-                name: 'Summary',
-                type: 'Text',
-                required: true,
-                validations: [{ size: { max: 500 } }],
-            },
-            {
-                id: 'content',
-                name: 'Full Details (Optional)',
-                type: 'RichText',
-                required: false,
-            },
-            {
-                id: 'registrationLink',
-                name: 'Registration/Download Link',
-                type: 'Symbol',
-                required: false,
-                validations: [{ regexp: { pattern: '^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-\\/]))?$' } }],
-            },
-        ],
-    },
 ];
 
 async function run() {

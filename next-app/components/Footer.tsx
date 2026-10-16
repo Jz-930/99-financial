@@ -95,7 +95,6 @@ export default function Footer() {
                             <li><Link href="/resources#foundational-articles" className="hover:text-brand-gold transition">Foundational Articles</Link></li>
                             <li><Link href="/resources#planning-concepts" className="hover:text-brand-gold transition">Planning Concepts</Link></li>
                             <li><Link href="/resources#guides" className="hover:text-brand-gold transition">In-Depth Guides (PDF)</Link></li>
-                            <li><Link href="/resources#upcoming-sessions" className="hover:text-brand-gold transition">Events & Sessions</Link></li>
                         </ul>
                     </div>
                     <div>

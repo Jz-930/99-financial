@@ -38,7 +38,6 @@ const headerContent = `
                 <div data-dropdown="resources" class="absolute top-full left-0 mt-2 w-56 bg-white border-t-4 border-brand-gold shadow-xl rounded-b-md hidden pt-2 animate-fadeIn">
                     <a href="resources.html" class="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold border-b border-slate-50 font-bold">Overview</a>
                     <a href="case-studies.html" class="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Case Studies</a>
-                    <a href="events.html" class="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">Events</a>
                     <a href="faq.html" class="block px-5 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-gold">FAQ</a>
                 </div>
             </div>
@@ -74,7 +73,6 @@ const headerContent = `
         <p class="px-3 text-xs text-gray-400 uppercase font-bold mb-2">Resources</p>
         <a href="resources.html" class="block pl-6 py-2 text-sm text-slate-600 hover:text-brand-gold font-bold">Overview</a>
         <a href="case-studies.html" class="block pl-6 py-2 text-sm text-slate-600 hover:text-brand-gold">Case Studies</a>
-        <a href="events.html" class="block pl-6 py-2 text-sm text-slate-600 hover:text-brand-gold">Events</a>
         <a href="faq.html" class="block pl-6 py-2 text-sm text-slate-600 hover:text-brand-gold">FAQ</a>
         <a href="contact.html" class="block px-3 py-2 text-lg font-medium text-slate-600 hover:text-brand-gold">Contact</a>
     </div>
@@ -111,7 +109,6 @@ const footerContent = `
                 <li><a href="case-studies.html" class="hover:text-brand-gold transition">Case Studies</a></li>
                 <li><a href="resources.html" class="hover:text-brand-gold transition">Guides</a></li>
                 <li><a href="faq.html" class="hover:text-brand-gold transition">FAQ</a></li>
-                <li><a href="events.html" class="hover:text-brand-gold transition">Events</a></li>
             </ul>
         </div>
         <div>
@@ -184,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 2. Manually highlight dropdown parent buttons
     const solutionsPages = ['solutions.html', 'corporate-par.html', 'cda.html', 'ifa.html', 'estate-planning.html', 'client-journey.html'];
-    const resourcesPages = ['case-studies.html', 'events.html', 'resources.html', 'faq.html'];
+    const resourcesPages = ['case-studies.html', 'resources.html', 'faq.html'];
 
     if (solutionsPages.includes(currentPath)) {
         const btn = document.querySelector('button[data-group="solutions"]');

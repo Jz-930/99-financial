@@ -1,4 +1,4 @@
-import { createClient, Entry } from 'contentful';
+import { createClient } from 'contentful';
 import { Document } from '@contentful/rich-text-types';
 
 const space = process.env.CONTENTFUL_SPACE_ID || '';
@@ -42,23 +42,6 @@ export interface GuidePdf {
                     fileName: string;
                     contentType: string;
                 };
-            }
-        };
-    };
-}
-
-export interface EventEntry {
-    contentTypeId: 'events';
-    fields: {
-        title: string;
-        slug: string;
-        date: string;
-        description: string;
-        image?: {
-            fields: {
-                file: {
-                    url: string;
-                }
             }
         };
     };
@@ -126,14 +109,5 @@ export async function getGuides() {
         order: '-fields.publishDate',
     };
     const entries = await client.getEntries<GuidePdf>(query);
-    return entries;
-}
-
-export async function getEvents() {
-    const query: any = {
-        content_type: 'events',
-        order: 'fields.date',
-    };
-    const entries = await client.getEntries<EventEntry>(query);
     return entries;
 }
